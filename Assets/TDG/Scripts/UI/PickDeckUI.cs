@@ -35,18 +35,17 @@ public class PickDeckUI : MonoBehaviour
 
 		foreach (var card in phaseCards) {
 			var cardUI = CreateCard(card, mainDeckContentPanel);
-			var cardToCreate = card;
-			cardUI.cardButton.onClick.AddListener(() => HandleMainDeckCardClicked(cardToCreate, playerDeckContentPanel));
-			cardUI.cardButton.onClick.AddListener(() => Destroy(cardUI.gameObject));
+			cardUI.cardButton.onClick.AddListener(() => HandleMainDeckCardClicked(cardUI, playerDeckContentPanel));
 		}
 	}
 
-	void HandleMainDeckCardClicked (Card card, Transform contentPanel)
+	void HandleMainDeckCardClicked (CardUI cardUI, Transform contentPanel)
 	{
-		GameManager.Player.cards.Add(card);
-		var cardUI = CreateCard(card, contentPanel);
-		cardUI.cardButton.onClick.AddListener(() => HandlePlayerDeckCardClicked(card, mainDeckContentPanel));
-		cardUI.cardButton.onClick.AddListener(() => Destroy(cardUI.gameObject));
+		GameManager.Player.cards.Add(cardUI.Card);
+
+		cardUI.transform.SetParent(contentPanel, false);
+		cardUI.cardButton.onClick.RemoveAllListeners();
+		cardUI.cardButton.onClick.AddListener(() => HandlePlayerDeckCardClicked(cardUI, mainDeckContentPanel));
 
 		if (GameManager.Player.cards.Count >= GameManager.maxCardsPerPhase) {
 			mainDeckCanvasGroup.alpha = .5f;
@@ -55,10 +54,13 @@ public class PickDeckUI : MonoBehaviour
 		}
 	}
 
-	void HandlePlayerDeckCardClicked (Card card, Transform contentPanel)
+	void HandlePlayerDeckCardClicked (CardUI cardUI, Transform contentPanel)
 	{
-		GameManager.Player.cards.Remove(card);
-		CreateCard(card, contentPanel);
+		GameManager.Player.cards.Remove(cardUI.Card);
+
+		cardUI.transform.SetParent(contentPanel, false);
+		cardUI.cardButton.onClick.RemoveAllListeners();
+		cardUI.cardButton.onClick.AddListener(() => HandleMainDeckCardClicked(cardUI, playerDeckContentPanel));
 
 		if (GameManager.Player.cards.Count < GameManager.maxCardsPerPhase) {
 			mainDeckCanvasGroup.alpha = 1f;

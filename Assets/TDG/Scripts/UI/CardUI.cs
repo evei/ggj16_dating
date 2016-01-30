@@ -15,11 +15,11 @@ public class CardUI : MonoBehaviour
 	public Sprite emotionSprite;
 	public Sprite actionSprite;
 
-	Card card;
+	public Card Card { get; private set;}
 
 	public void Init (Card card)
 	{
-		this.card = card;
+		Card = card;
 
 		categoryText.text = card.category.ToString();
 		subCategoryText.text = card.SubCategoryName.SplitCamelCase();
