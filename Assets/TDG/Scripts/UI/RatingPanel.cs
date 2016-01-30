@@ -39,7 +39,7 @@ public class RatingPanel : MonoBehaviour
 	void ContinueGame ()
 	{
 		if (GameManager.phase + 1 >= GameManager.maxPhasesNumber) { // End Game
-			// TODO Display game end result.
+			SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 		} else {
 			GameManager.phase++;
 			SceneManager.LoadScene(MainGameController.SCENE_PICKDECK);
