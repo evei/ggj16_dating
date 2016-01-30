@@ -15,8 +15,6 @@ public class GameManager : MonoBehaviour
 
 	const int CARDS_FOR_PHASE = 20;
 
-	const int MAX_DRAW_CARDS = 3;
-
 	void Awake ()
 	{
 		allCards = GetCards();
@@ -26,23 +24,28 @@ public class GameManager : MonoBehaviour
 
 	public List<Card> GetSelectableCardsForPhase(int phase, int boozeLevel)
 	{
-		//TODO predefined sets?/
-		var cardsForPhase = allCards.Where(c => c.phase == phase).ToList();
-
-		var result = new List<Card>();
-		while (result.Count < CARDS_FOR_PHASE && cardsForPhase.Count > 0) {
-			var index = RandomHelper.Next(cardsForPhase.Count);
-			var card = cardsForPhase[index];
-			result.Add(card);
-			cardsForPhase.RemoveAt(index);
-		}
-
-		return result;
+		var cardsForPhase = GetAllCardsForPhaseAndBoozeLevel(phase, boozeLevel);
+		return TakeRandomCards(cardsForPhase, CARDS_FOR_PHASE);
 	}
 
-	public List<Card> DrawCards(int boozeLevel)
+	public List<Card> GetAllCardsForPhaseAndBoozeLevel(int phase, int boozeLevel) 
 	{
-		return GetSelectableCardsForPhase(phase, boozeLevel).Take(Math.Max(MAX_DRAW_CARDS - boozeLevel, 1)).ToList();
+		//TODO predefined sets?/
+		return allCards.Where(c => c.phase == phase && c.boozeLevel >= boozeLevel).ToList();
+	}
+
+	public void PlayerDrinks(Player player)
+	{
+		var cards = GetAllCardsForPhaseAndBoozeLevel(phase, player.boozeLevel).Except(player.cards).ToList();
+		var unusedCards = player.cards.Where(c => !c.used).ToList();
+		var newCards = TakeRandomCards(cards, Math.Min(player.boozeLevel, unusedCards.Count));
+
+		while (unusedCards.Count > 0 && newCards.Count > 0) {
+			var unusedCard = unusedCards[RandomHelper.Next(unusedCards.Count)];
+			player.cards[player.cards.FindIndex(c => c == unusedCard)] = newCards[0];
+			unusedCards.Remove(unusedCard);
+			newCards.RemoveAt(0);
+		}
 	}
 
 	List<Card> GetCards ()
@@ -78,6 +81,19 @@ public class GameManager : MonoBehaviour
 		var subcategories = System.Enum.GetValues(enumType);
 		int subCategory = (int)subcategories.GetValue(RandomHelper.Next(subcategories.Length));
 		return new Card(i, cardCategory, subCategory, -1, RandomHelper.Next(maxBoozeLevel + 1));
+	}
+
+	public List<Card> TakeRandomCards (List<Card> cards, int amount)
+	{
+		var result = new List<Card>();
+		while (result.Count < amount && cards.Count > 0) {
+			var index = RandomHelper.Next(cards.Count);
+			var card = cards[index];
+			result.Add(card);
+			cards.RemoveAt(index);
+		}
+
+		return result;
 	}
 
 	public CardText GetTextForCard(Card card)
