@@ -11,7 +11,7 @@ public enum TalkCategory
 	Compliment = 1,
 	ShowOff = 2,
 	Smalltalk = 3,
-	Funny = 4,
+	Joke = 4,
 	NerdOut = 5,
 	ExRelationship = 6,
 	Work = 7,

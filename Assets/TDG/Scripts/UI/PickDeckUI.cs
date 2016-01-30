@@ -25,6 +25,7 @@ public class PickDeckUI : MonoBehaviour
 	void Start ()
 	{
 		PopulateMainDeck();
+		readyButton.interactable = false;
 	}
 
 	void PopulateMainDeck ()
@@ -50,6 +51,7 @@ public class PickDeckUI : MonoBehaviour
 		if (GameManager.Player.cards.Count >= GameManager.maxCardsPerPhase) {
 			mainDeckCanvasGroup.alpha = .5f;
 			mainDeckCanvasGroup.interactable = false;
+			readyButton.interactable = true;
 		}
 	}
 
@@ -61,6 +63,7 @@ public class PickDeckUI : MonoBehaviour
 		if (GameManager.Player.cards.Count < GameManager.maxCardsPerPhase) {
 			mainDeckCanvasGroup.alpha = 1f;
 			mainDeckCanvasGroup.interactable = true;
+			readyButton.interactable = false;
 		}
 	}
 
