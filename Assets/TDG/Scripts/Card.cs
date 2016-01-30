@@ -1,5 +1,6 @@
 public enum CardCategory
 {
+	None = -1,
 	Talk = 1,
 	Action = 2,
 	Emotion = 3
@@ -28,12 +29,14 @@ public enum ActionCategory
 public enum EmotionCategory 
 {
 	Laugh = 1,
-	Cry = 2
+	Cry = 2,
+	Blush = 3,
+	Drool = 4,
+	Yawn = 5
 }
 
 public class Card
 {
-
 	public int id;
 	public CardCategory category;
 	public int subCategory;
@@ -64,10 +67,18 @@ public class Card
 	}
 }
 
-public class Text
+public class CardText
 {
 	public int id;
-	public int category;
+	public CardCategory category;
 	public int subCategory;
 	public string text;
+
+	public CardText (int id, CardCategory category, int subCategory, string text)
+	{
+		this.id = id;
+		this.category = category;
+		this.subCategory = subCategory;
+		this.text = text;
+	}	
 }

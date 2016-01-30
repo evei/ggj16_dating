@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
 	public List<Card> allCards;
 
-	public List<Text> allTexts;
+	public List<CardText> allTexts;
 
 	public int maxBoozeLevel = 5;
 
@@ -66,11 +66,11 @@ public class GameManager : MonoBehaviour
 		return list;
 	}
 
-	List<Text> GetTexts ()
+	List<CardText> GetTexts ()
 	{
 		//return JsonUtility.FromJson<List<Text>>();
 
-		return new List<Text>();
+		return new List<CardText>();
 	}
 
 	Card CreateCard (int i, CardCategory cardCategory, System.Type enumType)
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
 		return new Card(i, cardCategory, subCategory, -1, RandomHelper.Next(maxBoozeLevel + 1));
 	}
 
-	public Text GetTextForCard(Card card)
+	public CardText GetTextForCard(Card card)
 	{
 		var possibleTexts = allTexts.Where(t => t.category == card.category && t.subCategory == card.subCategory).ToList();
 		if (possibleTexts.Count > 0) {
@@ -88,5 +88,6 @@ public class GameManager : MonoBehaviour
 		}
 
 		Debug.LogWarningFormat("No text found for card {0}.{1}", card.category, card.SubCategoryName);
+		return new CardText(-1, CardCategory.None, -1, string.Empty);
 	}
 }
