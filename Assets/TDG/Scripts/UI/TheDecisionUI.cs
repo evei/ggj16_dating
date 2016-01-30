@@ -5,4 +5,5 @@ public class TheDecisionUI : MonoBehaviour
 {
 	public Button yesButton;
 	public Button noButton;
+	public Image[] hearts;
 }
