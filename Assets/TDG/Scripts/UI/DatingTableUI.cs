@@ -10,6 +10,8 @@ public class DatingTableUI : MonoBehaviour
 	public Transform playerDeckContentPanel;
 	public GameObject cardPrefab;
 
+	public SpeechBubble speechBuble;
+
 	GameManager GameManager { get { return GameManager.Instance; } }
 
 	void Awake ()
@@ -64,11 +66,18 @@ public class DatingTableUI : MonoBehaviour
 	{
 		// TODO Do something.
 		Debug.Log("Play Card");
+		DisplayText(card);
 	}
 
 	void DrinkBoose ()
 	{
 		// TODO Do something
 		Debug.Log("Drink Boose");
+	}
+
+	void DisplayText (Card card)
+	{
+		var cardText = GameManager.GetTextForCard(card, GameManager.Player);
+		speechBuble.DisplayText(card.positive ? cardText.Good : cardText.Bad);
 	}
 }

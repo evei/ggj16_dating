@@ -11,9 +11,9 @@ public class CardUI : MonoBehaviour
 	public Image icon;
 	public Image cardBackground;
 
-	public Color talkColor;
-	public Color emotionColor;
-	public Color actionColor;
+	public Sprite talkSprite;
+	public Sprite emotionSprite;
+	public Sprite actionSprite;
 
 	Card card;
 
@@ -26,13 +26,13 @@ public class CardUI : MonoBehaviour
 	
 		switch (card.category) {
 		case CardCategory.Talk:
-			cardBackground.color = talkColor;
+			cardBackground.overrideSprite = talkSprite;
 			break;
 		case CardCategory.Emotion:
-			cardBackground.color = emotionColor;
+			cardBackground.overrideSprite = emotionSprite;
 			break;
 		case CardCategory.Action:
-			cardBackground.color = actionColor;
+			cardBackground.overrideSprite = actionSprite;
 			break;
 		}
 	}
