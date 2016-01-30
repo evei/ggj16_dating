@@ -11,13 +11,14 @@ public class DatingTableUI : MonoBehaviour
 	public GameObject cardPrefab;
 
 	public SpeechBubble speechBuble;
+	public RatingPanel ratingPanel;
 
 	GameManager GameManager { get { return GameManager.Instance; } }
 
 	void Awake ()
 	{
 		quitButton.onClick.AddListener(HandleQuitButton);
-		booseButton.onClick.AddListener(DrinkBoose);
+		booseButton.onClick.AddListener(DrinkBooze);
 	}
 
 	void HandleQuitButton ()
@@ -59,6 +60,7 @@ public class DatingTableUI : MonoBehaviour
 		if (GameManager.Player.cards.Count <= 0) {
 			// TODO Do something
 			Debug.Log("Played Last card");
+			ratingPanel.Show(); // TODO Move his line to the callback when both player finished playing their cards.
 		} 
 	}
 
@@ -69,10 +71,10 @@ public class DatingTableUI : MonoBehaviour
 		DisplayText(card);
 	}
 
-	void DrinkBoose ()
+	void DrinkBooze ()
 	{
 		// TODO Do something
-		Debug.Log("Drink Boose");
+		Debug.Log("Drink Booze");
 	}
 
 	void DisplayText (Card card)

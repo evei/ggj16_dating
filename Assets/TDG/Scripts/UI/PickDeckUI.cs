@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class PickDeckUI : MonoBehaviour 
 {
+	public Text phaseText;
 	public Button backButton;
 	public Button readyButton;
 

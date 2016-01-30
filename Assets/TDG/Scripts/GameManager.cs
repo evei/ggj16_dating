@@ -9,6 +9,7 @@ public class GameManager
 
 	public List<CardText> allTexts;
 
+	public int maxPhasesNumber = 3;
 	public int maxBoozeLevel = 5;
 	public int maxCardsPerPhase = 5;
 
