@@ -58,7 +58,6 @@ public class PickDeckUI : MonoBehaviour
 	void HandlePlayerDeckCardClicked (Card card, Transform contentPanel)
 	{
 		GameManager.Player.cards.Remove(card);
-		var cardUI = CreateCard(card, contentPanel);
 
 		if (GameManager.Player.cards.Count < GameManager.maxCardsPerPhase) {
 			mainDeckCanvasGroup.alpha = 1f;
