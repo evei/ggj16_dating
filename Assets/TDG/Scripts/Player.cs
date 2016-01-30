@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Scripts
+public class Player
 {
-	public class Player
-	{
-		
-	}
-}
+	public int currentBoozeLevel;
 
+	public List<Card> cards;
+}

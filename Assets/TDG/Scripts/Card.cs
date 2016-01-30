@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using UnityEditor.VersionControl;
-
 public enum CardCategory
 {
 	Talk = 1,
@@ -39,21 +35,32 @@ public class Card
 {
 
 	public int id;
-	public int category;
+	public CardCategory category;
 	public int subCategory;
+	public int phase;
 	public int boozeLevel;
 
-	public Card (int id, int category, int subCategory, int boozeLevel)
+	public Card (int id, CardCategory category, int subCategory, int phase = -1, int boozeLevel = -1)
 	{
 		this.id = id;
 		this.category = category;
 		this.subCategory = subCategory;
+		this.phase = phase;
 		this.boozeLevel = boozeLevel;
 	}
 
-	public Text FetchText (int category, int subCategory)
-	{
-		return null;
+	public string SubCategoryName {
+		get {
+			switch (category) {
+				case CardCategory.Talk:
+					return ((TalkCategory)subCategory).ToString();				
+				case CardCategory.Emotion:
+					return ((EmotionCategory)subCategory).ToString();
+				case CardCategory.Action:
+					return ((ActionCategory)subCategory).ToString();
+			}
+			return null;
+		}
 	}
 }
 
