@@ -15,6 +15,10 @@ public class CardUI : MonoBehaviour
 	public Sprite emotionSprite;
 	public Sprite actionSprite;
 
+	public Sprite talkIcon;
+	public Sprite emotionIcon;
+	public Sprite actionIcon;
+
 	public Card Card { get; private set;}
 
 	public void Init (Card card)
@@ -27,12 +31,15 @@ public class CardUI : MonoBehaviour
 		switch (card.category) {
 		case CardCategory.Talk:
 			cardBackground.overrideSprite = talkSprite;
+			icon.overrideSprite = talkIcon;
 			break;
 		case CardCategory.Emotion:
 			cardBackground.overrideSprite = emotionSprite;
+			icon.overrideSprite = emotionIcon;
 			break;
 		case CardCategory.Action:
 			cardBackground.overrideSprite = actionSprite;
+			icon.overrideSprite = actionIcon;
 			break;
 		}
 	}
