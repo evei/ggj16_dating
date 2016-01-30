@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class DatingTableUI : MonoBehaviour 
 {
@@ -60,7 +61,7 @@ public class DatingTableUI : MonoBehaviour
 		if (GameManager.Player.cards.Count <= 0) {
 			// TODO Do something
 			Debug.Log("Played Last card");
-			ratingPanel.Show(); // TODO Move his line to the callback when both player finished playing their cards.
+			ratingPanel.Show(); // TODO Move his line to the callback when both player finished playing their cards and the Bubbles are gone.
 		} 
 	}
 
@@ -73,8 +74,20 @@ public class DatingTableUI : MonoBehaviour
 
 	void DrinkBooze ()
 	{
-		// TODO Do something
+		StartCoroutine(DrinkBoozeRoutine());
+	}
+
+	IEnumerator DrinkBoozeRoutine ()
+	{
 		Debug.Log("Drink Booze");
+		GameManager.Player.boozeLevel++;
+
+		// TODO Play Drink booze animation
+		yield return null;
+
+		if (GameManager.Player.boozeLevel >= GameManager.maxBoozeLevel) {
+			// TODO Pass out
+		}
 	}
 
 	void DisplayText (Card card)
