@@ -128,12 +128,14 @@ public class GameManager
 		return new CardText(-1, card.category, card.subCategory, null, null);
 	}
 
-	#region Player
-
 	void CreatePlayer (Player.Gender gender)
 	{
 		Player = new Player(gender);
 	}
 
-	#endregion
+	public string GetPhaseName ()
+	{
+		// TODO Implement
+		return "Impress her";
+	}
 }
