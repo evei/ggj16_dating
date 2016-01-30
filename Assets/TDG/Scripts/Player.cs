@@ -11,6 +11,7 @@ public class Player
 	public int boozeLevel;
 	public Gender gender;
 	public List<Card> cards;
+	public int heartsWon;
 
 	public Player (Gender gender)
 	{

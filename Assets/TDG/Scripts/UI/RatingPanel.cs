@@ -27,7 +27,7 @@ public class RatingPanel : MonoBehaviour
 
 	void HandleGoodButton ()
 	{
-		// TODO Add score
+		// TODO Send heart to your date. (increase other player Player.heartsWon)
 		ContinueGame();
 	}
 
