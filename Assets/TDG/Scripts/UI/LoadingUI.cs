@@ -5,7 +5,7 @@ public class LoadingUI : MonoBehaviour
 {
 	void Start ()
 	{
-		Invoke("LoadDatingTable", 5f);
+		Invoke("LoadDatingTable", 2f);
 	}
 
 	void LoadDatingTable ()

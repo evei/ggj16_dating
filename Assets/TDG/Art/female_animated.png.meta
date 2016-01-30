@@ -1,9 +1,76 @@
 fileFormatVersion: 2
 guid: 18da645e253f49648995d60a19e95f03
-timeCreated: 1454177100
+timeCreated: 1454179313
 licenseType: Pro
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: female_animated_0
+    21300002: female_animated_1
+    21300004: female_animated_2
+    21300006: female_animated_3
+    21300008: female_animated_4
+    21300010: female_animated_5
+    21300012: female_animated_6
+    21300014: female_animated_7
+    21300016: female_animated_8
+    21300018: female_animated_9
+    21300020: female_animated_10
+    21300022: female_animated_11
+    21300024: female_animated_12
+    21300026: female_animated_13
+    21300028: female_animated_14
+    21300030: female_animated_15
+    21300032: female_animated_16
+    21300034: female_animated_17
+    21300036: female_animated_18
+    21300038: female_animated_19
+    21300040: female_animated_20
+    21300042: female_animated_21
+    21300044: female_animated_22
+    21300046: female_animated_23
+    21300048: female_animated_24
+    21300050: female_animated_25
+    21300052: female_animated_26
+    21300054: female_animated_27
+    21300056: female_animated_28
+    21300058: female_animated_29
+    21300060: female_animated_30
+    21300062: female_animated_31
+    21300064: female_animated_32
+    21300066: female_animated_33
+    21300068: female_animated_34
+    21300070: female_animated_35
+    21300072: female_animated_36
+    21300074: female_animated_37
+    21300076: female_animated_38
+    21300078: female_animated_39
+    21300080: female_animated_40
+    21300082: female_animated_41
+    21300084: female_animated_42
+    21300086: female_animated_43
+    21300088: female_animated_44
+    21300090: female_animated_45
+    21300092: female_animated_46
+    21300094: female_animated_47
+    21300096: female_animated_48
+    21300098: female_animated_49
+    21300100: female_animated_50
+    21300102: female_animated_51
+    21300104: female_animated_52
+    21300106: female_animated_53
+    21300108: female_animated_54
+    21300110: female_animated_55
+    21300112: female_animated_56
+    21300114: female_animated_57
+    21300116: female_animated_58
+    21300118: female_animated_59
+    21300120: female_animated_60
+    21300122: female_animated_61
+    21300124: female_animated_62
+    21300126: female_animated_63
+    21300128: female_animated_64
+    21300130: female_animated_65
+    21300132: female_animated_66
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -38,7 +105,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +116,744 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: female_animated_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 400
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 400
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_2
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 400
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_3
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 400
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_4
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 400
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_5
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 400
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_6
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 400
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_7
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 400
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 350
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_9
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 350
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_10
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 350
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_11
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 350
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_12
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 350
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_13
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 350
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_14
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 350
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_15
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 350
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 300
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_17
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 300
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_18
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 300
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_19
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 300
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_20
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 300
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_21
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 300
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_22
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 300
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_23
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 300
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 250
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_25
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 250
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_26
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 250
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_27
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 250
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_28
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 250
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_29
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 250
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_30
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 250
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_31
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 250
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_32
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 200
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_33
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 200
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_34
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 200
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_35
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 200
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_36
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 200
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_37
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 200
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_38
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 200
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_39
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 200
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_40
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 150
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_41
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 150
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_42
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 150
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_43
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 150
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_44
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 150
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_45
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 150
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_46
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 150
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_47
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 150
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_48
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 100
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_49
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 100
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_50
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 100
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_51
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 100
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_52
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 100
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_53
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 100
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_54
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 100
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_55
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 100
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_56
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 50
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_57
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 50
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_58
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 50
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_59
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_60
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 50
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_61
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 50
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_62
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 50
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_63
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_64
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_65
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 0
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_66
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 0
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 
