@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 
-public class GameManager : MonoBehaviour
+public class GameManager
 {
 	public List<Card> allCards;
 
@@ -15,28 +15,47 @@ public class GameManager : MonoBehaviour
 
 	const int CARDS_FOR_PHASE = 20;
 
-	void Awake ()
+	public Player Player {
+		get;
+		private set;
+	}
+
+	static GameManager _instance;
+	public static GameManager Instance {
+		get {
+			return _instance ?? (_instance = new GameManager());
+		}	
+	}
+
+	GameManager ()
 	{
+	}
+
+	public void Init(Player.Gender gender)
+	{
+		CreatePlayer(gender);
 		allCards = GetCards();
 		allTexts = GetTexts();
 		RandomHelper.r = new System.Random(10000);
 	}
 
-	public List<Card> GetSelectableCardsForPhase(int phase, int boozeLevel)
+	public List<Card> GetSelectableCardsForPhase(int boozeLevel)
 	{
-		var cardsForPhase = GetAllCardsForPhaseAndBoozeLevel(phase, boozeLevel);
-		return TakeRandomCards(cardsForPhase, CARDS_FOR_PHASE);
+		var cardsForPhase = GetAllCardsForPhaseAndBoozeLevel(boozeLevel);
+		var selectedCards = TakeRandomCards(cardsForPhase, CARDS_FOR_PHASE);
+		Debug.Log(string.Join("|", selectedCards.Select(c => c.ToString()).ToArray()));
+		return selectedCards;
 	}
 
-	public List<Card> GetAllCardsForPhaseAndBoozeLevel(int phase, int boozeLevel) 
+	public List<Card> GetAllCardsForPhaseAndBoozeLevel(int boozeLevel) 
 	{
 		//TODO predefined sets?/
-		return allCards.Where(c => c.phase == phase && c.boozeLevel >= boozeLevel).ToList();
+		return allCards.Where(c => (c.phase == -1 || c.phase == phase) && c.boozeLevel >= boozeLevel).ToList();
 	}
 
 	public void PlayerDrinks(Player player)
 	{
-		var cards = GetAllCardsForPhaseAndBoozeLevel(phase, player.boozeLevel).Except(player.cards).ToList();
+		var cards = GetAllCardsForPhaseAndBoozeLevel(player.boozeLevel).Except(player.cards).ToList();
 		var unusedCards = player.cards.Where(c => !c.used).ToList();
 		var newCards = TakeRandomCards(cards, Math.Min(player.boozeLevel, unusedCards.Count));
 
@@ -106,4 +125,13 @@ public class GameManager : MonoBehaviour
 		Debug.LogWarningFormat("No text found for card {0}.{1}", card.category, card.SubCategoryName);
 		return new CardText(-1, CardCategory.None, -1, string.Empty);
 	}
+
+	#region Player
+
+	void CreatePlayer (Player.Gender gender)
+	{
+		Player = new Player(gender);
+	}
+
+	#endregion
 }

@@ -69,6 +69,12 @@ public class Card
 			return null;
 		}
 	}
+
+	public override string ToString ()
+	{
+		return string.Format("[Card: category={0}, subCategory={1}]", category, SubCategoryName);
+	}
+	
 }
 
 public class CardText

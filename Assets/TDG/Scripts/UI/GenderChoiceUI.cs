@@ -17,16 +17,23 @@ public class GenderChoiceUI : MonoBehaviour
 
 	void HandleMaleButton ()
 	{
+		CreateNewPlayer(Player.Gender.Male);
 		SceneManager.LoadScene(MainGameController.SCENE_PICKDECK);
 	}
 
 	void HandleFemaleButton ()
 	{
+		CreateNewPlayer(Player.Gender.Female);
 		SceneManager.LoadScene(MainGameController.SCENE_PICKDECK);
 	}
 
 	void HandleBackButton ()
 	{
 		SceneManager.LoadScene(MainGameController.SCENE_LOBBY);
+	}
+
+	void CreateNewPlayer(Player.Gender gender)
+	{
+		GameManager.Instance.Init(gender);
 	}
 }
