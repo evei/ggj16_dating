@@ -116,7 +116,7 @@ public class GameManager
 		return result;
 	}
 
-	public CardText GetTextForCard(Card card)
+	public CardText GetTextForCard(Card card, Player player)
 	{
 		var possibleTexts = allTexts.Where(t => t.category == card.category && t.subCategory == card.subCategory).ToList();
 		if (possibleTexts.Count > 0) {
