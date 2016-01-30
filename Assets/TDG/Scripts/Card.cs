@@ -1,3 +1,5 @@
+using JetBrains.Annotations;
+
 public enum CardCategory
 {
 	None = -1,
@@ -12,18 +14,18 @@ public enum TalkCategory
 	ShowOff = 2,
 	Smalltalk = 3,
 	Funny = 4,
-	NerdOut = 5
+	NerdOut = 5,
+	ExRelationship = 6
 }
 
 public enum ActionCategory 
 {
-	TouchHand = 1,
-	TouchHair = 2,
-	Kiss = 3,
-	Blink = 4,
-	Fart = 5,
-	PickYourNose = 6,
-	NatureCalls = 7
+	Touch = 1,
+	Kiss = 2,
+	Blink = 3,
+	Fart = 4,
+	PickYourNose = 5,
+	NatureCalls = 6
 }
 
 public enum EmotionCategory 
@@ -32,7 +34,8 @@ public enum EmotionCategory
 	Cry = 2,
 	Blush = 3,
 	Drool = 4,
-	Yawn = 5
+	Yawn = 5,
+	Panic = 6
 }
 
 public class Card
@@ -42,6 +45,7 @@ public class Card
 	public int subCategory;
 	public int phase;
 	public int boozeLevel;
+	public bool used;
 
 	public Card (int id, CardCategory category, int subCategory, int phase = -1, int boozeLevel = -1)
 	{

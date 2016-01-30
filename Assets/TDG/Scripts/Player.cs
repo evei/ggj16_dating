@@ -2,7 +2,7 @@
 
 public class Player
 {
-	public int currentBoozeLevel;
+	public int boozeLevel;
 
 	public List<Card> cards;
 }
