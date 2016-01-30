@@ -100,7 +100,7 @@ public class GameManager
 	{
 		var subcategories = System.Enum.GetValues(enumType);
 		int subCategory = (int)subcategories.GetValue(RandomHelper.Next(subcategories.Length));
-		return new Card(i, cardCategory, subCategory, -1, RandomHelper.Next(maxBoozeLevel + 1));
+		return new Card(i, cardCategory, subCategory, RandomHelper.TrueFalse(), -1, RandomHelper.Next(maxBoozeLevel + 1));
 	}
 
 	public List<Card> TakeRandomCards (List<Card> cards, int amount)
@@ -124,7 +124,7 @@ public class GameManager
 		}
 
 		Debug.LogWarningFormat("No text found for card {0}.{1}", card.category, card.SubCategoryName);
-		return new CardText(-1, CardCategory.None, -1, string.Empty);
+		return new CardText(-1, card.category, card.subCategory, null, null);
 	}
 
 	#region Player

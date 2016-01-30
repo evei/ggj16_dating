@@ -18,4 +18,9 @@ public static class RandomHelper
 	{
 		return r.Next(includedMinValue, excludedMaxValue);
 	}	
+
+	public static bool TrueFalse ()
+	{
+		return r.Next(2) == 0;
+	}
 }

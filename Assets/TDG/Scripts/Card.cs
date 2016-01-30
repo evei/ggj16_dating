@@ -56,29 +56,32 @@ public class Card
 	public int subCategory;
 	public int phase;
 	public int boozeLevel;
+	public bool positive;
 	public bool used;
 
-	public Card (int id, CardCategory category, int subCategory, int phase = -1, int boozeLevel = -1)
+	public Card (int id, CardCategory category, int subCategory, bool positive = true, int phase = -1, int boozeLevel = -1)
 	{
 		this.id = id;
 		this.category = category;
 		this.subCategory = subCategory;
+		this.positive = true;
 		this.phase = phase;
 		this.boozeLevel = boozeLevel;
 	}
 
-	public string SubCategoryName {
-		get {
-			switch (category) {
-				case CardCategory.Talk:
-					return ((TalkCategory)subCategory).ToString();				
-				case CardCategory.Emotion:
-					return ((EmotionCategory)subCategory).ToString();
-				case CardCategory.Action:
-					return ((ActionCategory)subCategory).ToString();
-			}
-			return null;
+	public string SubCategoryName { get { return GetSubCategoryName(category, subCategory); } }
+
+	public static string GetSubCategoryName(CardCategory category, int subCategory)
+	{
+		switch (category) {
+			case CardCategory.Talk:
+				return ((TalkCategory)subCategory).ToString();				
+			case CardCategory.Emotion:
+				return ((EmotionCategory)subCategory).ToString();
+			case CardCategory.Action:
+				return ((ActionCategory)subCategory).ToString();
 		}
+		return null;
 	}
 
 	public override string ToString ()
@@ -93,13 +96,25 @@ public class CardText
 	public int id;
 	public CardCategory category;
 	public int subCategory;
-	public string text;
+	string good;
+	public string Good {
+		get {
+			return good ?? string.Format("{0}.{1} <GOOD>", category, Card.GetSubCategoryName(category, subCategory));
+		}
+	}
+	string bad;
+	public string Bad {
+		get {
+			return bad ?? string.Format("{0}.{1} <BAD>", category, Card.GetSubCategoryName(category, subCategory));
+		}
+	}
 
-	public CardText (int id, CardCategory category, int subCategory, string text)
+	public CardText (int id, CardCategory category, int subCategory, string good, string bad)
 	{
 		this.id = id;
 		this.category = category;
 		this.subCategory = subCategory;
-		this.text = text;
+		this.good = good;
+		this.bad = bad;
 	}	
 }
