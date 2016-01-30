@@ -8,7 +8,10 @@ public class PickDeckUI : MonoBehaviour
 	public Button readyButton;
 
 	public Transform mainDeckContentPanel;
+	public CanvasGroup mainDeckCanvasGroup;
+
 	public Transform playerDeckContentPanel;
+
 	public GameObject cardPrefab;
 
 	GameManager GameManager { get { return GameManager.Instance; } }
@@ -31,13 +34,34 @@ public class PickDeckUI : MonoBehaviour
 
 		foreach (var card in phaseCards) {
 			var cardUI = CreateCard(card, mainDeckContentPanel);
-			cardUI.cardButton.onClick.AddListener(() => HandleCardClicked(card, playerDeckContentPanel));
+			var cardToCreate = card;
+			cardUI.cardButton.onClick.AddListener(() => HandleMainDeckCardClicked(cardToCreate, playerDeckContentPanel));
+			cardUI.cardButton.onClick.AddListener(() => Destroy(cardUI.gameObject));
 		}
 	}
 
-	void HandleCardClicked (Card card, Transform contentPanel)
+	void HandleMainDeckCardClicked (Card card, Transform contentPanel)
 	{
-		CreateCard(card, contentPanel);
+		GameManager.Player.cards.Add(card);
+		var cardUI = CreateCard(card, contentPanel);
+		cardUI.cardButton.onClick.AddListener(() => HandlePlayerDeckCardClicked(card, mainDeckContentPanel));
+		cardUI.cardButton.onClick.AddListener(() => Destroy(cardUI.gameObject));
+
+		if (GameManager.Player.cards.Count >= GameManager.maxCardsPerPhase) {
+			mainDeckCanvasGroup.alpha = .5f;
+			mainDeckCanvasGroup.interactable = false;
+		}
+	}
+
+	void HandlePlayerDeckCardClicked (Card card, Transform contentPanel)
+	{
+		GameManager.Player.cards.Remove(card);
+		var cardUI = CreateCard(card, contentPanel);
+
+		if (GameManager.Player.cards.Count < GameManager.maxCardsPerPhase) {
+			mainDeckCanvasGroup.alpha = 1f;
+			mainDeckCanvasGroup.interactable = true;
+		}
 	}
 
 	CardUI CreateCard (Card card, Transform contentPanel)

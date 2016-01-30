@@ -15,5 +15,6 @@ public class Player
 	public Player (Gender gender)
 	{
 		this.gender = gender;
+		cards = new List<Card>();
 	}
 }

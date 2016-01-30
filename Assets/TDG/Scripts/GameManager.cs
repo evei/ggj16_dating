@@ -10,6 +10,7 @@ public class GameManager
 	public List<CardText> allTexts;
 
 	public int maxBoozeLevel = 5;
+	public int maxCardsPerPhase = 5;
 
 	public int phase;
 
