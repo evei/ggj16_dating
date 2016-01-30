@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using Wooga.Coroutines;
+using System.Collections;
 
 public class GameManager
 {
@@ -12,7 +14,14 @@ public class GameManager
 	public int maxBoozeLevel = 5;
 	public int maxCardsPerPhase = 5;
 
-	public int phase;
+	int phase;
+	public bool FirstPhase {
+		get {
+			return phase == 0;
+		}
+	}
+
+	public bool localPlayerFirst;
 
 	const int CARDS_FOR_PHASE = 20;
 
@@ -30,14 +39,17 @@ public class GameManager
 
 	GameManager ()
 	{
+//		RandomHelper.r = new System.Random(10000);
+
 	}
 
 	public void Init(Player.Gender gender)
 	{
+		phase = 0;
+		userId = null;
 		CreatePlayer(gender);
 		allCards = GetCards();
 		allTexts = GetTexts();
-		RandomHelper.r = new System.Random(10000);
 	}
 
 	public List<Card> GetSelectableCardsForPhase(int boozeLevel)
@@ -134,5 +146,136 @@ public class GameManager
 		Player = new Player(gender);
 	}
 
+	#endregion
+
+	#region webservice
+	Wooroutine<WebSocket> _webSocketWoo;
+	Wooroutine<WebSocket> WebSocketWoo {
+		get {
+			while (_webSocketWoo == null || _webSocketWoo.HasError || (_webSocketWoo.Completed && !_webSocketWoo.ReturnValue.error.IsNullOrEmpty())) {
+				_webSocketWoo = WooroutineRunner.StartRoutine<WebSocket>(WebsocketRoutine());
+			}
+			return _webSocketWoo;
+		}
+	}
+		
+	IEnumerator WebsocketRoutine ()
+	{
+		WebSocket w = new WebSocket(new Uri("ws://dating-room-ggj2016.herokuapp.com/websocket"));
+		yield return WooroutineRunner.StartRoutine(w.Connect());
+		w.SendString(GetJoinMessage());
+
+		yield return w;
+	}
+
+	string userId;
+	string room;
+	List<WebserviceMessage> receivedMessages = new List<WebserviceMessage>();
+
+	void ResetWebservice()
+	{
+		userId = null;
+		room = null;
+		receivedMessages.Clear();
+		if (_webSocketWoo != null && _webSocketWoo.Completed) {
+			_webSocketWoo.ReturnValue.Close();			
+		}
+	}
+
+		
+	IEnumerator ListenToWebsocketRoutine (WebSocket w)
+	{
+		while (w.error == null) {
+			var json = w.RecvString();
+			if (json != null) {
+				var message = JsonUtility.FromJson<WebserviceMessage>(json);
+				if (receivedMessages.All(m => m.id != message.id)) {
+					receivedMessages.Add(message);
+				}
+			}
+			yield return null;
+		}
+	}
+
+	public void PlayCard (Card card, CardText cardText)
+	{
+		Send(new PlayCardPayload(card.id, cardText.id, card.positive));
+	}
+
+	public Wooroutine<WebserviceMessage> PlayCard (Card card, CardText cardText)
+	{
+		yield return Send(new PlayCardPayload(card.id, cardText.id, card.positive));
+
+		//own message
+		yield return WooroutineRunner.StartRoutine<WebserviceMessage>(WaitForMessageRoutine()).Await();
+
+		var nextMessage = WooroutineRunner.StartRoutine<WebserviceMessage>(WaitForMessageRoutine());
+		yield return nextMessage;
+	}
+
+	public void Drink(int boozeLevel)
+	{
+		Send(new DrinkBoozePayload(boozeLevel));
+	}
+
+	public Coroutine StartDate()
+	{
+		return WooroutineRunner.StartRoutine(StartDateRoutine());
+	}
+
+	IEnumerator StartDateRoutine ()
+	{
+		while (true) {
+			var message = WooroutineRunner.StartRoutine<WebserviceMessage>(WaitForMessageRoutine());
+			yield return message.Await();
+			if (message.ReturnValue != null) {
+				Debug.Log(message.ReturnValue);
+				if (message.ReturnValue.users == null || message.ReturnValue.users.Length == 0) {
+					localPlayerFirst = true;
+					message = WooroutineRunner.StartRoutine<WebserviceMessage>(WaitForMessageRoutine());
+//					yield return message.Await();
+//					if (message.ReturnValue != null) {
+//						yield break;
+//					}
+				}
+				yield break;
+			}
+		}
+	}
+
+	Coroutine Send (object payload)
+	{
+		sendRoutine = WooroutineRunner.StartRoutine(SendRoutine(JsonUtility.ToJson(new WebserviceMessage(userId, "send", room, payload))));
+		return sendRoutine;
+	}
+
+	Coroutine sendRoutine;
+	IEnumerator SendRoutine (string message)
+	{	
+		if (sendRoutine != null) {
+			var previousSendRoutine = sendRoutine;
+			yield return previousSendRoutine;
+		}
+
+		while (!WebSocketWoo.Completed) {
+			yield return WebSocketWoo.Await();			
+		}
+
+		WebSocketWoo.ReturnValue.SendString(message);
+	}
+
+	IEnumerator WaitForMessageRoutine()
+	{
+		var amount = receivedMessages.Count;
+		while (amount <= receivedMessages.Count) {
+			yield return null;
+		}
+		yield return receivedMessages[amount];
+	}
+
+	string GetJoinMessage ()
+	{
+		return "{\"type\":\"join\",\"room\":\"foo\"}"; //TODO change as soon as reconnect is available
+	}
 	#endregion
 }

@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class LoadingUI : MonoBehaviour 
 {
-	void Start ()
+	IEnumerator Start ()
 	{
-		Invoke("LoadDatingTable", 5f);
+		yield return GameManager.Instance.StartDate();
+		LoadDatingTable();
 	}
 
 	void LoadDatingTable ()
