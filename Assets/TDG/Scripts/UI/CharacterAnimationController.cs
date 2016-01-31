@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using System.Collections;
 
 public class CharacterAnimationController : MonoBehaviour 
 {
 	public Animator characterAnimator;
 	public AnimationClip fallbackClip;
+	public AnimationClip passoutClip;
+	public AnimationClip fleeClip;
 
 	public List<TalkAnimConfig> talkConfig;
 	public List<ActionAnimConfig> actionConfig;
@@ -17,20 +20,33 @@ public class CharacterAnimationController : MonoBehaviour
 		switch (card.category) {
 		case CardCategory.Talk:
 			var talkClip = talkConfig.FirstOrDefault(c => (int)c.subcategory == card.subCategory).clip;
-			characterAnimator.SetTrigger(talkClip.name);
+			StartCoroutine(PlayAnimation(talkClip.name, onAnimationFinished));
 			break;	
 		case CardCategory.Emotion:
 			var emotionClip = emotionConfig.FirstOrDefault(c => (int)c.subcategory == card.subCategory).clip;
-			characterAnimator.SetTrigger(emotionClip.name);
+			StartCoroutine(PlayAnimation(emotionClip.name, onAnimationFinished));
 			break;
 		case CardCategory.Action:
 			var actionClip = actionConfig.FirstOrDefault(c => (int)c.subcategory == card.subCategory).clip;
-			characterAnimator.SetTrigger(actionClip.name);
+			StartCoroutine(PlayAnimation(actionClip.name, onAnimationFinished));
 			break;
 		default:
-			characterAnimator.SetTrigger(fallbackClip.name);
+			StartCoroutine(PlayAnimation(fallbackClip.name, onAnimationFinished));
 			break;
 		}
+	}
+
+	IEnumerator PlayAnimation (string animationName, Action onAnimationFinished) 
+	{
+		characterAnimator.SetTrigger(animationName);
+
+		while (characterAnimator.GetCurrentAnimatorStateInfo(0).IsName(animationName))
+		{
+			Debug.Log("Playing animation " + animationName );
+			yield return null;
+		}
+
+		onAnimationFinished();
 	}
 }
 
