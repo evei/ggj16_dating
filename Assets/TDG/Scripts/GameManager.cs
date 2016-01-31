@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 using System;
@@ -11,6 +11,7 @@ public class GameManager
 
 	public List<CardText> allTexts;
 
+	public int maxPhasesNumber = 3;
 	public int maxBoozeLevel = 5;
 	public int maxCardsPerPhase = 5;
 
@@ -139,14 +140,16 @@ public class GameManager
 		return new CardText(-1, card.category, card.subCategory, null, null);
 	}
 
-	#region Player
-
 	void CreatePlayer (Player.Gender gender)
 	{
 		Player = new Player(gender);
 	}
 
-	#endregion
+	public string GetPhaseName ()
+	{
+		// TODO Implement
+		return "Impress her";
+	}
 
 	#region webservice
 	Wooroutine<WebSocket> _webSocketWoo;
