@@ -4,10 +4,18 @@ using System.Collections;
 
 public class TheDecisionUI : MonoBehaviour 
 {
+	public GameObject decisionPanel;
 	public Text decisionTimerText;
 	public Button yesButton;
 	public Button noButton;
 	public Image[] hearts;
+
+	public GameObject inLovePanel;
+	public GameObject notInLovePanel;
+	public GameObject PlayerPassesOutPanel;
+	public GameObject DatePassesOutPanel;
+	public GameObject PlayerFleesPanel;
+	public GameObject DateFleesPanel;
 
 	GameManager GameManager { get { return GameManager.Instance; } }
 
@@ -20,20 +28,48 @@ public class TheDecisionUI : MonoBehaviour
 
 	void Start ()
 	{
+		DeactivatePanels();
+
 		// Decide which type of UI to display
 		switch (GameManager.CurrentState) {
-		case GameManager.GameState.DateFlee:
+		case GameManager.GameState.DateFlees:
 			break;
 		case GameManager.GameState.DatePassesOut:
 			break;
 		case GameManager.GameState.Decision:
+			decisionPanel.SetActive(true);
 			decisionRoutine = StartCoroutine(StartDecisionTimer());
 			break;
-		case GameManager.GameState.PlayerFlee:
+		case GameManager.GameState.PlayerFlees:
 			break;
 		case GameManager.GameState.PlayerPassesOut:
 			break;
 		}
+	}
+
+	void DeactivatePanels ()
+	{
+		decisionPanel.SetActive(false);
+	}
+
+	void HandleDateFlees ()
+	{
+		// TODO
+	}
+
+	void HandleDatePassesOut ()
+	{
+		// TODO
+	}
+
+	void HandlePlayerFlees ()
+	{
+		// TODO
+	}
+
+	void HandlePlayerPassesOut ()
+	{
+		// TODO
 	}
 
 	IEnumerator StartDecisionTimer ()

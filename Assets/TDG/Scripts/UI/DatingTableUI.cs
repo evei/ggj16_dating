@@ -24,7 +24,7 @@ public class DatingTableUI : MonoBehaviour
 
 	void HandleQuitButton ()
 	{
-		GameManager.CurrentState = GameManager.GameState.PlayerFlee;
+		GameManager.CurrentState = GameManager.GameState.PlayerFlees;
 		// TODO Send event so opponent is left alone and game ends
 		// TODO Quit from server room
 		SceneManager.LoadScene(MainGameController.SCENE_LOBBY);
@@ -69,8 +69,13 @@ public class DatingTableUI : MonoBehaviour
 
 	void PlayCard (Card card)
 	{
-		Debug.Log("Play Card");
 		DisplayText(card);
+	}
+
+	void DisplayText (Card card)
+	{
+		var cardText = GameManager.GetTextForCard(card, GameManager.Player);
+		speechBuble.DisplayText(card.positive ? cardText.Good : cardText.Bad);
 	}
 
 	void DrinkBooze ()
@@ -80,7 +85,6 @@ public class DatingTableUI : MonoBehaviour
 
 	IEnumerator DrinkBoozeRoutine ()
 	{
-		Debug.Log("Drink Booze");
 		GameManager.Player.boozeLevel++;
 
 		// TODO Play Drink booze animation
@@ -93,12 +97,6 @@ public class DatingTableUI : MonoBehaviour
 		}
 	}
 
-	void DisplayText (Card card)
-	{
-		var cardText = GameManager.GetTextForCard(card, GameManager.Player);
-		speechBuble.DisplayText(card.positive ? cardText.Good : cardText.Bad);
-	}
-
 	void HandleDatePassesOut ()
 	{
 		GameManager.CurrentState = GameManager.GameState.DatePassesOut;
@@ -108,7 +106,7 @@ public class DatingTableUI : MonoBehaviour
 
 	void HandleDateFlees ()
 	{
-		GameManager.CurrentState = GameManager.GameState.DateFlee;
+		GameManager.CurrentState = GameManager.GameState.DateFlees;
 		// TODO Show Date empty chair
 		SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 	}

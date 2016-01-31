@@ -10,8 +10,8 @@ public class GameManager
 		Dating = 0,
 		PlayerPassesOut = 1,
 		DatePassesOut = 2,
-		DateFlee = 3,
-		PlayerFlee = 4,
+		DateFlees = 3,
+		PlayerFlees = 4,
 		Decision = 5
 	}
 
