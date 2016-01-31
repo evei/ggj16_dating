@@ -12,10 +12,10 @@ public class TheDecisionUI : MonoBehaviour
 
 	public GameObject inLovePanel;
 	public GameObject notInLovePanel;
-	public GameObject PlayerPassesOutPanel;
-	public GameObject DatePassesOutPanel;
-	public GameObject PlayerFleesPanel;
-	public GameObject DateFleesPanel;
+	public GameObject playerPassesOutPanel;
+	public GameObject datePassesOutPanel;
+	public GameObject playerFleesPanel;
+	public GameObject dateFleesPanel;
 
 	GameManager GameManager { get { return GameManager.Instance; } }
 
