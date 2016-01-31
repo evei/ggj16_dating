@@ -150,6 +150,8 @@ public class GameManager
 
 	public string GetPhaseName ()
 	{
+		// TODO Get the second and third phase names.
+
 		switch (phase) {
 		case 0:
 			return "Impress her";

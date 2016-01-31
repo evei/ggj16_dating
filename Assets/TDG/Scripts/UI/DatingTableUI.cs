@@ -8,26 +8,22 @@ public class DatingTableUI : MonoBehaviour
 	public Button quitButton;
 	public Button booseButton;
 
+	public CanvasGroup playDeckCanvasGroup;
 	public Transform playerDeckContentPanel;
 	public GameObject cardPrefab;
 
 	public SpeechBubble speechBuble;
+	public SpeechBubble dateSpeechBuble;
 	public RatingPanel ratingPanel;
 
 	GameManager GameManager { get { return GameManager.Instance; } }
 
 	void Awake ()
 	{
-		quitButton.onClick.AddListener(HandleQuitButton);
+		quitButton.onClick.AddListener(HandleFleeButton);
 		booseButton.onClick.AddListener(DrinkBooze);
-	}
-
-	void HandleQuitButton ()
-	{
-		GameManager.CurrentState = GameManager.GameState.PlayerFlees;
-		// TODO Send event so opponent is left alone and game ends
-		// TODO Quit from server room
-		SceneManager.LoadScene(MainGameController.SCENE_LOBBY);
+		speechBuble.bubbleClosed += UnlockPlayerCards;
+		dateSpeechBuble.bubbleClosed += UnlockPlayerCards;
 	}
 
 	void Start ()
@@ -55,6 +51,8 @@ public class DatingTableUI : MonoBehaviour
 		return cardUI;
 	}
 
+	#region Gameplay
+
 	void HandlePlayerDeckCardClicked (Card card)
 	{
 		PlayCard(card);
@@ -69,14 +67,40 @@ public class DatingTableUI : MonoBehaviour
 
 	void PlayCard (Card card)
 	{
-		DisplayText(card);
+		LockPlayerCards();
+		DisplayText(card, speechBuble);
 	}
 
-	void DisplayText (Card card)
+	void DisplayText (Card card, SpeechBubble bubble)
 	{
 		var cardText = GameManager.GetTextForCard(card, GameManager.Player);
-		speechBuble.DisplayText(card.positive ? cardText.Good : cardText.Bad);
+		bubble.DisplayText(card.positive ? cardText.Good : cardText.Bad);
 	}
+
+	void UnlockPlayerCards ()
+	{
+		playDeckCanvasGroup.alpha = 1;
+		playDeckCanvasGroup.interactable = true;
+	}
+
+	void LockPlayerCards ()
+	{
+		playDeckCanvasGroup.alpha = .5f;
+		playDeckCanvasGroup.interactable = false;
+	}
+
+	IEnumerator WaitForPlayerResponse ()
+	{
+		LockPlayerCards();
+		// TODO Wait until player plays card
+		yield return null;
+
+		DisplayText(null, dateSpeechBuble); // TODO Pass the card
+	}
+
+	#endregion
+
+	#region Booze
 
 	void DrinkBooze ()
 	{
@@ -102,6 +126,16 @@ public class DatingTableUI : MonoBehaviour
 		GameManager.CurrentState = GameManager.GameState.DatePassesOut;
 		// TODO Show Date passses out animation
 		SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
+	}
+
+	#endregion
+
+	void HandleFleeButton ()
+	{
+		GameManager.CurrentState = GameManager.GameState.PlayerFlees;
+		// TODO Send event so opponent is left alone and game ends
+		// TODO Quit from server room
+		SceneManager.LoadScene(MainGameController.SCENE_LOBBY);
 	}
 
 	void HandleDateFlees ()
