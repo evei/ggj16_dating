@@ -73,6 +73,16 @@ public class CharacterAnimationController : MonoBehaviour
 
 		onAnimationFinished();
 	}
+
+	public void PlayFleeAnimation (Action onAnimationFinished)
+	{
+		StartCoroutine(PlayAnimation(fleeClip.name, onAnimationFinished));
+	}
+
+	public void PlayPassoutAnimation (Action onAnimationFinished)
+	{
+		StartCoroutine(PlayAnimation(passoutClip.name, onAnimationFinished));
+	}
 }
 
 [System.Serializable]
