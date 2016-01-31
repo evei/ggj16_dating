@@ -313,6 +313,9 @@ public class GameManager
 			case PayloadType.Flee:
 				OnDateFlees();
 				break;
+			case PayloadType.RatePhase:
+				OnDateRatesPhase(JsonUtility.FromJson<WebsocketMessage<RatePhasePayload>>(json).payload);
+				break;
 			default:
 				Debug.LogError("No Handle for payload type " + payloadType);
 				break;
