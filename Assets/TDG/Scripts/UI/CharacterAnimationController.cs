@@ -44,7 +44,7 @@ public class CharacterAnimationController : MonoBehaviour
 			break;
 
 		case CardCategory.Action:
-			var aConfig = emotionConfig.FirstOrDefault(c => (int)c.subcategory == card.subCategory);
+			var aConfig = actionConfig.FirstOrDefault(c => (int)c.subcategory == card.subCategory);
 			if (aConfig != null) {
 				var actionClip = aConfig.clip;
 				StartCoroutine(PlayAnimation(actionClip.name, onAnimationFinished));
