@@ -97,16 +97,18 @@ public class PlayCardPayload : Payload
 	public int card;
 	public int text;
 	public bool positive;
+	public int index;
 
 	public PlayCardPayload () : base(PayloadType.PlayCard)
 	{
 	}
 	
-	public PlayCardPayload (int card, int text, bool positive) : this()
+	public PlayCardPayload (int card, int text, bool positive, int index) : this()
 	{
 		this.card = card;
 		this.text = text;
 		this.positive = positive;
+		this.index = index;
 	}		
 }
 

@@ -352,9 +352,9 @@ public class GameManager
 		}
 	}
 
-	public void SendPlayCard (Card card, CardText cardText)
+	public void SendPlayCard (Card card, CardText cardText, int textsIndex)
 	{
-		Send(new PlayCardPayload(card.id, cardText.id, card.positive));
+		Send(new PlayCardPayload(card.id, cardText.id, card.positive, textsIndex));
 	}
 
 	void SendDrink(int boozeLevel)

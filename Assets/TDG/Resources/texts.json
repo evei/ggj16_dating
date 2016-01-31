@@ -5,291 +5,291 @@
             "category": 1,
             "subCategory": 1,
             "good": ["I am so glad we met.",
-			"You look so beautiful. I realy adore pixel faces."]
+            "You look so beautiful. I realy adore pixel faces."],
             "bad": ["I normally go for 9s or 10s, but if they're like you, independent and educated I'd date a 7.",
-			"If you were forced into prostitution, I would definitely pay for your services.",
-			"You'd be so pretty if you were thin.",
-			"You would make a pretty corpse."]
+            "If you were forced into prostitution, I would definitely pay for your services.",
+            "You'd be so pretty if you were thin.",
+            "You would make a pretty corpse."]
         },
         {
             "id": 2,
             "category": 1,
             "subCategory": 2,
             "good": ["I rescued a baby cat once from a burning building.",
-			"I spent every weekend helping the homeless shelter.",
-			"This reminds me of my time in Alaska, it was so beautiful. Have you ever been there?"]
+            "I spent every weekend helping the homeless shelter.",
+            "This reminds me of my time in Alaska, it was so beautiful. Have you ever been there?"],
             "bad": ["I ate like, I dunno... six hard boiled eggs and hade like the monster poop!",
-			"I can dislocate my sholder. Look... just a little twist here and ... AARRG. See?",
-			"I got this scare while I was running away from the Ambulance and fell into a manhole.",
-			"Sometimes I yell at old people so they hand me their wallet. That's such a fun!"]
+            "I can dislocate my sholder. Look... just a little twist here and ... AARRG. See?",
+            "I got this scare while I was running away from the Ambulance and fell into a manhole.",
+            "Sometimes I yell at old people so they hand me their wallet. That's such a fun!"]
         },
         {
             "id": 3,
             "category": 1,
             "subCategory": 3,
             "good": ["So, what are you doing?",
-			"How do you like this place? They serve a awesome caesars salad."]
+            "How do you like this place? They serve a awesome caesars salad."],
             "bad": ["How is your financial situation?",
-			"I so love Donald Trump, he is hooooooot! I would have sex with him.",
-			"I hope religion is important for you. When the end comes, you will regret if you are not."]
+            "I so love Donald Trump, he is hooooooot! I would have sex with him.",
+            "I hope religion is important for you. When the end comes, you will regret if you are not."]
         },
         {
             "id": 4,
             "category": 1,
             "subCategory": 4,
             "good": ["Hey, what's the largest organ in a human body? No, it's the skin.",
-			"Wow, your t-shirt is even more ironic than mine!",
-			"Why did the belt get locked up? He held up a pair of pants."]
-            "bad": ["Pull my finger!".
-			"If I said you had a beautiful body, would you hold it against me?",
-			"Did it hurt when you fell down from Heaven?",
-			"Is there an airport nearby, or is that my heart taking off?"]
-		
+            "Wow, your t-shirt is even more ironic than mine!",
+            "Why did the belt get locked up? He held up a pair of pants."],
+            "bad": ["Pull my finger!",
+            "If I said you had a beautiful body, would you hold it against me?",
+            "Did it hurt when you fell down from Heaven?",
+            "Is there an airport nearby, or is that my heart taking off?"]
+        
         },
         {
             "id": 5,
             "category": 1,
             "subCategory": 5,
             "good": ["I admire captain picard",
-			"I take part in a lot of game jams",
-			"I make computergames for a living."]
+            "I take part in a lot of game jams",
+            "I make computergames for a living."],
             "bad": ["I still live with my mother. But thats ok because if I bring a date she can sleep on the sofa.",
-			"I am allergic to my own tears. When I cry I swell up like a balloon.",
-			"I have a game of Dungeons and Dragons in like... 20 minutes. You can't join, sorry."]
+            "I am allergic to my own tears. When I cry I swell up like a balloon.",
+            "I have a game of Dungeons and Dragons in like... 20 minutes. You can't join, sorry."]
         },
         {
             "id": 6,
             "category": 1,
             "subCategory": 6,
             "good": ["My last relationship ended when we found out that we had different goals for the future.",
-			"In my last relationship I discoverd how important it is to give your partner some free space too.",
-			"My ex? Well at one point we figured out that we are pretty much only friends and so we broke up. It was the right thing to do."]
+            "In my last relationship I discoverd how important it is to give your partner some free space too.",
+            "My ex? Well at one point we figured out that we are pretty much only friends and so we broke up. It was the right thing to do."],
             "bad": ["Here is a picture of my ex. I still have some nudes that I put on the internet. LOL",
-			"You look just like my ex... this is crazy!",
-			"My ex still lives in my flat, we could hang out together if you want to?"]
+            "You look just like my ex... this is crazy!",
+            "My ex still lives in my flat, we could hang out together if you want to?"]
         },
         {
             "id": 7,
             "category": 1,
             "subCategory": 7,
             "good": ["I think work should be only one part of your life. Do what makes you happy and explore the awesomeness of the world arround you.",
-			"I made 4 mio with an app I designed last year so I now try to give something back to society.",
-			"I run my own company and doing pretty well. But I know where I come from so I stay grounded."
+            "I made 4 mio with an app I designed last year so I now try to give something back to society.",
+            "I run my own company and doing pretty well. But I know where I come from so I stay grounded."],
             "bad": ["I collect roadkill for a living",
-			"My mum gives me pocket money if I ask her.",
-			"Work? Nah, I'm not doing this. I think society can take good care of me. Don't se no reason to change my views there."]
+            "My mum gives me pocket money if I ask her.",
+            "Work? Nah, I'm not doing this. I think society can take good care of me. Don't se no reason to change my views there."]
         },
         {
             "id": 8,
             "category": 1,
             "subCategory": 8,
             "good": ["I visit my parents from time to time. Right now they are on a journey round the world. They are such a sweet couple.",
-			"My dad used to teach me everything I needed to know. One day I want to teach my own children all the important lessons too.",
-			"I'm lucky because I had a very protected and safe childhood. I will allways be greatful for all the love and patience they had for me."]
+            "My dad used to teach me everything I needed to know. One day I want to teach my own children all the important lessons too.",
+            "I'm lucky because I had a very protected and safe childhood. I will allways be greatful for all the love and patience they had for me."],
             "bad": ["I had to kill and eat them when we were locked in a bunker once. Don't want to talk about it now.",
-			"People say that brestfeeding is wrong. I think it's the best. Mom still feeds me whenever I visit her.",
-			"My Parents? Sure, they are at the table behin you, see? HEY DAD! LOOK! I'M DATING!"
+            "People say that brestfeeding is wrong. I think it's the best. Mom still feeds me whenever I visit her.",
+            "My Parents? Sure, they are at the table behin you, see? HEY DAD! LOOK! I'M DATING!"]
         },
         {
             "id": 9,
             "category": 1,
             "subCategory": 9,
             "good": ["Mmmh, that's pretty good food. I'm glad you picked this place.",
-			"You like korean food too? I love korean food! There is this awesome restaurant in this little street, you should check that out."
-			"I grew up on a farm, you know. At one point I stopped eating meat. But I'm not enforcing others to do so aswell. That would be silly."]
+            "You like korean food too? I love korean food! There is this awesome restaurant in this little street, you should check that out.",
+            "I grew up on a farm, you know. At one point I stopped eating meat. But I'm not enforcing others to do so aswell. That would be silly."],
             "bad": ["OMNOMNOMNOM... Are you eating this? Can I have it?",
-			"Did you know that eating human flesh is ok in several states of the US?",
-			"This food here is ok. But isn't there a McDonalds arround here?"
-			"Foooood, foody foody foood... yumm yumm yumm.... put it in my mouth and chew it... chewy chewy chewy...",
-			"Animals have no soul. They are food."]
-		
+            "Did you know that eating human flesh is ok in several states of the US?",
+            "This food here is ok. But isn't there a McDonalds arround here?",
+            "Foooood, foody foody foood... yumm yumm yumm.... put it in my mouth and chew it... chewy chewy chewy...",
+            "Animals have no soul. They are food."]
+        
         },
         {
             "id": 10,
             "category": 1,
             "subCategory": 10,
             "good": ["When I young, I once found a half dead bird. I but it in a box and saved it. A few days later I set it free.",
-			"Please don't lough but I was a magican when I was young.",
-			"I have this memory from my childhood when I learend to ride a bike and fell into a puddle of mud. Let me tell you the story..."]
+            "Please don't lough but I was a magican when I was young.",
+            "I have this memory from my childhood when I learend to ride a bike and fell into a puddle of mud. Let me tell you the story..."],
             "bad": ["When I young, I once found a half dead bird. I but it in a box and set it on fire.",
-			"I punched every other kid in the face. All the time. Punchmaster was how they called me.",
-			"I peed my pants until I was 14 or so.",
-			"I spent most my childhood locked up in a wooden box."]
-			
+            "I punched every other kid in the face. All the time. Punchmaster was how they called me.",
+            "I peed my pants until I was 14 or so.",
+            "I spent most my childhood locked up in a wooden box."]
+            
         },
         {
             "id": 11,
             "category": 1,
             "subCategory": 11,
             "good": ["I have a cat. Mr. Whiskers is it's name.",
-			"I have a dog. It can do about 30 tricks.",
-			"Sadly I am allergic to animal furr. But I love these little critters."]
+            "I have a dog. It can do about 30 tricks.",
+            "Sadly I am allergic to animal furr. But I love these little critters."],
             "bad": ["I torture flys. I rip out the wings and turn them into pedestrian.",
-			"Pets? I have worms living in my guts. Does that count?"
-			"I have 8 snakes, some rats.. as food for the snakes... let's see... uhm a tarantula and about 15 guinea pigs living in my flat."]
+            "Pets? I have worms living in my guts. Does that count?",
+            "I have 8 snakes, some rats.. as food for the snakes... let's see... uhm a tarantula and about 15 guinea pigs living in my flat."]
         },
         {
             "id": 12,
             "category": 1,
             "subCategory": 12,
-            "good": ["..."]
+            "good": ["..."],
             "bad": ["Uuuhm.",
-			"Daaaah.",
-			"Pffffffffffff.",
-			"Dumdidumdidum.",
-			"I aah... ahm. Yeah so... oh. Do ahm, do you like.. like things like that?"]
+            "Daaaah.",
+            "Pffffffffffff.",
+            "Dumdidumdidum.",
+            "I aah... ahm. Yeah so... oh. Do ahm, do you like.. like things like that?"]
         },
         {
             "id": 13,
             "category": 2,
             "subCategory": 1,
             "good": ["Kiss me.",
-			"Shh.. stop the talking."]
+            "Shh.. stop the talking."],
             "bad": ["Get that lips going baby!",
-			"KISS! NOW! KISS!!",
-			"Mmmmh... wedding kiss. Good.",
-			"Mind if I bring in my old friend Mr. Tounge?"]
+            "KISS! NOW! KISS!!",
+            "Mmmmh... wedding kiss. Good.",
+            "Mind if I bring in my old friend Mr. Tounge?"]
         },
         {
             "id": 14,
             "category": 2,
             "subCategory": 2,
             "good": ["Ah, you know ;)",
-			"Psst"]
+            "Psst"],
             "bad": ["IF you know what I mean, eh?",
-			"I'd order cucumber.",
-			"And what are doing tonight?",
-			"I would love to show you my place.",
-			"I have a webcam at home.",
-			"I think I'm gonna get wasted tonihgt.",
-			"Someone will get layed, huh?"]
+            "I'd order cucumber.",
+            "And what are doing tonight?",
+            "I would love to show you my place.",
+            "I have a webcam at home.",
+            "I think I'm gonna get wasted tonihgt.",
+            "Someone will get layed, huh?"]
         },
         {
             "id": 15,
             "category": 2,
             "subCategory": 3,
-            "good": ["Oh, I'm sorry."]
+            "good": ["Oh, I'm sorry."],
             "bad": ["Oooh, INCOMMING!",
-			"Sniff sniff... ugh!",
-			"Pull my finger!"]
+            "Sniff sniff... ugh!",
+            "Pull my finger!"]
         },
         {
             "id": 16,
             "category": 2,
             "subCategory": 4,
-            "good": ["Sorry."]
+            "good": ["Sorry."],
             "bad": ["What IS that?",
-			"You don't mind if I try to get this.... little.... come here you!"]
+            "You don't mind if I try to get this.... little.... come here you!"]
         },
         {
             "id": 17,
             "category": 2,
             "subCategory": 5,
-            "good": ["I think I have to leave for a secound."]
+            "good": ["I think I have to leave for a secound."],
             "bad": ["FIGHTING.... MONSTER.... POOP.... Aaaaaargh!",
-			"Uuuh... something was wrong with that fish.",
-			"Hold it back... hold it back... you can do it.. There we go."]
+            "Uuuh... something was wrong with that fish.",
+            "Hold it back... hold it back... you can do it.. There we go."]
         },
         {
             "id": 18,
             "category": 2,
             "subCategory": 6,
-            "good": ["Sooo?"]
+            "good": ["Sooo?"],
             "bad": ["Are you telling the truth?"]
         },
         {
             "id": 19,
             "category": 2,
             "subCategory": 7,
-            "good": ["Just quickly texting my sis, she's having troubles with her studys. Sorry."]
-            "bad": ["#awesome #dating #gamejam2016 #sosexy #nofilter"],
-			[....stupid little... thing is .... stop stalking me you ..... comment:"aww so sweeeet"... like, like, follow...",
-			"Almost there... level 99 and out of HC. I just connect there and .... booster activated... Ah, Level 100..."]
+            "good": ["Just quickly texting my sis, she's having troubles with her studys. Sorry."],
+            "bad": ["#awesome #dating #gamejam2016 #sosexy #nofilter",
+            "....stupid little... thing is .... stop stalking me you ..... comment:\"aww so sweeeet\"... like, like, follow...",
+            "Almost there... level 99 and out of HC. I just connect there and .... booster activated... Ah, Level 100..."]
         },
         {
             "id": 20,
             "category": 2,
             "subCategory": 8,
-            "good": ["I have an emergency!"]
+            "good": ["I have an emergency!"],
             "bad": ["My people need me!",
-			["SOLONG SUCKER!"]
+            "SOLONG SUCKER!"]
         },
         {
             "id": 21,
             "category": 2,
             "subCategory": 9,
-            "good": ["Hmm?"]
+            "good": ["Hmm?"],
             "bad": ["Hmmm."]
         },
         {
             "id": 22,
             "category": 2,
             "subCategory": 10,
-            "good": ["What a nice evening."]
+            "good": ["What a nice evening."],
             "bad": ["I'm thinking about something funny."]
         },
         {
             "id": 23,
             "category": 2,
             "subCategory": 11,
-            "good": ["..."]
+            "good": ["..."],
             "bad": [">.<"]
         },
         {
             "id": 24,
             "category": 2,
             "subCategory": 12,
-            "good": ["I only smoke when I am with lovely people"]
+            "good": ["I only smoke when I am with lovely people"],
             "bad": ["Aaaahhh. I love smoking more than breathing."]
         },
         {
             "id": 25,
             "category": 3,
             "subCategory": 1,
-            "good": ["Hahahahaaa... awww"]
-            "bad": ["WUHAHAHAHAAAA HAAAA HAHAHAHAHAAAA WAAAAHHAHAHAAAA!! OH MY GOOOOD!! HAHAHAA!!!"
+            "good": ["Hahahahaaa... awww"],
+            "bad": ["WUHAHAHAHAAAA HAAAA HAHAHAHAHAAAA WAAAAHHAHAHAAAA!! OH MY GOOOOD!! HAHAHAA!!!"]
         },
         {
             "id": 26,
             "category": 3,
             "subCategory": 2,
-            "good": ["Sorry, I'm being emotional here."]
+            "good": ["Sorry, I'm being emotional here."],
             "bad": ["WHY DON'T YOU LOVE ME?!"]
         },
         {
             "id": 27,
             "category": 3,
             "subCategory": 3,
-            "good": ["Jee..."]
-            "bad": [""]
+            "good": ["Jee..."],
+            "bad": ["Penis"]
         },
         {
             "id": 28,
             "category": 3,
             "subCategory": 4,
-            "good": "Emotion.Drool <GOOD>",
-            "bad": "Emotion.Drool <BAD>"
+            "good": ["Donuts... hmmmm.."],
+            "bad": ["errrr.... braaaaaaaaain..."]
         },
         {
             "id": 29,
             "category": 3,
             "subCategory": 5,
-            "good": "Emotion.Yawn <GOOD>",
-            "bad": "Emotion.Yawn <BAD>"
+            "good": ["Was a long night yesterday. And the day before. Sorry."],
+            "bad": ["Booooring."]
         },
         {
             "id": 30,
             "category": 3,
             "subCategory": 6,
-            "good": "Emotion.Panic <GOOD>",
-            "bad": "Emotion.Panic <BAD>"
+            "good": ["My house is on fire!"],
+            "bad": ["*gasp* *panic* ... don't hurt me!"]
         },
         {
             "id": 31,
             "category": 3,
             "subCategory": 7,
-            "good": "Emotion.Anger <GOOD>",
-            "bad": "Emotion.Anger <BAD>"
+            "good": ["Let's kill these capitalistic bastards!"],
+            "bad": ["Let's kill these liberal bastards!"]
         }
     ]
 }

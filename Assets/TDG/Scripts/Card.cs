@@ -112,10 +112,10 @@ public class CardText
 	public int id;
 	public CardCategory category;
 	public int subCategory;
-	public string good;
-	public string bad;
+	public string[] good;
+	public string[] bad;
 
-	public CardText (int id, CardCategory category, int subCategory, string good, string bad)
+	public CardText (int id, CardCategory category, int subCategory, string[] good, string[] bad)
 	{
 		this.id = id;
 		this.category = category;

@@ -88,13 +88,16 @@ public class DatingTableUI : MonoBehaviour
 	{
 		LockPlayerCards();
 		var cardText = GameManager.ChooseTextForCard(card);
-		GameManager.SendPlayCard(card, cardText);
-		DisplayText(cardText, card.positive, speechBuble);
+		var texts = card.positive ? cardText.good : cardText.bad;
+		var index = RandomHelper.Next(texts.Length);
+		var text = texts[index];
+		GameManager.SendPlayCard(card, cardText, index);
+		DisplayText(text, speechBuble);
 	}
 
-	void DisplayText (CardText cardText, bool positive, SpeechBubble bubble)
+	void DisplayText (string text, SpeechBubble bubble)
 	{
-		bubble.DisplayText(positive ? cardText.good : cardText.bad);
+		bubble.DisplayText(text);
 	}
 
 	void PlayerMoveStarts ()
@@ -173,7 +176,9 @@ public class DatingTableUI : MonoBehaviour
 	{
 		var card = GameManager.GetCard(playCardPayload.card);
 		var cardText = GameManager.GetCardText(playCardPayload.text);
-		DisplayText(cardText ?? GameManager.ChooseTextForCard(card), playCardPayload.positive, dateSpeechBuble);
+		var texts = playCardPayload.positive ? cardText.good : cardText.bad;
+		var text = texts[playCardPayload.index];
+		DisplayText(text, dateSpeechBuble);
 
 		animController.PlayCard(card, AnimationEndsCallback);
 	}
