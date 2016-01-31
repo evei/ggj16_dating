@@ -157,5 +157,8 @@ public class GameManager
 			return "Impress her";
 		case 2:
 			return "Impress her";
+		}
+
+		return string.Empty;
 	}
 }
