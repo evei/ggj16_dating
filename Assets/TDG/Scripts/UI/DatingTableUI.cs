@@ -17,6 +17,8 @@ public class DatingTableUI : MonoBehaviour
 	public SpeechBubble dateSpeechBuble;
 	public RatingPanel ratingPanel;
 
+	public CharacterAnimationController animController;
+
 	GameManager GameManager { get { return GameManager.Instance; } }
 
 	Player Player { get { return GameManager.Player; } }
