@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.Collections;
-using System.IO;
 
 public class PickDeckUI : MonoBehaviour 
 {
@@ -23,7 +22,7 @@ public class PickDeckUI : MonoBehaviour
 
 	GameManager GameManager { get { return GameManager.Instance; } }
 
-	int timeToPick = 30;
+	const int TIME_TO_PICK = 30;
 	float elapsedTime;
 
 	List<Card> availableCards = new List<Card>();
@@ -39,7 +38,7 @@ public class PickDeckUI : MonoBehaviour
 		PopulateMainDeck();
 		readyButton.interactable = false;
 
-		timerText.text = timeToPick.ToString();
+		timerText.text = TIME_TO_PICK.ToString();
 		StartCoroutine(StartTimer());
 		SetPhaseText();
 	}
@@ -139,8 +138,8 @@ public class PickDeckUI : MonoBehaviour
 
 	IEnumerator StartTimer ()
 	{
-		while (elapsedTime <= timeToPick) {
-			timerText.text = ((int)(timeToPick - elapsedTime)).ToString();
+		while (elapsedTime <= TIME_TO_PICK) {
+			timerText.text = ((int)(TIME_TO_PICK - elapsedTime)).ToString();
 			elapsedTime += Time.deltaTime;
 			yield return null;
 		}

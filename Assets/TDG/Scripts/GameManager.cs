@@ -7,6 +7,16 @@ using System.Collections;
 
 public class GameManager
 {
+	public enum GameState 
+	{
+		Dating = 0,
+		PlayerPassesOut = 1,
+		DatePassesOut = 2,
+		DateFlees = 3,
+		PlayerFlees = 4,
+		Decision = 5
+	}
+
 	public List<Card> allCards;
 
 	public List<CardText> allTexts;
@@ -23,6 +33,11 @@ public class GameManager
 	}
 
 	public bool localPlayerFirst;
+
+	public GameState CurrentState {
+		get;
+		set;
+	}
 
 	const int CARDS_FOR_PHASE = 20;
 
@@ -135,7 +150,7 @@ public class GameManager
 			return possibleTexts[RandomHelper.Next(possibleTexts.Count)];
 		}
 
-		Debug.LogWarningFormat("No text found for card {0}.{1}", card.category, card.SubCategoryName);
+		Debug.LogWarningFormat("No text found for card {0}. {1}", card.category, card.SubCategoryName);
 		return new CardText(-1, card.category, card.subCategory, null, null);
 	}
 
@@ -146,8 +161,18 @@ public class GameManager
 
 	public string GetPhaseName ()
 	{
-		// TODO Implement
-		return "Impress her";
+		// TODO Get the second and third phase names.
+
+		switch (phase) {
+		case 0:
+			return "Introduction";
+		case 1:
+			return "Impress her";
+		case 2:
+			return "Go for it";
+		}
+
+		return string.Empty;
 	}
 
 	#region webservice
