@@ -33,16 +33,19 @@ public class TheDecisionUI : MonoBehaviour
 		// Decide which type of UI to display
 		switch (GameManager.CurrentState) {
 		case GameManager.GameState.DateFlees:
+			HandleDateFlees();
 			break;
 		case GameManager.GameState.DatePassesOut:
+			HandleDatePassesOut();
 			break;
 		case GameManager.GameState.Decision:
-			decisionPanel.SetActive(true);
-			decisionRoutine = StartCoroutine(StartDecisionTimer());
+			HandleDecisionTime();
 			break;
 		case GameManager.GameState.PlayerFlees:
+			HandlePlayerFlees();
 			break;
 		case GameManager.GameState.PlayerPassesOut:
+			HandlePlayerPassesOut();
 			break;
 		}
 	}
@@ -50,26 +53,42 @@ public class TheDecisionUI : MonoBehaviour
 	void DeactivatePanels ()
 	{
 		decisionPanel.SetActive(false);
+		inLovePanel.SetActive(false);
+		notInLovePanel.SetActive(false);
+		playerPassesOutPanel.SetActive(false);
+		datePassesOutPanel.SetActive(false);
+		playerFleesPanel.SetActive(false);
+		dateFleesPanel.SetActive(false);
 	}
 
 	void HandleDateFlees ()
 	{
+		dateFleesPanel.SetActive(true);
 		// TODO
 	}
 
 	void HandleDatePassesOut ()
 	{
+		datePassesOutPanel.SetActive(true);
 		// TODO
 	}
 
 	void HandlePlayerFlees ()
 	{
+		playerFleesPanel.SetActive(true);
 		// TODO
 	}
 
 	void HandlePlayerPassesOut ()
 	{
+		playerPassesOutPanel.SetActive(true);
 		// TODO
+	}
+
+	void HandleDecisionTime ()
+	{
+		decisionPanel.SetActive(true);
+		decisionRoutine = StartCoroutine(StartDecisionTimer());
 	}
 
 	IEnumerator StartDecisionTimer ()
@@ -88,6 +107,7 @@ public class TheDecisionUI : MonoBehaviour
 	{
 		StopCoroutine(decisionRoutine);
 		SendLove();
+		// TODO Waiting Visual feedback
 	}
 
 	void SendLove ()
@@ -105,6 +125,7 @@ public class TheDecisionUI : MonoBehaviour
 	void SendNoLove ()
 	{
 		// TODO Send NO love to the other player
+		// TODO Waiting Visual feedback
 	}
 
 	void HandleDateDecision ()
@@ -120,15 +141,19 @@ public class TheDecisionUI : MonoBehaviour
 
 	void DisplayDecisionEnding ()
 	{
+		decisionPanel.SetActive(false);
 		// Display appropriate animation based on the player decision
 		if (playerInLove && dateInLove) {
-			// TODO
+			inLovePanel.SetActive(true);
 		} else if (playerInLove && !dateInLove){
-			// TODO
+			notInLovePanel.SetActive(true);
+			// TODO Set appropriate message
 		} else if (!playerInLove && dateInLove) {
-			// TODO
+			notInLovePanel.SetActive(true);
+			// TODO Set appropriate message
 		} else {
-			// TODO
+			notInLovePanel.SetActive(true);
+			// TODO Set appropriate message
 		}
 	}
 }

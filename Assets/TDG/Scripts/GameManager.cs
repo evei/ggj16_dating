@@ -150,7 +150,12 @@ public class GameManager
 
 	public string GetPhaseName ()
 	{
-		// TODO Implement
-		return "Impress her";
+		switch (phase) {
+		case 0:
+			return "Impress her";
+		case 1:
+			return "Impress her";
+		case 2:
+			return "Impress her";
 	}
 }
