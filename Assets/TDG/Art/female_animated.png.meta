@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 18da645e253f49648995d60a19e95f03
-timeCreated: 1454241494
+timeCreated: 1454245060
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -85,24 +85,24 @@ TextureImporter:
     21300156: female_animated_78
     21300158: female_animated_79
     21300160: female_animated_80
-    21300162: female_animated_81
-    21300164: female_animated_82
-    21300166: female_animated_83
-    21300168: female_animated_84
-    21300170: female_animated_85
-    21300172: female_animated_86
-    21300174: female_animated_87
-    21300176: female_animated_88
-    21300178: female_animated_89
+    21300162: female_animated_t2
+    21300164: female_animated_81
+    21300166: female_animated_t3
+    21300168: female_animated_82
+    21300170: female_animated_t4
+    21300172: female_animated_94
+    21300174: female_animated_83
+    21300176: female_animated_84
+    21300178: female_animated_95
     21300180: female_animated_90
     21300182: female_animated_91
-    21300184: female_animated_92
-    21300186: female_animated_93
+    21300184: female_animated_85
+    21300186: female_animated_98
     21300188: female_animated_94
     21300190: female_animated_95
-    21300192: female_animated_96
+    21300192: female_animated_86
     21300194: female_animated_97
-    21300196: female_animated_98
+    21300196: female_animated_t1
     21300198: female_animated_99
     21300200: female_animated_100
     21300202: female_animated_101
@@ -177,7 +177,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_1
@@ -188,7 +188,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_2
@@ -199,7 +199,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_3
@@ -210,7 +210,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_4
@@ -221,7 +221,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_5
@@ -232,7 +232,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_6
@@ -243,7 +243,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_7
@@ -254,7 +254,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_8
@@ -265,7 +265,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_9
@@ -276,7 +276,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_10
@@ -285,9 +285,9 @@ TextureImporter:
         x: 85
         y: 650
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_11
@@ -296,9 +296,9 @@ TextureImporter:
         x: 125
         y: 650
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_12
@@ -307,9 +307,9 @@ TextureImporter:
         x: 165
         y: 650
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_13
@@ -318,9 +318,9 @@ TextureImporter:
         x: 205
         y: 650
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_14
@@ -329,9 +329,9 @@ TextureImporter:
         x: 245
         y: 650
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_15
@@ -342,7 +342,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_16
@@ -353,7 +353,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_17
@@ -364,7 +364,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_18
@@ -375,7 +375,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_19
@@ -386,7 +386,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_20
@@ -397,7 +397,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_21
@@ -406,9 +406,9 @@ TextureImporter:
         x: 205
         y: 600
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_22
@@ -417,9 +417,9 @@ TextureImporter:
         x: 245
         y: 600
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_23
@@ -430,7 +430,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_24
@@ -441,7 +441,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_25
@@ -450,9 +450,9 @@ TextureImporter:
         x: 45
         y: 550
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_26
@@ -461,9 +461,9 @@ TextureImporter:
         x: 85
         y: 550
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_27
@@ -474,7 +474,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_28
@@ -485,7 +485,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_29
@@ -496,7 +496,7 @@ TextureImporter:
         width: 30
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_30
@@ -507,7 +507,7 @@ TextureImporter:
         width: 30
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_31
@@ -518,7 +518,7 @@ TextureImporter:
         width: 30
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_32
@@ -529,7 +529,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_33
@@ -540,7 +540,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_34
@@ -551,7 +551,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_35
@@ -562,7 +562,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_36
@@ -573,7 +573,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_37
@@ -584,7 +584,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_38
@@ -595,7 +595,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_39
@@ -606,7 +606,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_40
@@ -617,7 +617,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_41
@@ -628,7 +628,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_42
@@ -639,7 +639,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_43
@@ -650,7 +650,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_44
@@ -661,7 +661,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_45
@@ -670,9 +670,9 @@ TextureImporter:
         x: 205
         y: 450
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_46
@@ -681,9 +681,9 @@ TextureImporter:
         x: 245
         y: 450
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_47
@@ -692,9 +692,9 @@ TextureImporter:
         x: 285
         y: 450
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_48
@@ -703,9 +703,9 @@ TextureImporter:
         x: 5
         y: 400
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_49
@@ -714,9 +714,9 @@ TextureImporter:
         x: 45
         y: 400
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_50
@@ -725,9 +725,9 @@ TextureImporter:
         x: 85
         y: 400
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_51
@@ -736,9 +736,9 @@ TextureImporter:
         x: 125
         y: 400
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_52
@@ -749,7 +749,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_53
@@ -760,7 +760,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_54
@@ -771,7 +771,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_55
@@ -782,7 +782,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_56
@@ -791,9 +791,9 @@ TextureImporter:
         x: 5
         y: 350
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_57
@@ -802,9 +802,9 @@ TextureImporter:
         x: 45
         y: 350
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_58
@@ -813,9 +813,9 @@ TextureImporter:
         x: 85
         y: 350
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_59
@@ -826,7 +826,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_60
@@ -835,9 +835,9 @@ TextureImporter:
         x: 165
         y: 350
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_61
@@ -846,9 +846,9 @@ TextureImporter:
         x: 205
         y: 350
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_62
@@ -857,9 +857,9 @@ TextureImporter:
         x: 245
         y: 350
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_63
@@ -870,7 +870,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_64
@@ -881,7 +881,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_65
@@ -892,7 +892,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_66
@@ -903,7 +903,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_67
@@ -914,7 +914,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_68
@@ -925,7 +925,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_69
@@ -936,7 +936,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_70
@@ -947,7 +947,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_71
@@ -958,7 +958,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_72
@@ -969,7 +969,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_73
@@ -980,7 +980,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_74
@@ -991,7 +991,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_75
@@ -1002,7 +1002,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_76
@@ -1013,7 +1013,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_77
@@ -1024,7 +1024,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_78
@@ -1035,32 +1035,32 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_79
       rect:
         serializedVersion: 2
         x: 285
-        y: 251
+        y: 250
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_80
       rect:
         serializedVersion: 2
         x: 5
-        y: 201
+        y: 200
         width: 30
-        height: 43
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: female_animated_81
+    - name: female_animated_t2
       rect:
         serializedVersion: 2
         x: 5
@@ -1068,87 +1068,87 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_81
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 200
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_t3
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 150
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_82
       rect:
         serializedVersion: 2
-        x: 45
-        y: 201
+        x: 85
+        y: 200
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_t4
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 150
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_94
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 150
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_83
       rect:
         serializedVersion: 2
-        x: 45
-        y: 150
+        x: 125
+        y: 200
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_84
       rect:
         serializedVersion: 2
-        x: 85
-        y: 201
-        width: 30
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: female_animated_85
-      rect:
-        serializedVersion: 2
-        x: 85
-        y: 150
-        width: 30
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: female_animated_86
-      rect:
-        serializedVersion: 2
-        x: 125
-        y: 150
-        width: 30
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: female_animated_87
-      rect:
-        serializedVersion: 2
-        x: 125
-        y: 201
-        width: 30
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: female_animated_88
-      rect:
-        serializedVersion: 2
         x: 165
-        y: 201
+        y: 200
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: female_animated_89
+    - name: female_animated_95
       rect:
         serializedVersion: 2
         x: 165
@@ -1156,346 +1156,211 @@ TextureImporter:
         width: 30
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: female_animated_90
-      rect:
-        serializedVersion: 2
-        x: 203
-        y: 153
-        width: 6
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_91
       rect:
         serializedVersion: 2
         x: 203
-        y: 151
+        y: 150
         width: 35
-        height: 36
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 17.5, y: 8}
-        - {x: 13.5, y: 18}
-        - {x: -17.5, y: 18}
-        - {x: -16.5, y: 16}
-        - {x: -17.5, y: 9}
-        - {x: -17.5, y: -18}
-        - {x: 17.5, y: -18}
-    - name: female_animated_92
+      - - {x: 9.5, y: 23.5}
+        - {x: -10.5, y: 23.5}
+        - {x: -17.5, y: 16.5}
+        - {x: -17.5, y: -23.5}
+        - {x: 17.5, y: -23.5}
+        - {x: 17.5, y: 10.5}
+        - {x: 15.5, y: 18.5}
+    - name: female_animated_85
       rect:
         serializedVersion: 2
         x: 205
-        y: 201
+        y: 200
         width: 30
-        height: 44
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: female_animated_93
+    - name: female_animated_86
       rect:
         serializedVersion: 2
-        x: 210
-        y: 150
-        width: 4
-        height: 4
+        x: 245
+        y: 200
+        width: 30
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: female_animated_94
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 187
-        width: 17
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: female_animated_95
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 183
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: female_animated_96
-      rect:
-        serializedVersion: 2
-        x: 242
-        y: 152
-        width: 44
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -20, y: -46.5}
-        - {x: -15, y: -46.5}
-        - {x: -14, y: -42.5}
-        - {x: -16, y: -40.5}
-        - {x: -19, y: -41.5}
-      - - {x: -1, y: -37.5}
-        - {x: -4, y: -39.5}
-        - {x: -6, y: -45.5}
-        - {x: -6, y: -46.5}
-        - {x: 0, y: -46.5}
-        - {x: 2, y: -43.5}
-        - {x: 2, y: -38.5}
-      - - {x: 5, y: -44.5}
-        - {x: 7, y: -46.5}
-        - {x: 17, y: -46.5}
-        - {x: 17, y: -32.5}
-        - {x: 14, y: -31.5}
-        - {x: 6, y: -31.5}
-        - {x: 5, y: -33.5}
-      - - {x: 17, y: -46.5}
-        - {x: 21, y: -46.5}
-        - {x: 21, y: -43.5}
-        - {x: 18, y: -42.5}
-        - {x: 16, y: -44.5}
-      - - {x: -19, y: -44.5}
-        - {x: -19, y: -41.5}
-        - {x: -22, y: -40.5}
-        - {x: -22, y: -45.5}
-      - - {x: -10, y: -41.5}
-        - {x: -10, y: -42.5}
-        - {x: -8, y: -44.5}
-        - {x: -7, y: -44.5}
-        - {x: -4, y: -41.5}
-        - {x: -4, y: -39.5}
-        - {x: -7, y: -38.5}
-      - - {x: 4, y: -41.5}
-        - {x: 7, y: -40.5}
-        - {x: 7, y: -37.5}
-        - {x: 4, y: -36.5}
-        - {x: 2, y: -38.5}
-      - - {x: 19, y: -40.5}
-        - {x: 22, y: -39.5}
-        - {x: 22, y: -36.5}
-        - {x: 19, y: -35.5}
-        - {x: 17, y: -37.5}
-      - - {x: -18, y: -27.5}
-        - {x: -19, y: -32.5}
-        - {x: -19, y: -39.5}
-        - {x: -15, y: -39.5}
-        - {x: -10, y: -37.5}
-        - {x: -10, y: -30.5}
-        - {x: -13, y: -27.5}
-      - - {x: -19, y: -33.5}
-        - {x: -19, y: -30.5}
-        - {x: -22, y: -29.5}
-        - {x: -22, y: -34.5}
-      - - {x: 13, y: -32.5}
-        - {x: 16, y: -31.5}
-        - {x: 16, y: -28.5}
-        - {x: 13, y: -27.5}
-        - {x: 11, y: -29.5}
-      - - {x: 4, y: -29.5}
-        - {x: 7, y: -28.5}
-        - {x: 7, y: -25.5}
-        - {x: 4, y: -24.5}
-        - {x: 2, y: -26.5}
-      - - {x: -19, y: -28.5}
-        - {x: -16, y: -27.5}
-        - {x: -16, y: -24.5}
-        - {x: -19, y: -23.5}
-        - {x: -21, y: -25.5}
-      - - {x: -6, y: -18.5}
-        - {x: -6, y: -25.5}
-        - {x: -4, y: -27.5}
-        - {x: -1, y: -25.5}
-        - {x: 1, y: -21.5}
-        - {x: 0, y: -18.5}
-        - {x: -4, y: -17.5}
-      - - {x: 18, y: -27.5}
-        - {x: 21, y: -26.5}
-        - {x: 21, y: -23.5}
-        - {x: 18, y: -22.5}
-        - {x: 16, y: -24.5}
-      - - {x: 7, y: -22.5}
-        - {x: 7, y: -23.5}
-        - {x: 9, y: -25.5}
-        - {x: 10, y: -25.5}
-        - {x: 13, y: -22.5}
-        - {x: 13, y: -20.5}
-        - {x: 10, y: -19.5}
-      - - {x: 4, y: -24.5}
-        - {x: 7, y: -23.5}
-        - {x: 7, y: -20.5}
-        - {x: 4, y: -19.5}
-        - {x: 2, y: -21.5}
-      - - {x: 7, y: -19.5}
-        - {x: 10, y: -18.5}
-        - {x: 10, y: -15.5}
-        - {x: 7, y: -14.5}
-        - {x: 5, y: -16.5}
-      - - {x: 18, y: -19.5}
-        - {x: 21, y: -18.5}
-        - {x: 21, y: -15.5}
-        - {x: 18, y: -14.5}
-        - {x: 16, y: -16.5}
-      - - {x: -22, y: -17.5}
-        - {x: -21, y: -18.5}
-        - {x: -18, y: -17.5}
-        - {x: -18, y: -14.5}
-        - {x: -21, y: -13.5}
-        - {x: -22, y: -14.5}
-      - - {x: -11, y: -14.5}
-        - {x: -10, y: -17.5}
-        - {x: -8, y: -17.5}
-        - {x: 0, y: -10.5}
-        - {x: 0, y: -8.5}
-        - {x: -3, y: -7.5}
-      - - {x: 2, y: -17.5}
-        - {x: 5, y: -16.5}
-        - {x: 5, y: -13.5}
-        - {x: 2, y: -12.5}
-        - {x: 0, y: -14.5}
-      - - {x: 9, y: -14.5}
-        - {x: 12, y: -13.5}
-        - {x: 12, y: -10.5}
-        - {x: 9, y: -9.5}
-        - {x: 7, y: -11.5}
-      - - {x: 19, y: -12.5}
-        - {x: 21, y: -14.5}
-        - {x: 22, y: -14.5}
-        - {x: 22, y: -9.5}
-        - {x: 20, y: -9.5}
-      - - {x: 4, y: -9.5}
-        - {x: 7, y: -8.5}
-        - {x: 7, y: -5.5}
-        - {x: 4, y: -4.5}
-        - {x: 2, y: -6.5}
-      - - {x: 9, y: -9.5}
-        - {x: 12, y: -8.5}
-        - {x: 12, y: -5.5}
-        - {x: 9, y: -4.5}
-        - {x: 7, y: -6.5}
-      - - {x: -22, y: -7.5}
-        - {x: -21, y: -8.5}
-        - {x: -18, y: -7.5}
-        - {x: -18, y: -4.5}
-        - {x: -21, y: -3.5}
-        - {x: -22, y: -4.5}
-      - - {x: -16, y: 46.5}
-        - {x: -21, y: 34.5}
-        - {x: -21, y: 3.5}
-        - {x: -17, y: -7.5}
-        - {x: -7, y: -7.5}
-        - {x: 13, y: -3.5}
-        - {x: 13, y: 33.5}
-        - {x: 7, y: 46.5}
-      - - {x: -5, y: -4.5}
-        - {x: -2, y: -3.5}
-        - {x: -2, y: -0.5}
-        - {x: -5, y: 0.5}
-        - {x: -7, y: -1.5}
-      - - {x: 19, y: 3.5}
-        - {x: 21, y: 1.5}
-        - {x: 22, y: 1.5}
-        - {x: 22, y: 20.5}
-        - {x: 19, y: 19.5}
     - name: female_animated_97
       rect:
         serializedVersion: 2
-        x: 272
-        y: 153
-        width: 6
-        height: 4
+        x: 242
+        y: 150
+        width: 37
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: female_animated_98
+      outline:
+      - - {x: -16.5, y: -22}
+        - {x: -14.5, y: -24}
+        - {x: -11.5, y: -23}
+        - {x: -10.5, y: -18}
+        - {x: -12.5, y: -16}
+        - {x: -15.5, y: -17}
+      - - {x: 2.5, y: -13}
+        - {x: 0.5, y: -15}
+        - {x: -2.5, y: -21}
+        - {x: -2.5, y: -23}
+        - {x: -0.5, y: -24}
+        - {x: 3.5, y: -23}
+        - {x: 5.5, y: -19}
+        - {x: 5.5, y: -14}
+      - - {x: 10.5, y: -7}
+        - {x: 8.5, y: -9}
+        - {x: 8.5, y: -19}
+        - {x: 13.5, y: -23}
+        - {x: 18.5, y: -23}
+        - {x: 18.5, y: -8}
+        - {x: 16.5, y: -7}
+      - - {x: -15.5, y: -20}
+        - {x: -15.5, y: -17}
+        - {x: -18.5, y: -16}
+        - {x: -18.5, y: -21}
+      - - {x: -6.5, y: -17}
+        - {x: -6.5, y: -18}
+        - {x: -4.5, y: -20}
+        - {x: -3.5, y: -20}
+        - {x: -0.5, y: -17}
+        - {x: -0.5, y: -15}
+        - {x: -3.5, y: -14}
+      - - {x: 7.5, y: -17}
+        - {x: 10.5, y: -16}
+        - {x: 10.5, y: -13}
+        - {x: 7.5, y: -12}
+        - {x: 5.5, y: -14}
+      - - {x: -8.5, y: -3}
+        - {x: -12.5, y: -3}
+        - {x: -15.5, y: -6}
+        - {x: -15.5, y: -15}
+        - {x: -9.5, y: -15}
+        - {x: -6.5, y: -13}
+        - {x: -6.5, y: -6}
+      - - {x: -15.5, y: -9}
+        - {x: -15.5, y: -6}
+        - {x: -18.5, y: -5}
+        - {x: -18.5, y: -10}
+      - - {x: 14.5, y: -5}
+        - {x: 16.5, y: -8}
+        - {x: 18.5, y: -7}
+        - {x: 18.5, y: -4}
+        - {x: 16.5, y: -3}
+      - - {x: 7.5, y: -5}
+        - {x: 10.5, y: -4}
+        - {x: 10.5, y: -1}
+        - {x: 7.5, y: 0}
+        - {x: 5.5, y: -2}
+      - - {x: -15.5, y: -4}
+        - {x: -12.5, y: -3}
+        - {x: -12.5, y: 0}
+        - {x: -15.5, y: 1}
+        - {x: -17.5, y: -1}
+      - - {x: -2.5, y: 6}
+        - {x: -2.5, y: -1}
+        - {x: -0.5, y: -3}
+        - {x: 2.5, y: -1}
+        - {x: 4.5, y: 3}
+        - {x: 3.5, y: 6}
+        - {x: -0.5, y: 7}
+      - - {x: 10.5, y: 2}
+        - {x: 10.5, y: 1}
+        - {x: 12.5, y: -1}
+        - {x: 13.5, y: -1}
+        - {x: 16.5, y: 2}
+        - {x: 16.5, y: 4}
+        - {x: 13.5, y: 5}
+      - - {x: 7.5, y: 0}
+        - {x: 10.5, y: 1}
+        - {x: 10.5, y: 4}
+        - {x: 7.5, y: 5}
+        - {x: 5.5, y: 3}
+      - - {x: 10.5, y: 5}
+        - {x: 13.5, y: 6}
+        - {x: 13.5, y: 9}
+        - {x: 10.5, y: 10}
+        - {x: 8.5, y: 8}
+      - - {x: -18.5, y: 7}
+        - {x: -17.5, y: 6}
+        - {x: -14.5, y: 7}
+        - {x: -14.5, y: 10}
+        - {x: -17.5, y: 11}
+        - {x: -18.5, y: 10}
+      - - {x: -7.5, y: 10}
+        - {x: -6.5, y: 7}
+        - {x: -4.5, y: 7}
+        - {x: 3.5, y: 14}
+        - {x: 3.5, y: 16}
+        - {x: 0.5, y: 17}
+      - - {x: 5.5, y: 7}
+        - {x: 8.5, y: 8}
+        - {x: 8.5, y: 11}
+        - {x: 5.5, y: 12}
+        - {x: 3.5, y: 10}
+      - - {x: 12.5, y: 10}
+        - {x: 15.5, y: 11}
+        - {x: 15.5, y: 14}
+        - {x: 12.5, y: 15}
+        - {x: 10.5, y: 13}
+      - - {x: 7.5, y: 15}
+        - {x: 10.5, y: 16}
+        - {x: 10.5, y: 19}
+        - {x: 7.5, y: 20}
+        - {x: 5.5, y: 18}
+      - - {x: 12.5, y: 15}
+        - {x: 15.5, y: 16}
+        - {x: 15.5, y: 19}
+        - {x: 12.5, y: 20}
+        - {x: 10.5, y: 18}
+      - - {x: -18.5, y: 17}
+        - {x: -17.5, y: 16}
+        - {x: -14.5, y: 17}
+        - {x: -14.5, y: 20}
+        - {x: -17.5, y: 21}
+        - {x: -18.5, y: 20}
+      - - {x: -11.5, y: 24}
+        - {x: -13.5, y: 20}
+        - {x: -11.5, y: 17}
+        - {x: -8.5, y: 19}
+        - {x: -6.5, y: 23}
+        - {x: -6.5, y: 24}
+      - - {x: -1.5, y: 20}
+        - {x: 1.5, y: 21}
+        - {x: 1.5, y: 24}
+        - {x: -2.5, y: 24}
+        - {x: -3.5, y: 23}
+      - - {x: 7.5, y: 22}
+        - {x: 7.5, y: 24}
+        - {x: 2.5, y: 24}
+        - {x: 4.5, y: 21}
+    - name: female_animated_t1
       rect:
         serializedVersion: 2
         x: 285
-        y: 154
-        width: 34
-        height: 91
+        y: 200
+        width: 30
+        height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: 17, y: -45.5}
-        - {x: 17, y: -43.5}
-        - {x: 14, y: -42.5}
-        - {x: 12, y: -45.5}
-      - - {x: -14, y: -45.5}
-        - {x: -11, y: -44.5}
-        - {x: -11, y: -41.5}
-        - {x: -14, y: -40.5}
-        - {x: -16, y: -42.5}
-      - - {x: -1, y: -43.5}
-        - {x: 2, y: -42.5}
-        - {x: 2, y: -39.5}
-        - {x: -1, y: -38.5}
-        - {x: -3, y: -40.5}
-      - - {x: -8, y: -37.5}
-        - {x: -5, y: -36.5}
-        - {x: -5, y: -33.5}
-        - {x: -8, y: -32.5}
-        - {x: -10, y: -34.5}
-      - - {x: 11, y: -36.5}
-        - {x: 14, y: -35.5}
-        - {x: 14, y: -32.5}
-        - {x: 11, y: -31.5}
-        - {x: 9, y: -33.5}
-      - - {x: -2, y: -30.5}
-        - {x: 1, y: -29.5}
-        - {x: 1, y: -26.5}
-        - {x: -2, y: -25.5}
-        - {x: -4, y: -27.5}
-      - - {x: 12, y: -26.5}
-        - {x: 15, y: -25.5}
-        - {x: 15, y: -22.5}
-        - {x: 12, y: -21.5}
-        - {x: 10, y: -23.5}
-      - - {x: 6, y: -24.5}
-        - {x: 9, y: -23.5}
-        - {x: 9, y: -20.5}
-        - {x: 6, y: -19.5}
-        - {x: 4, y: -21.5}
-      - - {x: -11, y: -23.5}
-        - {x: -8, y: -22.5}
-        - {x: -8, y: -19.5}
-        - {x: -11, y: -18.5}
-        - {x: -13, y: -20.5}
-      - - {x: 14, y: -18.5}
-        - {x: 16, y: -20.5}
-        - {x: 17, y: -20.5}
-        - {x: 17, y: -15.5}
-        - {x: 15, y: -15.5}
-      - - {x: 0, y: -17.5}
-        - {x: 3, y: -16.5}
-        - {x: 3, y: -13.5}
-        - {x: 0, y: -12.5}
-        - {x: -2, y: -14.5}
-      - - {x: -14, y: -14.5}
-        - {x: -14, y: -11.5}
-        - {x: -17, y: -10.5}
-        - {x: -17, y: -15.5}
-      - - {x: -10, y: 45.5}
-        - {x: -15, y: 39.5}
-        - {x: -17, y: 32.5}
-        - {x: -17, y: -1.5}
-        - {x: 15, y: -1.5}
-        - {x: 15, y: 43.5}
-        - {x: 10, y: 45.5}
+      outline: []
     - name: female_animated_99
       rect:
         serializedVersion: 2
@@ -1504,7 +1369,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_100
@@ -1515,7 +1380,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_101
@@ -1526,7 +1391,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_102
@@ -1537,7 +1402,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_103
@@ -1548,7 +1413,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_104
@@ -1559,7 +1424,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_105
@@ -1570,7 +1435,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_106
@@ -1581,7 +1446,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_107
@@ -1592,7 +1457,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_108
@@ -1603,7 +1468,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_109
@@ -1614,7 +1479,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_110
@@ -1625,78 +1490,94 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_111
       rect:
         serializedVersion: 2
-        x: 165
+        x: 161
         y: 50
-        width: 30
+        width: 38
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -9, y: 22.5}
+        - {x: -15, y: 16.5}
+        - {x: -17, y: -5.5}
+        - {x: -17, y: -22.5}
+        - {x: 17, y: -22.5}
+        - {x: 17, y: 13.5}
+        - {x: 10, y: 22.5}
     - name: female_animated_112
       rect:
         serializedVersion: 2
-        x: 205
+        x: 201
         y: 50
-        width: 31
+        width: 38
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -9, y: 22.5}
+        - {x: -15, y: 16.5}
+        - {x: -17, y: -4.5}
+        - {x: -17, y: -22.5}
+        - {x: 18, y: -22.5}
+        - {x: 18, y: 13.5}
+        - {x: 11, y: 22.5}
     - name: female_animated_113
       rect:
         serializedVersion: 2
-        x: 245
+        x: 241
         y: 50
-        width: 33
+        width: 38
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -10.5, y: 22.5}
-        - {x: -15.5, y: 16.5}
-        - {x: -16.5, y: 11.5}
-        - {x: -16.5, y: -22.5}
-        - {x: 15.5, y: -22.5}
-        - {x: 15.5, y: 18.5}
-        - {x: 9.5, y: 22.5}
-      - - {x: 13.5, y: 15.5}
-        - {x: 11.5, y: 12.5}
-        - {x: 11.5, y: 5.5}
-        - {x: 15.5, y: 5.5}
-        - {x: 16.5, y: 7.5}
-        - {x: 16.5, y: 15.5}
+      - - {x: -12, y: 22.5}
+        - {x: -15, y: 16.5}
+        - {x: -17, y: -5.5}
+        - {x: -17, y: -22.5}
+        - {x: 17, y: -22.5}
+        - {x: 17, y: 21.5}
+        - {x: 15, y: 22.5}
+      - - {x: 14, y: 12.5}
+        - {x: 13, y: 8.5}
+        - {x: 13, y: 6.5}
+        - {x: 15, y: 5.5}
+        - {x: 19, y: 6.5}
+        - {x: 19, y: 14.5}
+        - {x: 17, y: 15.5}
     - name: female_animated_114
       rect:
         serializedVersion: 2
-        x: 285
+        x: 281
         y: 50
-        width: 33
+        width: 38
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -10.5, y: 22.5}
-        - {x: -15.5, y: 16.5}
-        - {x: -16.5, y: 11.5}
-        - {x: -16.5, y: -22.5}
-        - {x: 15.5, y: -22.5}
-        - {x: 15.5, y: 18.5}
-        - {x: 9.5, y: 22.5}
-      - - {x: 13.5, y: 9.5}
-        - {x: 15.5, y: 7.5}
-        - {x: 16.5, y: 7.5}
-        - {x: 16.5, y: 13.5}
-        - {x: 13.5, y: 12.5}
+      - - {x: -12, y: 22.5}
+        - {x: -15, y: 16.5}
+        - {x: -17, y: -5.5}
+        - {x: -17, y: -22.5}
+        - {x: 17, y: -22.5}
+        - {x: 17, y: 21.5}
+        - {x: 15, y: 22.5}
+      - - {x: 15, y: 12.5}
+        - {x: 15, y: 9.5}
+        - {x: 17, y: 7.5}
+        - {x: 19, y: 8.5}
+        - {x: 19, y: 12.5}
+        - {x: 18, y: 13.5}
     - name: female_animated_115
       rect:
         serializedVersion: 2
@@ -1705,7 +1586,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_116
@@ -1716,7 +1597,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_117
@@ -1727,7 +1608,7 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     - name: female_animated_118
@@ -1738,9 +1619,254 @@ TextureImporter:
         width: 30
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+    - name: female_animated_90
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 150
+        width: 36
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: -22}
+        - {x: -14, y: -24}
+        - {x: -11, y: -23}
+        - {x: -10, y: -18}
+        - {x: -12, y: -16}
+        - {x: -15, y: -17}
+      - - {x: 3, y: -13}
+        - {x: 1, y: -15}
+        - {x: -2, y: -21}
+        - {x: -2, y: -23}
+        - {x: 0, y: -24}
+        - {x: 4, y: -23}
+        - {x: 6, y: -19}
+        - {x: 6, y: -14}
+      - - {x: 10, y: -7}
+        - {x: 9, y: -9}
+        - {x: 9, y: -19}
+        - {x: 13, y: -23}
+        - {x: 18, y: -23}
+        - {x: 18, y: -8}
+        - {x: 15, y: -7}
+      - - {x: -15, y: -20}
+        - {x: -15, y: -17}
+        - {x: -18, y: -16}
+        - {x: -18, y: -21}
+      - - {x: -6, y: -17}
+        - {x: -6, y: -18}
+        - {x: -4, y: -20}
+        - {x: -3, y: -20}
+        - {x: 0, y: -17}
+        - {x: 0, y: -15}
+        - {x: -3, y: -14}
+      - - {x: 8, y: -17}
+        - {x: 11, y: -16}
+        - {x: 11, y: -13}
+        - {x: 8, y: -12}
+        - {x: 6, y: -14}
+      - - {x: -8, y: -3}
+        - {x: -12, y: -3}
+        - {x: -15, y: -6}
+        - {x: -15, y: -15}
+        - {x: -9, y: -15}
+        - {x: -6, y: -13}
+        - {x: -6, y: -6}
+      - - {x: -15, y: -9}
+        - {x: -15, y: -6}
+        - {x: -18, y: -5}
+        - {x: -18, y: -10}
+      - - {x: 15, y: -6}
+        - {x: 17, y: -8}
+        - {x: 18, y: -8}
+        - {x: 18, y: -3}
+        - {x: 16, y: -3}
+      - - {x: 8, y: -5}
+        - {x: 11, y: -4}
+        - {x: 11, y: -1}
+        - {x: 8, y: 0}
+        - {x: 6, y: -2}
+      - - {x: -15, y: -4}
+        - {x: -12, y: -3}
+        - {x: -12, y: 0}
+        - {x: -15, y: 1}
+        - {x: -17, y: -1}
+      - - {x: -2, y: 6}
+        - {x: -2, y: -1}
+        - {x: 0, y: -3}
+        - {x: 3, y: -1}
+        - {x: 5, y: 3}
+        - {x: 4, y: 6}
+        - {x: 0, y: 7}
+      - - {x: 11, y: 2}
+        - {x: 11, y: 1}
+        - {x: 13, y: -1}
+        - {x: 14, y: -1}
+        - {x: 17, y: 2}
+        - {x: 17, y: 4}
+        - {x: 14, y: 5}
+      - - {x: 8, y: 0}
+        - {x: 11, y: 1}
+        - {x: 11, y: 4}
+        - {x: 8, y: 5}
+        - {x: 6, y: 3}
+      - - {x: 11, y: 5}
+        - {x: 14, y: 6}
+        - {x: 14, y: 9}
+        - {x: 11, y: 10}
+        - {x: 9, y: 8}
+      - - {x: -18, y: 7}
+        - {x: -17, y: 6}
+        - {x: -14, y: 7}
+        - {x: -14, y: 10}
+        - {x: -17, y: 11}
+        - {x: -18, y: 10}
+      - - {x: -7, y: 10}
+        - {x: -6, y: 7}
+        - {x: -4, y: 7}
+        - {x: 4, y: 14}
+        - {x: 4, y: 16}
+        - {x: 1, y: 17}
+      - - {x: 6, y: 7}
+        - {x: 9, y: 8}
+        - {x: 9, y: 11}
+        - {x: 6, y: 12}
+        - {x: 4, y: 10}
+      - - {x: 13, y: 10}
+        - {x: 16, y: 11}
+        - {x: 16, y: 14}
+        - {x: 13, y: 15}
+        - {x: 11, y: 13}
+      - - {x: 8, y: 15}
+        - {x: 11, y: 16}
+        - {x: 11, y: 19}
+        - {x: 8, y: 20}
+        - {x: 6, y: 18}
+      - - {x: 13, y: 15}
+        - {x: 16, y: 16}
+        - {x: 16, y: 19}
+        - {x: 13, y: 20}
+        - {x: 11, y: 18}
+      - - {x: -18, y: 17}
+        - {x: -17, y: 16}
+        - {x: -14, y: 17}
+        - {x: -14, y: 20}
+        - {x: -17, y: 21}
+        - {x: -18, y: 20}
+      - - {x: -11, y: 24}
+        - {x: -13, y: 20}
+        - {x: -11, y: 17}
+        - {x: -8, y: 19}
+        - {x: -6, y: 23}
+        - {x: -6, y: 24}
+      - - {x: -1, y: 20}
+        - {x: 2, y: 21}
+        - {x: 2, y: 24}
+        - {x: -2, y: 24}
+        - {x: -3, y: 23}
+      - - {x: 8, y: 22}
+        - {x: 8, y: 24}
+        - {x: 3, y: 24}
+        - {x: 5, y: 21}
+    - name: female_animated_98
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 150
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: -22}
+        - {x: -18, y: -23}
+        - {x: -15, y: -22}
+        - {x: -15, y: -19}
+        - {x: -18, y: -18}
+        - {x: -19, y: -19}
+      - - {x: 16, y: -22}
+        - {x: 19, y: -21}
+        - {x: 19, y: -18}
+        - {x: 16, y: -17}
+        - {x: 14, y: -19}
+      - - {x: -12, y: -20}
+        - {x: -9, y: -19}
+        - {x: -9, y: -16}
+        - {x: -12, y: -15}
+        - {x: -14, y: -17}
+      - - {x: 1, y: -18}
+        - {x: 4, y: -17}
+        - {x: 4, y: -14}
+        - {x: 1, y: -13}
+        - {x: -1, y: -15}
+      - - {x: -17, y: -16}
+        - {x: -14, y: -15}
+        - {x: -14, y: -12}
+        - {x: -17, y: -11}
+        - {x: -19, y: -13}
+      - - {x: -6, y: -12}
+        - {x: -3, y: -11}
+        - {x: -3, y: -8}
+        - {x: -6, y: -7}
+        - {x: -8, y: -9}
+      - - {x: 13, y: -11}
+        - {x: 16, y: -10}
+        - {x: 16, y: -7}
+        - {x: 13, y: -6}
+        - {x: 11, y: -8}
+      - - {x: 0, y: -5}
+        - {x: 3, y: -4}
+        - {x: 3, y: -1}
+        - {x: 0, y: 0}
+        - {x: -2, y: -2}
+      - - {x: -19, y: -2}
+        - {x: -18, y: -3}
+        - {x: -15, y: -2}
+        - {x: -15, y: 1}
+        - {x: -18, y: 2}
+        - {x: -19, y: 1}
+      - - {x: 14, y: -1}
+        - {x: 17, y: 0}
+        - {x: 17, y: 3}
+        - {x: 14, y: 4}
+        - {x: 12, y: 2}
+      - - {x: 8, y: 1}
+        - {x: 11, y: 2}
+        - {x: 11, y: 5}
+        - {x: 8, y: 6}
+        - {x: 6, y: 4}
+      - - {x: -9, y: 2}
+        - {x: -6, y: 3}
+        - {x: -6, y: 6}
+        - {x: -9, y: 7}
+        - {x: -11, y: 5}
+      - - {x: -19, y: 6}
+        - {x: -18, y: 5}
+        - {x: -15, y: 6}
+        - {x: -15, y: 9}
+        - {x: -18, y: 10}
+        - {x: -19, y: 9}
+      - - {x: 16, y: 7}
+        - {x: 18, y: 5}
+        - {x: 19, y: 5}
+        - {x: 19, y: 10}
+        - {x: 17, y: 10}
+      - - {x: 2, y: 8}
+        - {x: 5, y: 9}
+        - {x: 5, y: 12}
+        - {x: 2, y: 13}
+        - {x: 0, y: 11}
+      - - {x: -15, y: 10}
+        - {x: -12, y: 11}
+        - {x: -12, y: 14}
+        - {x: -15, y: 15}
+        - {x: -17, y: 13}
     outline: []
   spritePackingTag: 
   userData: 

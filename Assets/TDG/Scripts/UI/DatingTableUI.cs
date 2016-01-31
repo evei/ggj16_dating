@@ -156,9 +156,7 @@ public class DatingTableUI : MonoBehaviour
 		var cardText = GameManager.GetCardText(playCardPayload.text);
 		DisplayText(cardText ?? GameManager.ChooseTextForCard(card), playCardPayload.positive, dateSpeechBuble);
 
-		// TODO: TEST loops and maybe callback
 		animController.PlayCard(card, AnimationEndsCallback);
-		Debug.Log("Playing animation " + card.category +  " - " +  card.subCategory);
 	}
 
 	void HandleDateDrinks (DrinkBoozePayload drinkBoozePayload)
@@ -167,24 +165,29 @@ public class DatingTableUI : MonoBehaviour
 			//TODO
 			Debug.Log("Date passed out");
 			GameManager.CurrentState = GameManager.GameState.DatePassesOut;
-			// TODO Show Date passses out animation
-			SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);			
+
+			animController.PlayPassoutAnimation(LoadDecision);
 		}
 	}
 
 	void HandleDateFlees ()
 	{
-		//TODO
+		//TODO 
 		Debug.Log("Date fled the dating scene");
 		GameManager.CurrentState = GameManager.GameState.DateFlees;
-		// TODO Show Date empty chair and wait for some seconds
-		SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
+
+		animController.PlayFleeAnimation(LoadDecision);
 	}		
 
 	#endregion
 
 	void AnimationEndsCallback ()
 	{
-		Debug.LogWarning("Animation finished"); 
+		Debug.LogWarning(">>>> Animation finished"); 
+	}
+
+	void LoadDecision ()
+	{
+		SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 	}
 }
