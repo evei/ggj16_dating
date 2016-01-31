@@ -17,19 +17,43 @@ public class CharacterAnimationController : MonoBehaviour
 
 	public void PlayCard (Card card, Action onAnimationFinished)
 	{
+		StopAllCoroutines();
+
 		switch (card.category) {
+
 		case CardCategory.Talk:
-			var talkClip = talkConfig.FirstOrDefault(c => (int)c.subcategory == card.subCategory).clip;
-			StartCoroutine(PlayAnimation(talkClip.name, onAnimationFinished));
+			var tConfig = talkConfig.FirstOrDefault(c => (int)c.subcategory == card.subCategory);
+			if (tConfig != null) {
+				var talkClip = tConfig.clip;
+				StartCoroutine(PlayAnimation(talkClip.name, onAnimationFinished));
+			} else {
+				Debug.LogWarning("Animation not found: " + card.category + " - " + card.subCategory);
+				StartCoroutine(PlayAnimation(fallbackClip.name, onAnimationFinished));
+			}
 			break;	
+
 		case CardCategory.Emotion:
-			var emotionClip = emotionConfig.FirstOrDefault(c => (int)c.subcategory == card.subCategory).clip;
-			StartCoroutine(PlayAnimation(emotionClip.name, onAnimationFinished));
+			var eConfig = emotionConfig.FirstOrDefault(c => (int)c.subcategory == card.subCategory);
+			if (eConfig != null) {
+				var emotionClip = eConfig.clip;
+				StartCoroutine(PlayAnimation(emotionClip.name, onAnimationFinished));
+			} else {
+				Debug.LogWarning("Animation not found: " + card.category + " - " + card.subCategory);
+				StartCoroutine(PlayAnimation(fallbackClip.name, onAnimationFinished));
+			}
 			break;
+
 		case CardCategory.Action:
-			var actionClip = actionConfig.FirstOrDefault(c => (int)c.subcategory == card.subCategory).clip;
-			StartCoroutine(PlayAnimation(actionClip.name, onAnimationFinished));
+			var aConfig = emotionConfig.FirstOrDefault(c => (int)c.subcategory == card.subCategory);
+			if (aConfig != null) {
+				var actionClip = aConfig.clip;
+				StartCoroutine(PlayAnimation(actionClip.name, onAnimationFinished));
+			} else {
+				Debug.LogWarning("Animation not found: " + card.category + " - " + card.subCategory);
+				StartCoroutine(PlayAnimation(fallbackClip.name, onAnimationFinished));
+			}
 			break;
+
 		default:
 			StartCoroutine(PlayAnimation(fallbackClip.name, onAnimationFinished));
 			break;
@@ -38,11 +62,12 @@ public class CharacterAnimationController : MonoBehaviour
 
 	IEnumerator PlayAnimation (string animationName, Action onAnimationFinished) 
 	{
+		Debug.Log(">>>> Playing animation " + animationName);
 		characterAnimator.SetTrigger(animationName);
 
 		while (characterAnimator.GetCurrentAnimatorStateInfo(0).IsName(animationName))
 		{
-			Debug.Log("Playing animation " + animationName );
+			Debug.Log(">>>>> Waiting to finish Playing animation " + animationName );
 			yield return null;
 		}
 

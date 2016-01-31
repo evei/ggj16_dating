@@ -160,7 +160,6 @@ public class DatingTableUI : MonoBehaviour
 
 		// TODO: TEST loops and maybe callback
 		animController.PlayCard(card, AnimationEndsCallback);
-		Debug.Log("Playing animation " + card.category +  " - " +  card.subCategory);
 	}
 
 	void HandleDateDrinks (DrinkBoozePayload drinkBoozePayload)
@@ -187,6 +186,6 @@ public class DatingTableUI : MonoBehaviour
 
 	void AnimationEndsCallback ()
 	{
-		Debug.LogWarning("Animation finished"); 
+		Debug.LogWarning(">>>> Animation finished"); 
 	}
 }
