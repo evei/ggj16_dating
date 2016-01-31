@@ -54,7 +54,10 @@ public class DatingTableUI : MonoBehaviour
 	}
 
 	void PopulateMainDeck ()
-	{
+	{		
+		for (int i = 0; i < playerDeckContentPanel.childCount; i++) {
+			Destroy(playerDeckContentPanel.GetChild(i).gameObject);
+		}
 		foreach (var card in Player.cards.Where(c => !c.used)) {
 			var cardUI = CreateCard(card, playerDeckContentPanel);
 			var cardToCreate = card;
@@ -128,6 +131,7 @@ public class DatingTableUI : MonoBehaviour
 	void DrinkBooze ()
 	{
 		GameManager.PlayerDrinks();
+		PopulateMainDeck();
 		StartCoroutine(DrinkBoozeRoutine());
 	}
 
