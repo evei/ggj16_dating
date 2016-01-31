@@ -27,14 +27,9 @@ public class DatingTableUI : MonoBehaviour
 		booseButton.onClick.AddListener(DrinkBooze);
 		dateSpeechBuble.bubbleClosed += PlayerMoveStarts;
 		speechBuble.bubbleClosed += PlayerMoveOver;
-
-		GameManager.PauseWebsocketListener(false);
-		GameManager.OnDatePlaysCard += HandleDatePlaysCard;
-		GameManager.OnDateDrinks += HandleDateDrinks;
-		GameManager.OnDateFlees += HandleDateFlees;
 	}
 
-	void Destroy ()
+	void OnDestroy ()
 	{
 		GameManager.OnDatePlaysCard -= HandleDatePlaysCard;
 		GameManager.OnDateDrinks -= HandleDateDrinks;
@@ -47,6 +42,11 @@ public class DatingTableUI : MonoBehaviour
 		if (!Player.startsPhase) {
 			LockPlayerCards();	
 		}
+
+		GameManager.PauseWebsocketListener(false);
+		GameManager.OnDatePlaysCard += HandleDatePlaysCard;
+		GameManager.OnDateDrinks += HandleDateDrinks;
+		GameManager.OnDateFlees += HandleDateFlees;
 	}
 
 	void PopulateMainDeck ()
@@ -160,6 +160,8 @@ public class DatingTableUI : MonoBehaviour
 	void HandleDateDrinks (DrinkBoozePayload drinkBoozePayload)
 	{		
 		if (drinkBoozePayload.boozeLevel > GameManager.maxBoozeLevel) {
+			//TODO
+			Debug.Log("Date passed out");
 			GameManager.CurrentState = GameManager.GameState.DatePassesOut;
 			// TODO Show Date passses out animation
 			SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);			
@@ -168,6 +170,8 @@ public class DatingTableUI : MonoBehaviour
 
 	void HandleDateFlees ()
 	{
+		//TODO
+		Debug.Log("Date fled the dating scene");
 		GameManager.CurrentState = GameManager.GameState.DateFlees;
 		// TODO Show Date empty chair and wait for some seconds
 		SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);

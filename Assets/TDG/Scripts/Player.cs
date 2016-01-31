@@ -14,9 +14,13 @@ public class Player
 	public int boozeLevel;
 	public Gender gender;
 	public List<Card> cards;
-	public int heartsWon;
+	public List<RatePhasePayload> ratesReceived = new List<RatePhasePayload>();
+	public List<RatePhasePayload> ratesGiven = new List<RatePhasePayload>();
 
 	public bool startsPhase;
+
+	public DecisionPayload playerInLove;
+	public DecisionPayload dateInLove;
 
 	public Player (Gender gender)
 	{

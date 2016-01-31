@@ -52,23 +52,23 @@ public class GameManager
 	}
 
 	GameManager ()
-	{
-		RandomHelper.r = new System.Random(10000);
+	{		
 	}
 
 	public void Init(Player.Gender gender)
 	{
+		RandomHelper.r = new System.Random(10000);
 		phase = 0;
 		CreatePlayer(gender);
 		allCards = GetCards();
 		allTexts = GetTexts();
+		CloseWebsocket();
 	}
 
 	public List<Card> GetSelectableCardsForPhase(int boozeLevel)
 	{
 		var cardsForPhase = GetAllCardsForPhaseAndBoozeLevel(boozeLevel);
 		var selectedCards = TakeRandomCards(cardsForPhase, CARDS_FOR_PHASE);
-		Debug.Log(string.Join("|", selectedCards.Select(c => c.ToString()).ToArray()));
 		return selectedCards;
 	}
 
@@ -185,9 +185,8 @@ public class GameManager
 	#region webservice
 	string room = null;
 
-	public Action<PlayCardPayload> OnDatePlaysCard = msg => {};
-	public Action<DrinkBoozePayload> OnDateDrinks = msg => {};
-	public Action<RatePhasePayload> OnDateRatesPhase = msg => {};
+	public Action<PlayCardPayload> OnDatePlaysCard = pl => {};
+	public Action<DrinkBoozePayload> OnDateDrinks = pl => {};
 	public Action OnDateFlees = () => {};
 
 	public Coroutine StartDate()
@@ -262,12 +261,14 @@ public class GameManager
 		if (listenRoutine != null) {
 			WooroutineRunner.StopRoutine(listenRoutine);
 		}
-		if (_webSocketWoo.Completed) {			
-			_webSocketWoo.ReturnValue.Close();
-		}
-		else {
-			_webSocketWoo.Stop();
-			_webSocketWoo = null;
+		if (_webSocketWoo != null) {
+			if (_webSocketWoo.Completed) {			
+				_webSocketWoo.ReturnValue.Close();
+			}
+			else {
+				_webSocketWoo.Stop();
+				_webSocketWoo = null;
+			}			
 		}
 	}
 
@@ -314,7 +315,10 @@ public class GameManager
 				OnDateFlees();
 				break;
 			case PayloadType.RatePhase:
-				OnDateRatesPhase(JsonUtility.FromJson<WebsocketMessage<RatePhasePayload>>(json).payload);
+				Player.ratesReceived.Add(JsonUtility.FromJson<WebsocketMessage<RatePhasePayload>>(json).payload);
+				break;
+			case PayloadType.Decision:
+				Player.dateInLove = JsonUtility.FromJson<WebsocketMessage<DecisionPayload>>(json).payload;
 				break;
 			default:
 				Debug.LogError("No Handle for payload type " + payloadType);
@@ -334,7 +338,16 @@ public class GameManager
 
 	public void SendRatePhase(bool positive)
 	{
-		Send(new RatePhasePayload(positive));
+		var payload = new RatePhasePayload(positive);
+		Player.ratesGiven.Add(payload);
+		Send(payload);
+	}
+
+	public void SendDecision (bool positive)
+	{
+		var payload = new DecisionPayload(positive);
+		Player.playerInLove = payload;
+		Send(payload);
 	}
 
 	Coroutine Send<T> (T payload) where T : Payload

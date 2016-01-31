@@ -21,12 +21,11 @@ public class TheDecisionUI : MonoBehaviour
 
 	GameManager GameManager { get { return GameManager.Instance; } }
 
-	Coroutine decisionRoutine;
-	const int TIME_TO_DECIDE = 10;
-	float elapsedTime;
+	Player Player { get { return GameManager.Player; } }
 
-	bool playerInLove;
-	bool dateInLove;
+	Coroutine decisionRoutine;
+	const int TIME_TO_DECIDE = 30;
+	float elapsedTime;
 
 	void Start ()
 	{
@@ -51,6 +50,7 @@ public class TheDecisionUI : MonoBehaviour
 			break;
 		}
 	}
+
 
 	void DeactivatePanels ()
 	{
@@ -89,8 +89,15 @@ public class TheDecisionUI : MonoBehaviour
 	}
 
 	void HandleDecisionTime ()
-	{
+	{		
 		decisionPanel.SetActive(true);
+		noButton.onClick.AddListener(HandleNoButton);
+		yesButton.onClick.AddListener(HandleYesButton);
+		for (int i = 0; i < hearts.Length; i++) {
+			var color = hearts[i].color;
+			color.a = Player.ratesGiven[i].positive ? 1f : 0.5f;
+			hearts[i].color = color;
+		}
 		decisionRoutine = StartCoroutine(StartDecisionTimer());
 	}
 
@@ -103,37 +110,32 @@ public class TheDecisionUI : MonoBehaviour
 		}
 
 		decisionTimerText.text = "0";
-		SendNoLove();
+		HandleNoButton();
 	}
 
 	void HandleYesButton ()
 	{
 		StopCoroutine(decisionRoutine);
-		SendLove();
-		// TODO Waiting Visual feedback
-	}
-
-	void SendLove ()
-	{
-		playerInLove = true;
-		// TODO Send love to other player
+		StartCoroutine(SendAndWaitForDecisionOutcome(true));
 	}
 
 	void HandleNoButton ()
 	{
 		StopAllCoroutines();
-		SendNoLove();
+		StartCoroutine(SendAndWaitForDecisionOutcome(false));
 	}
 
-	void SendNoLove ()
+	IEnumerator SendAndWaitForDecisionOutcome (bool playerLove)
 	{
-		// TODO Send NO love to the other player
-		// TODO Waiting Visual feedback
-	}
+		//TODO show waiting for date decision
+		decisionPanel.SetActive(false);
 
-	void HandleDateDecision ()
-	{
-		// TODO Set the dateInLove coming from the other player
+		GameManager.SendDecision(playerLove);
+
+		while (Player.dateInLove == null) {
+			yield return null;
+		}
+		DisplayDecisionEnding();
 	}
 
 	void StopTimer ()
@@ -147,12 +149,12 @@ public class TheDecisionUI : MonoBehaviour
 		decisionPanel.SetActive(false);
 		quitButton.SetActive(true);
 		// Display appropriate animation based on the player decision
-		if (playerInLove && dateInLove) {
+		if (Player.playerInLove.positive && Player.dateInLove.positive) {
 			inLovePanel.SetActive(true);
-		} else if (playerInLove && !dateInLove){
+		} else if (Player.playerInLove.positive && !Player.dateInLove.positive){
 			notInLovePanel.SetActive(true);
 			// TODO Set appropriate message
-		} else if (!playerInLove && dateInLove) {
+		} else if (!Player.playerInLove.positive && Player.dateInLove.positive) {
 			notInLovePanel.SetActive(true);
 			// TODO Set appropriate message
 		} else {

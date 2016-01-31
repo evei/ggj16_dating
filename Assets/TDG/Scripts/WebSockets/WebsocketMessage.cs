@@ -76,6 +76,7 @@ public enum PayloadType
 	PlayCard,
 	Drink,
 	RatePhase,
+	Decision,
 	Flee
 }
 
@@ -121,6 +122,20 @@ public class RatePhasePayload : Payload
 		this.positive = positive;
 	}	
 }
+
+[Serializable]
+public class DecisionPayload : Payload
+{
+	public bool positive;
+	public DecisionPayload () : base(PayloadType.Decision)
+	{
+	}
+	public DecisionPayload (bool positive) : this()
+	{
+		this.positive = positive;
+	}	
+}
+
 
 [Serializable]
 public class DrinkBoozePayload : Payload

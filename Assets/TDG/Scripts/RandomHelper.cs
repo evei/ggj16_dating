@@ -21,6 +21,6 @@ public static class RandomHelper
 
 	public static bool TrueFalse ()
 	{
-		return r.Next(2) == 0;
+		return Next(2) == 0;
 	}
 }
