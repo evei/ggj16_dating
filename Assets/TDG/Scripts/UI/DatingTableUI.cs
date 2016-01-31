@@ -24,6 +24,8 @@ public class DatingTableUI : MonoBehaviour
 
 	void HandleQuitButton ()
 	{
+		GameManager.CurrentState = GameManager.GameState.PlayerFlee;
+		// TODO Send event so opponent is left alone and game ends
 		// TODO Quit from server room
 		SceneManager.LoadScene(MainGameController.SCENE_LOBBY);
 	}
@@ -61,13 +63,12 @@ public class DatingTableUI : MonoBehaviour
 		if (GameManager.Player.cards.Count <= 0) {
 			// TODO Do something
 			Debug.Log("Played Last card");
-			ratingPanel.Show(); // TODO Move his line to the callback when both player finished playing their cards and the Bubbles are gone.
+			ratingPanel.Show(); // TODO Move this line to the callback when both player finished playing their cards and the Bubbles are gone.
 		} 
 	}
 
 	void PlayCard (Card card)
 	{
-		// TODO Do something.
 		Debug.Log("Play Card");
 		DisplayText(card);
 	}
@@ -86,7 +87,9 @@ public class DatingTableUI : MonoBehaviour
 		yield return null;
 
 		if (GameManager.Player.boozeLevel >= GameManager.maxBoozeLevel) {
-			// TODO Pass out
+			GameManager.CurrentState = GameManager.GameState.PlayerPassesOut;
+			// TODO Pass out animation
+			SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 		}
 	}
 
@@ -94,5 +97,19 @@ public class DatingTableUI : MonoBehaviour
 	{
 		var cardText = GameManager.GetTextForCard(card, GameManager.Player);
 		speechBuble.DisplayText(card.positive ? cardText.Good : cardText.Bad);
+	}
+
+	void HandleDatePassesOut ()
+	{
+		GameManager.CurrentState = GameManager.GameState.DatePassesOut;
+		// TODO Show Date passses out animation
+		SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
+	}
+
+	void HandleDateFlees ()
+	{
+		GameManager.CurrentState = GameManager.GameState.DateFlee;
+		// TODO Show Date empty chair
+		SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 	}
 }

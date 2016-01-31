@@ -5,6 +5,16 @@ using System;
 
 public class GameManager
 {
+	public enum GameState 
+	{
+		Dating = 0,
+		PlayerPassesOut = 1,
+		DatePassesOut = 2,
+		DateFlee = 3,
+		PlayerFlee = 4,
+		Decision = 5
+	}
+
 	public List<Card> allCards;
 
 	public List<CardText> allTexts;
@@ -14,6 +24,11 @@ public class GameManager
 	public int maxCardsPerPhase = 5;
 
 	public int phase;
+
+	public GameState CurrentState {
+		get;
+		set;
+	}
 
 	const int CARDS_FOR_PHASE = 20;
 
