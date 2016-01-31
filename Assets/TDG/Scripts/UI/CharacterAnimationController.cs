@@ -65,13 +65,17 @@ public class CharacterAnimationController : MonoBehaviour
 		Debug.Log(">>>> Playing animation " + animationName);
 		characterAnimator.SetTrigger(animationName);
 
-		while (characterAnimator.GetCurrentAnimatorStateInfo(0).IsName(animationName))
+		yield return null; // Wait one frame
+
+		while (characterAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.95f)
 		{
 			Debug.Log(">>>>> Waiting to finish Playing animation " + animationName );
 			yield return null;
 		}
 
-		onAnimationFinished();
+		if (onAnimationFinished != null) {
+			onAnimationFinished();
+		}
 	}
 
 	public void PlayFalbackAnimation (Action onAnimationFinished)
