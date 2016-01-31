@@ -96,8 +96,7 @@ public class DatingTableUI : MonoBehaviour
 
 	void PlayerMoveStarts ()
 	{
-		playDeckCanvasGroup.alpha = 1;
-		playDeckCanvasGroup.interactable = true;
+		UnlockPlayerCards();
 		if (Player.startsPhase && Player.cards.TrueForAll(c => c.used)) {
 			ratingPanel.Show();
 		}
@@ -108,6 +107,12 @@ public class DatingTableUI : MonoBehaviour
 		if (!Player.startsPhase && Player.cards.TrueForAll(c => c.used)) {
 			ratingPanel.Show();
 		}
+	}
+
+	void UnlockPlayerCards ()
+	{
+		playDeckCanvasGroup.alpha = 1;
+		playDeckCanvasGroup.interactable = true;
 	}
 
 	void LockPlayerCards ()
@@ -128,10 +133,12 @@ public class DatingTableUI : MonoBehaviour
 
 	IEnumerator DrinkBoozeRoutine ()
 	{
+		LockPlayerCards();
+
 		drinkBoozeParticles.gameObject.SetActive(true);
 		drinkBoozeParticles.Play();
 
-		yield return new WaitForSeconds(3f);
+		yield return new WaitForSeconds(4f);
 
 		drinkBoozeParticles.gameObject.SetActive(false);
 		drinkBoozeParticles.Stop();
@@ -140,6 +147,8 @@ public class DatingTableUI : MonoBehaviour
 			GameManager.CurrentState = GameManager.GameState.PlayerPassesOut;
 			SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 		}
+
+		UnlockPlayerCards();
 	}
 
 	#endregion
