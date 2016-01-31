@@ -10,7 +10,8 @@ public class MainGameController : MonoBehaviour
 	public const string SCENE_DATING_TABLE = "DatingTable";
 	public const string SCENE_THE_DECISION = "TheDecision";
 
-	void Awake() {
+	void Awake() 
+	{
 		DontDestroyOnLoad(gameObject);
 	}
 
