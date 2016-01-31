@@ -27,8 +27,8 @@ public class CharacterAnimationController : MonoBehaviour
 				var talkClip = tConfig.clip;
 				StartCoroutine(PlayAnimation(talkClip.name, onAnimationFinished));
 			} else {
-				Debug.LogWarning("Animation not found: " + card.category + " - " + card.subCategory);
-				StartCoroutine(PlayAnimation(fallbackClip.name, onAnimationFinished));
+				Debug.LogWarning("Animation config not found: " + card.category + " - " + card.subCategory);
+				PlayFalbackAnimation(onAnimationFinished);
 			}
 			break;	
 
@@ -38,8 +38,8 @@ public class CharacterAnimationController : MonoBehaviour
 				var emotionClip = eConfig.clip;
 				StartCoroutine(PlayAnimation(emotionClip.name, onAnimationFinished));
 			} else {
-				Debug.LogWarning("Animation not found: " + card.category + " - " + card.subCategory);
-				StartCoroutine(PlayAnimation(fallbackClip.name, onAnimationFinished));
+				Debug.LogWarning("Animation config not found: " + card.category + " - " + card.subCategory);
+				PlayFalbackAnimation(onAnimationFinished);
 			}
 			break;
 
@@ -49,13 +49,13 @@ public class CharacterAnimationController : MonoBehaviour
 				var actionClip = aConfig.clip;
 				StartCoroutine(PlayAnimation(actionClip.name, onAnimationFinished));
 			} else {
-				Debug.LogWarning("Animation not found: " + card.category + " - " + card.subCategory);
-				StartCoroutine(PlayAnimation(fallbackClip.name, onAnimationFinished));
+				Debug.LogWarning("Animation config not found: " + card.category + " - " + card.subCategory);
+				PlayFalbackAnimation(onAnimationFinished);
 			}
 			break;
 
 		default:
-			StartCoroutine(PlayAnimation(fallbackClip.name, onAnimationFinished));
+			PlayFalbackAnimation(onAnimationFinished);
 			break;
 		}
 	}
@@ -72,6 +72,11 @@ public class CharacterAnimationController : MonoBehaviour
 		}
 
 		onAnimationFinished();
+	}
+
+	public void PlayFalbackAnimation (Action onAnimationFinished)
+	{
+		StartCoroutine(PlayAnimation(fallbackClip.name, onAnimationFinished));
 	}
 
 	public void PlayFleeAnimation (Action onAnimationFinished)
