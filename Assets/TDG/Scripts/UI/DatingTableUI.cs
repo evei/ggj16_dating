@@ -7,7 +7,7 @@ using System.Linq;
 public class DatingTableUI : MonoBehaviour 
 {
 	public Button quitButton;
-	public Button booseButton;
+	public Button boozeButton;
 
 	public CanvasGroup playDeckCanvasGroup;
 	public Transform playerDeckContentPanel;
@@ -28,7 +28,7 @@ public class DatingTableUI : MonoBehaviour
 	void Awake ()
 	{
 		quitButton.onClick.AddListener(HandleFleeButton);
-		booseButton.onClick.AddListener(DrinkBooze);
+		boozeButton.onClick.AddListener(DrinkBooze);
 		dateSpeechBuble.bubbleClosed += PlayerMoveStarts;
 		speechBuble.bubbleClosed += PlayerMoveOver;
 	}
@@ -114,12 +114,14 @@ public class DatingTableUI : MonoBehaviour
 
 	void UnlockPlayerCards ()
 	{
+		boozeButton.interactable = true;
 		playDeckCanvasGroup.alpha = 1;
 		playDeckCanvasGroup.interactable = true;
 	}
 
 	void LockPlayerCards ()
 	{
+		boozeButton.interactable = false;
 		playDeckCanvasGroup.alpha = .5f;
 		playDeckCanvasGroup.interactable = false;
 	}
