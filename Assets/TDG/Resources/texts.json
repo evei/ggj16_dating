@@ -5,7 +5,7 @@
             "category": 1,
             "subCategory": 1,
             "good": ["I am so glad we met.",
-            "You look so beautiful. I realy adore pixel faces."],
+            "You look so beautiful. I really adore pixel faces."],
             "bad": ["I normally go for 9s or 10s, but if they're like you, independent and educated I'd date a 7.",
             "If you were forced into prostitution, I would definitely pay for your services.",
             "You'd be so pretty if you were thin.",
@@ -19,7 +19,7 @@
             "I spent every weekend helping the homeless shelter.",
             "This reminds me of my time in Alaska, it was so beautiful. Have you ever been there?"],
             "bad": ["I ate like, I dunno... six hard boiled eggs and hade like the monster poop!",
-            "I can dislocate my sholder. Look... just a little twist here and ... AARRG. See?",
+            "I can dislocate my shoulder. Look... just a little twist here and ... AARRG. See?",
             "I got this scare while I was running away from the Ambulance and fell into a manhole.",
             "Sometimes I yell at old people so they hand me their wallet. That's such a fun!"]
         },
@@ -62,7 +62,7 @@
             "category": 1,
             "subCategory": 6,
             "good": ["My last relationship ended when we found out that we had different goals for the future.",
-            "In my last relationship I discoverd how important it is to give your partner some free space too.",
+            "In my last relationship I discovered  how important it is to give your partner some free space too.",
             "My ex? Well at one point we figured out that we are pretty much only friends and so we broke up. It was the right thing to do."],
             "bad": ["Here is a picture of my ex. I still have some nudes that I put on the internet. LOL",
             "You look just like my ex... this is crazy!",
@@ -72,7 +72,7 @@
             "id": 7,
             "category": 1,
             "subCategory": 7,
-            "good": ["I think work should be only one part of your life. Do what makes you happy and explore the awesomeness of the world arround you.",
+            "good": ["I think work should be only one part of your life. Do what makes you happy and explore the awesomeness of the world around you.",
             "I made 4 mio with an app I designed last year so I now try to give something back to society.",
             "I run my own company and doing pretty well. But I know where I come from so I stay grounded."],
             "bad": ["I collect roadkill for a living",
@@ -85,21 +85,21 @@
             "subCategory": 8,
             "good": ["I visit my parents from time to time. Right now they are on a journey round the world. They are such a sweet couple.",
             "My dad used to teach me everything I needed to know. One day I want to teach my own children all the important lessons too.",
-            "I'm lucky because I had a very protected and safe childhood. I will allways be greatful for all the love and patience they had for me."],
+            "I'm lucky because I had a very protected and safe childhood. I will always be grateful for all the love and patience they had for me."],
             "bad": ["I had to kill and eat them when we were locked in a bunker once. Don't want to talk about it now.",
-            "People say that brestfeeding is wrong. I think it's the best. Mom still feeds me whenever I visit her.",
-            "My Parents? Sure, they are at the table behin you, see? HEY DAD! LOOK! I'M DATING!"]
+            "People say that breast-feeding is wrong. I think it's the best. Mom still feeds me whenever I visit her.",
+            "My Parents? Sure, they are at the table behind you, see? HEY DAD! LOOK! I'M DATING!"]
         },
         {
             "id": 9,
             "category": 1,
             "subCategory": 9,
             "good": ["Mmmh, that's pretty good food. I'm glad you picked this place.",
-            "You like korean food too? I love korean food! There is this awesome restaurant in this little street, you should check that out.",
-            "I grew up on a farm, you know. At one point I stopped eating meat. But I'm not enforcing others to do so aswell. That would be silly."],
+            "You like korean food too? I love Korean food! There is this awesome restaurant in this little street, you should check that out.",
+            "I grew up on a farm, you know. At one point I stopped eating meat. But I'm not enforcing others to do so as well. That would be silly."],
             "bad": ["OMNOMNOMNOM... Are you eating this? Can I have it?",
             "Did you know that eating human flesh is ok in several states of the US?",
-            "This food here is ok. But isn't there a McDonalds arround here?",
+            "This food here is ok. But isn't there a McDonalds around here?",
             "Foooood, foody foody foood... yumm yumm yumm.... put it in my mouth and chew it... chewy chewy chewy...",
             "Animals have no soul. They are food."]
         
@@ -109,8 +109,8 @@
             "category": 1,
             "subCategory": 10,
             "good": ["When I young, I once found a half dead bird. I but it in a box and saved it. A few days later I set it free.",
-            "Please don't lough but I was a magican when I was young.",
-            "I have this memory from my childhood when I learend to ride a bike and fell into a puddle of mud. Let me tell you the story..."],
+            "Please don't lough but I was a magician when I was young.",
+            "I have this memory from my childhood when I learned to ride a bike and fell into a puddle of mud. Let me tell you the story..."],
             "bad": ["When I young, I once found a half dead bird. I but it in a box and set it on fire.",
             "I punched every other kid in the face. All the time. Punchmaster was how they called me.",
             "I peed my pants until I was 14 or so.",
@@ -123,8 +123,8 @@
             "subCategory": 11,
             "good": ["I have a cat. Mr. Whiskers is it's name.",
             "I have a dog. It can do about 30 tricks.",
-            "Sadly I am allergic to animal furr. But I love these little critters."],
-            "bad": ["I torture flys. I rip out the wings and turn them into pedestrian.",
+            "Sadly I am allergic to animal fur. But I love these little critters."],
+            "bad": ["I torture flies. I rip out the wings and turn them into pedestrian.",
             "Pets? I have worms living in my guts. Does that count?",
             "I have 8 snakes, some rats.. as food for the snakes... let's see... uhm a tarantula and about 15 guinea pigs living in my flat."]
         },
@@ -148,7 +148,7 @@
             "bad": ["Get that lips going baby!",
             "KISS! NOW! KISS!!",
             "Mmmmh... wedding kiss. Good.",
-            "Mind if I bring in my old friend Mr. Tounge?"]
+            "Mind if I bring in my old friend Mr. Tongue?"]
         },
         {
             "id": 14,
@@ -161,8 +161,8 @@
             "And what are doing tonight?",
             "I would love to show you my place.",
             "I have a webcam at home.",
-            "I think I'm gonna get wasted tonihgt.",
-            "Someone will get layed, huh?"]
+            "I think I'm gonna get wasted tonight.",
+            "Someone will get laied, huh?"]
         },
         {
             "id": 15,
@@ -185,7 +185,7 @@
             "id": 17,
             "category": 2,
             "subCategory": 5,
-            "good": ["I think I have to leave for a secound."],
+            "good": ["I think I have to leave for a second."],
             "bad": ["FIGHTING.... MONSTER.... POOP.... Aaaaaargh!",
             "Uuuh... something was wrong with that fish.",
             "Hold it back... hold it back... you can do it.. There we go."]
@@ -201,7 +201,7 @@
             "id": 19,
             "category": 2,
             "subCategory": 7,
-            "good": ["Just quickly texting my sis, she's having troubles with her studys. Sorry."],
+            "good": ["Just quickly texting my sis, she's having troubles with her studies. Sorry."],
             "bad": ["#awesome #dating #gamejam2016 #sosexy #nofilter",
             "....stupid little... thing is .... stop stalking me you ..... comment:\"aww so sweeeet\"... like, like, follow...",
             "Almost there... level 99 and out of HC. I just connect there and .... booster activated... Ah, Level 100..."]
