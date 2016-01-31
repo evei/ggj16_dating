@@ -32,8 +32,6 @@ public class GameManager
 		}
 	}
 
-	public bool localPlayerFirst;
-
 	public GameState CurrentState {
 		get;
 		set;
@@ -55,8 +53,7 @@ public class GameManager
 
 	GameManager ()
 	{
-//		RandomHelper.r = new System.Random(10000);
-
+		RandomHelper.r = new System.Random(10000);
 	}
 
 	public void Init(Player.Gender gender)
@@ -143,7 +140,7 @@ public class GameManager
 		return result;
 	}
 
-	public CardText GetTextForCard(Card card, Player player)
+	public CardText ChooseTextForCard(Card card)
 	{
 		var possibleTexts = allTexts.Where(t => t.category == card.category && t.subCategory == card.subCategory).ToList();
 		if (possibleTexts.Count > 0) {
@@ -152,6 +149,16 @@ public class GameManager
 
 		Debug.LogWarningFormat("No text found for card {0}. {1}", card.category, card.SubCategoryName);
 		return new CardText(-1, card.category, card.subCategory, null, null);
+	}
+
+	public CardText GetCardText (int id)
+	{
+		return allTexts.Find(t => t.id == id);
+	}
+
+	public Card GetCard (int id)
+	{
+		return allCards.Find(c => c.id == id);
 	}
 
 	void CreatePlayer (Player.Gender gender)
@@ -176,9 +183,12 @@ public class GameManager
 	}
 
 	#region webservice
-	const string ROOM = "tdg";
+	string room = null;
 
-	public Action<WebserviceMessage> OnMessageFromOtherPlayer = msg => {};
+	public Action<PlayCardPayload> OnDatePlaysCard = msg => {};
+	public Action<DrinkBoozePayload> OnDateDrinks = msg => {};
+	public Action<RatePhasePayload> OnDateRatesPhase = msg => {};
+	public Action OnDateFlees = () => {};
 
 	public Coroutine StartDate()
 	{
@@ -191,8 +201,9 @@ public class GameManager
 	{
 		var index = receivedMessages.Count;
 		bool otherPlayerJoined = false;
+		bool playerJoined = false;
 
-		while (!otherPlayerJoined) {			
+		while (!otherPlayerJoined || !playerJoined) {			
 			while (!WebSocketWoo.Completed) {
 				yield return WebSocketWoo.Await();
 			}
@@ -202,11 +213,20 @@ public class GameManager
 			}
 			
 			var msg = receivedMessages[index];
-			if (msg.type == "joined" && msg.user_id != Player.id) {
-				otherPlayerJoined = true;
+			if (msg.type == WebsocketMessage.TYPE_JOINED) {
+				if (msg.user_id != Player.id) {
+					otherPlayerJoined = true;			
+				}
+				else {
+					playerJoined = true;
+					Player.startsPhase = !otherPlayerJoined;
+				}
+				room = msg.room;
 			}
 			index++;
 		}
+			
+		Debug.Log("Player.startsPhase: " + Player.startsPhase);
 	}
 
 	Wooroutine<WebSocket> _webSocketWoo;
@@ -221,15 +241,21 @@ public class GameManager
 		
 	IEnumerator ConnectRoutine ()
 	{
-		var joinMsg = JsonUtility.ToJson(GetJoinMessage());
-		Debug.LogWarning("(re)connecting: " + joinMsg);
+		var message = GetMatchOrJoinMessage();
+		Debug.LogWarning("(re)connecting: " + message);
 		WebSocket w = new WebSocket(new Uri("ws://dating-room-ggj2016.herokuapp.com/websocket"));
 		yield return WooroutineRunner.StartRoutine(w.Connect());
-		w.SendString(joinMsg);
+		w.SendString(message);
 		yield return w;
 	}
 		
-	List<WebserviceMessage> receivedMessages = new List<WebserviceMessage>();
+	List<WebsocketMessage> receivedMessages = new List<WebsocketMessage>();
+
+	bool pauseWebsocketListener;
+	public void PauseWebsocketListener (bool state)
+	{
+		pauseWebsocketListener = state;
+	}
 
 	public void CloseWebsocket()
 	{
@@ -252,14 +278,19 @@ public class GameManager
 			while (!WebSocketWoo.Completed) {
 				yield return WebSocketWoo.Await();
 			}
+			while (pauseWebsocketListener) {
+				yield return null;
+			}
 			var json = WebSocketWoo.ReturnValue.RecvString();
 			if (json != null && WebSocketWoo.ReturnValue.error == null) {
 				Debug.Log(json);
-				var message = JsonUtility.FromJson<WebserviceMessage>(json);
+				var message = JsonUtility.FromJson<WebsocketMessage>(json);
 				if (receivedMessages.All(m => m.id != message.id)) {
 					receivedMessages.Add(message);
-					if (message.user_id != Player.id) {
-						OnMessageFromOtherPlayer(message);
+					if (message.type == WebsocketMessage.TYPE_MESSAGE &&  
+						message.user_id != Player.id && 
+						message.payload != null) {
+						HandlePayload(json, message.payload.type);
 					}
 				}
 			}
@@ -270,24 +301,43 @@ public class GameManager
 		}
 	}
 
-	public void PlayCard (Card card, CardText cardText)
+	void HandlePayload (string json, PayloadType payloadType)
+	{
+		switch (payloadType) {
+			case PayloadType.PlayCard:
+				OnDatePlaysCard(JsonUtility.FromJson<WebsocketMessage<PlayCardPayload>>(json).payload);
+				break;
+			case PayloadType.Drink:
+				OnDateDrinks(JsonUtility.FromJson<WebsocketMessage<DrinkBoozePayload>>(json).payload);
+				break;
+			case PayloadType.Flee:
+				OnDateFlees();
+				break;
+			default:
+				Debug.LogError("No Handle for payload type " + payloadType);
+				break;
+		}
+	}
+
+	public void SendPlayCard (Card card, CardText cardText)
 	{
 		Send(new PlayCardPayload(card.id, cardText.id, card.positive));
 	}
 
-	public void Drink(int boozeLevel)
+	public void SendDrink(int boozeLevel)
 	{
 		Send(new DrinkBoozePayload(boozeLevel));
 	}
 
-	public void RatePhase(bool positive)
+	public void SendRatePhase(bool positive)
 	{
 		Send(new RatePhasePayload(positive));
 	}
 
-	Coroutine Send (object payload)
+	Coroutine Send<T> (T payload) where T : Payload
 	{
-		sendRoutine = WooroutineRunner.StartRoutine(SendRoutine(JsonUtility.ToJson(new WebserviceMessage(Player.id, "send", ROOM, payload))));
+		var msg = new SendMessage<T>(room, payload);
+		sendRoutine = WooroutineRunner.StartRoutine(SendRoutine(JsonUtility.ToJson(msg)));
 		return sendRoutine;
 	}
 
@@ -303,27 +353,21 @@ public class GameManager
 			yield return WebSocketWoo.Await();			
 		}
 
+		Debug.Log("sending:" + message);
 		WebSocketWoo.ReturnValue.SendString(message);
+		Debug.Log("sent:" + message);
 	}
 
-	JoinMessage GetJoinMessage ()
+	string GetMatchOrJoinMessage ()
 	{
-		var msg = new JoinMessage { user_id = Player.id};
-		if (receivedMessages.Count > 0) {
-			msg.last_id = receivedMessages[receivedMessages.Count - 1].id;
+		if (room != null) {
+			var msg = new JoinMessage { user_id = Player.id, room = room, last_id = receivedMessages[receivedMessages.Count - 1].id };
+			return JsonUtility.ToJson(msg);
 		}
 		else {
-			msg.last_id = -1;
+			var msg = new MatchMessage { user_id = Player.id };
+			return JsonUtility.ToJson(msg);			
 		}
-		return msg;
-	}
-
-	class JoinMessage 
-	{
-		public string user_id;
-		public string type = "join";
-		public string room = ROOM;
-		public int last_id;
 	}
 	#endregion
 }

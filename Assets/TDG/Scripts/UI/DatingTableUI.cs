@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Linq;
 
 public class DatingTableUI : MonoBehaviour 
 {
@@ -18,22 +19,39 @@ public class DatingTableUI : MonoBehaviour
 
 	GameManager GameManager { get { return GameManager.Instance; } }
 
+	Player Player { get { return GameManager.Player; } }
+
 	void Awake ()
 	{
 		quitButton.onClick.AddListener(HandleFleeButton);
 		booseButton.onClick.AddListener(DrinkBooze);
-		speechBuble.bubbleClosed += UnlockPlayerCards;
-		dateSpeechBuble.bubbleClosed += UnlockPlayerCards;
+		dateSpeechBuble.bubbleClosed += PlayerMoveStarts;
+		speechBuble.bubbleClosed += PlayerMoveOver;
+
+		GameManager.PauseWebsocketListener(false);
+		GameManager.OnDatePlaysCard += HandleDatePlaysCard;
+		GameManager.OnDateDrinks += HandleDateDrinks;
+		GameManager.OnDateFlees += HandleDateFlees;
+	}
+
+	void Destroy ()
+	{
+		GameManager.OnDatePlaysCard -= HandleDatePlaysCard;
+		GameManager.OnDateDrinks -= HandleDateDrinks;
+		GameManager.OnDateFlees -= HandleDateFlees;
 	}
 
 	void Start ()
 	{
 		PopulateMainDeck();
+		if (!Player.startsPhase) {
+			LockPlayerCards();	
+		}
 	}
 
 	void PopulateMainDeck ()
 	{
-		foreach (var card in GameManager.Player.cards) {
+		foreach (var card in Player.cards.Where(c => !c.used)) {
 			var cardUI = CreateCard(card, playerDeckContentPanel);
 			var cardToCreate = card;
 			cardUI.cardButton.onClick.AddListener(() => HandlePlayerDeckCardClicked(cardToCreate));
@@ -56,31 +74,36 @@ public class DatingTableUI : MonoBehaviour
 	void HandlePlayerDeckCardClicked (Card card)
 	{
 		PlayCard(card);
-		GameManager.Player.cards.Remove(card);
-
-		if (GameManager.Player.cards.Count <= 0) {
-			// TODO Do something
-			Debug.Log("Played Last card");
-			ratingPanel.Show(); // TODO Move this line to the callback when both player finished playing their cards and the Bubbles are gone.
-		} 
+		card.used = true;;
 	}
 
 	void PlayCard (Card card)
 	{
 		LockPlayerCards();
-		DisplayText(card, speechBuble);
+		var cardText = GameManager.ChooseTextForCard(card);
+		GameManager.SendPlayCard(card, cardText);
+		DisplayText(cardText, card.positive, speechBuble);
 	}
 
-	void DisplayText (Card card, SpeechBubble bubble)
+	void DisplayText (CardText cardText, bool positive, SpeechBubble bubble)
 	{
-		var cardText = GameManager.GetTextForCard(card, GameManager.Player);
-		bubble.DisplayText(card.positive ? cardText.Good : cardText.Bad);
+		bubble.DisplayText(positive ? cardText.Good : cardText.Bad);
 	}
 
-	void UnlockPlayerCards ()
+	void PlayerMoveStarts ()
 	{
 		playDeckCanvasGroup.alpha = 1;
 		playDeckCanvasGroup.interactable = true;
+		if (Player.startsPhase && Player.cards.TrueForAll(c => c.used)) {
+			ratingPanel.Show();
+		}
+	}
+
+	void PlayerMoveOver ()
+	{
+		if (!Player.startsPhase && Player.cards.TrueForAll(c => c.used)) {
+			ratingPanel.Show();
+		}
 	}
 
 	void LockPlayerCards ()
@@ -89,43 +112,28 @@ public class DatingTableUI : MonoBehaviour
 		playDeckCanvasGroup.interactable = false;
 	}
 
-	IEnumerator WaitForPlayerResponse ()
-	{
-		LockPlayerCards();
-		// TODO Wait until player plays card
-		yield return null;
-
-		DisplayText(null, dateSpeechBuble); // TODO Pass the card
-	}
-
 	#endregion
 
 	#region Booze
 
 	void DrinkBooze ()
 	{
+		Player.boozeLevel++;
+		GameManager.SendDrink(Player.boozeLevel);
 		StartCoroutine(DrinkBoozeRoutine());
 	}
 
 	IEnumerator DrinkBoozeRoutine ()
 	{
-		GameManager.Player.boozeLevel++;
 
 		// TODO Play Drink booze animation
 		yield return null;
 
-		if (GameManager.Player.boozeLevel >= GameManager.maxBoozeLevel) {
+		if (Player.boozeLevel >= GameManager.maxBoozeLevel) {
 			GameManager.CurrentState = GameManager.GameState.PlayerPassesOut;
 			// TODO Pass out animation
 			SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 		}
-	}
-
-	void HandleDatePassesOut ()
-	{
-		GameManager.CurrentState = GameManager.GameState.DatePassesOut;
-		// TODO Show Date passses out animation
-		SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 	}
 
 	#endregion
@@ -136,6 +144,26 @@ public class DatingTableUI : MonoBehaviour
 		// TODO Send event so opponent is left alone and game ends
 		// TODO Quit from server room
 		SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
+	}		
+
+	#region other player
+
+	void HandleDatePlaysCard (PlayCardPayload playCardPayload)
+	{
+		//TODO display card action/effect besides speech bubble?
+		var card = GameManager.GetCard(playCardPayload.card);
+		card.positive = playCardPayload.positive;
+		var cardText = GameManager.GetCardText(playCardPayload.text);
+		DisplayText(cardText ?? GameManager.ChooseTextForCard(card), playCardPayload.positive, dateSpeechBuble);
+	}
+
+	void HandleDateDrinks (DrinkBoozePayload drinkBoozePayload)
+	{		
+		if (drinkBoozePayload.boozeLevel > GameManager.maxBoozeLevel) {
+			GameManager.CurrentState = GameManager.GameState.DatePassesOut;
+			// TODO Show Date passses out animation
+			SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);			
+		}
 	}
 
 	void HandleDateFlees ()
@@ -143,5 +171,6 @@ public class DatingTableUI : MonoBehaviour
 		GameManager.CurrentState = GameManager.GameState.DateFlees;
 		// TODO Show Date empty chair and wait for some seconds
 		SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
-	}
+	}		
+	#endregion
 }

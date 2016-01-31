@@ -16,6 +16,8 @@ public class Player
 	public List<Card> cards;
 	public int heartsWon;
 
+	public bool startsPhase;
+
 	public Player (Gender gender)
 	{
 		this.gender = gender;

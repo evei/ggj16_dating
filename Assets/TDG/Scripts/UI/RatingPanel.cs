@@ -22,17 +22,19 @@ public class RatingPanel : MonoBehaviour
 
 	public void Show ()
 	{
+		GameManager.PauseWebsocketListener(true);
 		gameObject.SetActive(true);
 	}
 
 	void HandleGoodButton ()
 	{
-		// TODO Send heart to your date. (increase other player Player.heartsWon)
+		GameManager.SendRatePhase(true);
 		ContinueGame();
 	}
 
 	void HandleBadButton ()
 	{
+		GameManager.SendRatePhase(false);
 		ContinueGame();
 	}
 
@@ -43,6 +45,7 @@ public class RatingPanel : MonoBehaviour
 			SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 		} else {
 			GameManager.phase++;
+			GameManager.Player.startsPhase = !GameManager.Player.startsPhase;
 			SceneManager.LoadScene(MainGameController.SCENE_PICKDECK);
 		}
 	}

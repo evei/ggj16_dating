@@ -6,7 +6,9 @@ public class LoadingUI : MonoBehaviour
 {
 	IEnumerator Start ()
 	{
-		yield return GameManager.Instance.StartDate();
+		if (GameManager.Instance.FirstPhase) {
+			yield return GameManager.Instance.StartDate();			
+		}
 		LoadDatingTable();
 	}
 

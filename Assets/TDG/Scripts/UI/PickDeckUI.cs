@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.Collections;
+using System.Linq;
 
 public class PickDeckUI : MonoBehaviour 
 {
@@ -71,7 +72,7 @@ public class PickDeckUI : MonoBehaviour
 		cardUI.cardButton.onClick.RemoveAllListeners();
 		cardUI.cardButton.onClick.AddListener(() => HandlePlayerDeckCardClicked(cardUI, mainDeckContentPanel));
 
-		if (GameManager.Player.cards.Count >= GameManager.maxCardsPerPhase) {
+		if (GameManager.Player.cards.Count(c => !c.used) >= GameManager.maxCardsPerPhase) {
 			mainDeckCanvasGroup.alpha = .5f;
 			mainDeckCanvasGroup.interactable = false;
 			readyButton.interactable = true;
@@ -87,7 +88,7 @@ public class PickDeckUI : MonoBehaviour
 		cardUI.cardButton.onClick.RemoveAllListeners();
 		cardUI.cardButton.onClick.AddListener(() => HandleMainDeckCardClicked(cardUI, playerDeckContentPanel));
 
-		if (GameManager.Player.cards.Count < GameManager.maxCardsPerPhase) {
+		if (GameManager.Player.cards.Count(c => !c.used) < GameManager.maxCardsPerPhase) {
 			mainDeckCanvasGroup.alpha = 1f;
 			mainDeckCanvasGroup.interactable = true;
 			readyButton.interactable = false;
