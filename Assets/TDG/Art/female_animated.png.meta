@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 18da645e253f49648995d60a19e95f03
-timeCreated: 1454179313
+timeCreated: 1454241494
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -71,6 +71,58 @@ TextureImporter:
     21300128: female_animated_64
     21300130: female_animated_65
     21300132: female_animated_66
+    21300134: female_animated_67
+    21300136: female_animated_68
+    21300138: female_animated_69
+    21300140: female_animated_70
+    21300142: female_animated_71
+    21300144: female_animated_72
+    21300146: female_animated_73
+    21300148: female_animated_74
+    21300150: female_animated_75
+    21300152: female_animated_76
+    21300154: female_animated_77
+    21300156: female_animated_78
+    21300158: female_animated_79
+    21300160: female_animated_80
+    21300162: female_animated_81
+    21300164: female_animated_82
+    21300166: female_animated_83
+    21300168: female_animated_84
+    21300170: female_animated_85
+    21300172: female_animated_86
+    21300174: female_animated_87
+    21300176: female_animated_88
+    21300178: female_animated_89
+    21300180: female_animated_90
+    21300182: female_animated_91
+    21300184: female_animated_92
+    21300186: female_animated_93
+    21300188: female_animated_94
+    21300190: female_animated_95
+    21300192: female_animated_96
+    21300194: female_animated_97
+    21300196: female_animated_98
+    21300198: female_animated_99
+    21300200: female_animated_100
+    21300202: female_animated_101
+    21300204: female_animated_102
+    21300206: female_animated_103
+    21300208: female_animated_104
+    21300210: female_animated_105
+    21300212: female_animated_106
+    21300214: female_animated_107
+    21300216: female_animated_108
+    21300218: female_animated_109
+    21300220: female_animated_110
+    21300222: female_animated_111
+    21300224: female_animated_112
+    21300226: female_animated_113
+    21300228: female_animated_114
+    21300230: female_animated_115
+    21300232: female_animated_116
+    21300234: female_animated_117
+    21300236: female_animated_118
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -121,7 +173,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 400
+        y: 700
         width: 30
         height: 45
       alignment: 0
@@ -132,7 +184,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 45
-        y: 400
+        y: 700
         width: 30
         height: 45
       alignment: 0
@@ -143,7 +195,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 85
-        y: 400
+        y: 700
         width: 30
         height: 45
       alignment: 0
@@ -154,7 +206,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 125
-        y: 400
+        y: 700
         width: 30
         height: 45
       alignment: 0
@@ -165,7 +217,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 400
+        y: 700
         width: 30
         height: 45
       alignment: 0
@@ -176,7 +228,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 205
-        y: 400
+        y: 700
         width: 30
         height: 45
       alignment: 0
@@ -187,7 +239,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 245
-        y: 400
+        y: 700
         width: 30
         height: 45
       alignment: 0
@@ -198,7 +250,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 285
-        y: 400
+        y: 700
         width: 30
         height: 45
       alignment: 0
@@ -209,7 +261,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 350
+        y: 650
         width: 30
         height: 45
       alignment: 0
@@ -220,7 +272,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 45
-        y: 350
+        y: 650
         width: 30
         height: 45
       alignment: 0
@@ -231,7 +283,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 85
-        y: 350
+        y: 650
         width: 30
         height: 44
       alignment: 0
@@ -242,7 +294,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 125
-        y: 350
+        y: 650
         width: 30
         height: 44
       alignment: 0
@@ -253,7 +305,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 350
+        y: 650
         width: 30
         height: 44
       alignment: 0
@@ -264,7 +316,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 205
-        y: 350
+        y: 650
         width: 30
         height: 44
       alignment: 0
@@ -275,7 +327,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 245
-        y: 350
+        y: 650
         width: 30
         height: 44
       alignment: 0
@@ -286,7 +338,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 285
-        y: 350
+        y: 650
         width: 30
         height: 45
       alignment: 0
@@ -297,7 +349,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 300
+        y: 600
         width: 30
         height: 45
       alignment: 0
@@ -308,7 +360,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 45
-        y: 300
+        y: 600
         width: 30
         height: 45
       alignment: 0
@@ -319,7 +371,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 85
-        y: 300
+        y: 600
         width: 30
         height: 45
       alignment: 0
@@ -330,7 +382,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 125
-        y: 300
+        y: 600
         width: 30
         height: 45
       alignment: 0
@@ -341,7 +393,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 300
+        y: 600
         width: 30
         height: 45
       alignment: 0
@@ -352,7 +404,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 205
-        y: 300
+        y: 600
         width: 30
         height: 44
       alignment: 0
@@ -363,7 +415,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 245
-        y: 300
+        y: 600
         width: 30
         height: 44
       alignment: 0
@@ -374,7 +426,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 285
-        y: 300
+        y: 600
         width: 30
         height: 45
       alignment: 0
@@ -385,7 +437,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 250
+        y: 550
         width: 30
         height: 45
       alignment: 0
@@ -396,7 +448,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 45
-        y: 250
+        y: 550
         width: 30
         height: 44
       alignment: 0
@@ -407,7 +459,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 85
-        y: 250
+        y: 550
         width: 30
         height: 44
       alignment: 0
@@ -418,7 +470,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 125
-        y: 250
+        y: 550
         width: 30
         height: 45
       alignment: 0
@@ -429,7 +481,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 250
+        y: 550
         width: 30
         height: 45
       alignment: 0
@@ -440,7 +492,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 205
-        y: 250
+        y: 550
         width: 30
         height: 46
       alignment: 0
@@ -451,7 +503,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 245
-        y: 250
+        y: 550
         width: 30
         height: 47
       alignment: 0
@@ -462,7 +514,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 285
-        y: 250
+        y: 550
         width: 30
         height: 47
       alignment: 0
@@ -473,7 +525,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 200
+        y: 500
         width: 30
         height: 45
       alignment: 0
@@ -484,7 +536,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 45
-        y: 200
+        y: 500
         width: 30
         height: 45
       alignment: 0
@@ -495,7 +547,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 85
-        y: 200
+        y: 500
         width: 30
         height: 45
       alignment: 0
@@ -506,7 +558,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 125
-        y: 200
+        y: 500
         width: 30
         height: 45
       alignment: 0
@@ -517,7 +569,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 200
+        y: 500
         width: 30
         height: 45
       alignment: 0
@@ -528,7 +580,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 205
-        y: 200
+        y: 500
         width: 30
         height: 45
       alignment: 0
@@ -539,7 +591,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 245
-        y: 200
+        y: 500
         width: 30
         height: 45
       alignment: 0
@@ -550,7 +602,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 285
-        y: 200
+        y: 500
         width: 30
         height: 45
       alignment: 0
@@ -561,7 +613,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 150
+        y: 450
         width: 30
         height: 45
       alignment: 0
@@ -572,7 +624,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 45
-        y: 150
+        y: 450
         width: 30
         height: 45
       alignment: 0
@@ -583,7 +635,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 85
-        y: 150
+        y: 450
         width: 30
         height: 45
       alignment: 0
@@ -594,7 +646,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 125
-        y: 150
+        y: 450
         width: 30
         height: 45
       alignment: 0
@@ -605,7 +657,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 150
+        y: 450
         width: 30
         height: 45
       alignment: 0
@@ -616,7 +668,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 205
-        y: 150
+        y: 450
         width: 30
         height: 44
       alignment: 0
@@ -627,7 +679,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 245
-        y: 150
+        y: 450
         width: 30
         height: 44
       alignment: 0
@@ -638,7 +690,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 285
-        y: 150
+        y: 450
         width: 30
         height: 44
       alignment: 0
@@ -649,7 +701,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 100
+        y: 400
         width: 30
         height: 44
       alignment: 0
@@ -660,7 +712,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 45
-        y: 100
+        y: 400
         width: 30
         height: 44
       alignment: 0
@@ -671,7 +723,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 85
-        y: 100
+        y: 400
         width: 30
         height: 44
       alignment: 0
@@ -682,7 +734,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 125
-        y: 100
+        y: 400
         width: 30
         height: 44
       alignment: 0
@@ -693,7 +745,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 100
+        y: 400
         width: 30
         height: 45
       alignment: 0
@@ -704,7 +756,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 205
-        y: 100
+        y: 400
         width: 30
         height: 45
       alignment: 0
@@ -715,7 +767,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 245
-        y: 100
+        y: 400
         width: 30
         height: 45
       alignment: 0
@@ -726,7 +778,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 285
-        y: 100
+        y: 400
         width: 30
         height: 45
       alignment: 0
@@ -737,7 +789,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 50
+        y: 350
         width: 30
         height: 44
       alignment: 0
@@ -748,7 +800,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 45
-        y: 50
+        y: 350
         width: 30
         height: 44
       alignment: 0
@@ -759,7 +811,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 85
-        y: 50
+        y: 350
         width: 30
         height: 44
       alignment: 0
@@ -770,7 +822,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 125
-        y: 50
+        y: 350
         width: 30
         height: 45
       alignment: 0
@@ -781,7 +833,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 165
-        y: 50
+        y: 350
         width: 30
         height: 44
       alignment: 0
@@ -792,7 +844,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 205
-        y: 50
+        y: 350
         width: 30
         height: 44
       alignment: 0
@@ -803,7 +855,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 245
-        y: 50
+        y: 350
         width: 30
         height: 44
       alignment: 0
@@ -814,7 +866,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 285
-        y: 50
+        y: 350
         width: 30
         height: 45
       alignment: 0
@@ -825,7 +877,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 0
+        y: 300
         width: 30
         height: 45
       alignment: 0
@@ -836,7 +888,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 45
-        y: 0
+        y: 300
         width: 30
         height: 45
       alignment: 0
@@ -847,6 +899,841 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 85
+        y: 300
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_67
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 300
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_68
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 300
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_69
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 300
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_70
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 300
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_71
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 300
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_72
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 250
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_73
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 250
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_74
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 250
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_75
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 250
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_76
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 250
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_77
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 250
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_78
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 250
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_79
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 251
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_80
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 201
+        width: 30
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_81
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 150
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_82
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 201
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_83
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 150
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_84
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 201
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_85
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 150
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_86
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 150
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_87
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 201
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_88
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 201
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_89
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 151
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_90
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 153
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_91
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 151
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17.5, y: 8}
+        - {x: 13.5, y: 18}
+        - {x: -17.5, y: 18}
+        - {x: -16.5, y: 16}
+        - {x: -17.5, y: 9}
+        - {x: -17.5, y: -18}
+        - {x: 17.5, y: -18}
+    - name: female_animated_92
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 201
+        width: 30
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_93
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 150
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_94
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 187
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_95
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 183
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_96
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 152
+        width: 44
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: -46.5}
+        - {x: -15, y: -46.5}
+        - {x: -14, y: -42.5}
+        - {x: -16, y: -40.5}
+        - {x: -19, y: -41.5}
+      - - {x: -1, y: -37.5}
+        - {x: -4, y: -39.5}
+        - {x: -6, y: -45.5}
+        - {x: -6, y: -46.5}
+        - {x: 0, y: -46.5}
+        - {x: 2, y: -43.5}
+        - {x: 2, y: -38.5}
+      - - {x: 5, y: -44.5}
+        - {x: 7, y: -46.5}
+        - {x: 17, y: -46.5}
+        - {x: 17, y: -32.5}
+        - {x: 14, y: -31.5}
+        - {x: 6, y: -31.5}
+        - {x: 5, y: -33.5}
+      - - {x: 17, y: -46.5}
+        - {x: 21, y: -46.5}
+        - {x: 21, y: -43.5}
+        - {x: 18, y: -42.5}
+        - {x: 16, y: -44.5}
+      - - {x: -19, y: -44.5}
+        - {x: -19, y: -41.5}
+        - {x: -22, y: -40.5}
+        - {x: -22, y: -45.5}
+      - - {x: -10, y: -41.5}
+        - {x: -10, y: -42.5}
+        - {x: -8, y: -44.5}
+        - {x: -7, y: -44.5}
+        - {x: -4, y: -41.5}
+        - {x: -4, y: -39.5}
+        - {x: -7, y: -38.5}
+      - - {x: 4, y: -41.5}
+        - {x: 7, y: -40.5}
+        - {x: 7, y: -37.5}
+        - {x: 4, y: -36.5}
+        - {x: 2, y: -38.5}
+      - - {x: 19, y: -40.5}
+        - {x: 22, y: -39.5}
+        - {x: 22, y: -36.5}
+        - {x: 19, y: -35.5}
+        - {x: 17, y: -37.5}
+      - - {x: -18, y: -27.5}
+        - {x: -19, y: -32.5}
+        - {x: -19, y: -39.5}
+        - {x: -15, y: -39.5}
+        - {x: -10, y: -37.5}
+        - {x: -10, y: -30.5}
+        - {x: -13, y: -27.5}
+      - - {x: -19, y: -33.5}
+        - {x: -19, y: -30.5}
+        - {x: -22, y: -29.5}
+        - {x: -22, y: -34.5}
+      - - {x: 13, y: -32.5}
+        - {x: 16, y: -31.5}
+        - {x: 16, y: -28.5}
+        - {x: 13, y: -27.5}
+        - {x: 11, y: -29.5}
+      - - {x: 4, y: -29.5}
+        - {x: 7, y: -28.5}
+        - {x: 7, y: -25.5}
+        - {x: 4, y: -24.5}
+        - {x: 2, y: -26.5}
+      - - {x: -19, y: -28.5}
+        - {x: -16, y: -27.5}
+        - {x: -16, y: -24.5}
+        - {x: -19, y: -23.5}
+        - {x: -21, y: -25.5}
+      - - {x: -6, y: -18.5}
+        - {x: -6, y: -25.5}
+        - {x: -4, y: -27.5}
+        - {x: -1, y: -25.5}
+        - {x: 1, y: -21.5}
+        - {x: 0, y: -18.5}
+        - {x: -4, y: -17.5}
+      - - {x: 18, y: -27.5}
+        - {x: 21, y: -26.5}
+        - {x: 21, y: -23.5}
+        - {x: 18, y: -22.5}
+        - {x: 16, y: -24.5}
+      - - {x: 7, y: -22.5}
+        - {x: 7, y: -23.5}
+        - {x: 9, y: -25.5}
+        - {x: 10, y: -25.5}
+        - {x: 13, y: -22.5}
+        - {x: 13, y: -20.5}
+        - {x: 10, y: -19.5}
+      - - {x: 4, y: -24.5}
+        - {x: 7, y: -23.5}
+        - {x: 7, y: -20.5}
+        - {x: 4, y: -19.5}
+        - {x: 2, y: -21.5}
+      - - {x: 7, y: -19.5}
+        - {x: 10, y: -18.5}
+        - {x: 10, y: -15.5}
+        - {x: 7, y: -14.5}
+        - {x: 5, y: -16.5}
+      - - {x: 18, y: -19.5}
+        - {x: 21, y: -18.5}
+        - {x: 21, y: -15.5}
+        - {x: 18, y: -14.5}
+        - {x: 16, y: -16.5}
+      - - {x: -22, y: -17.5}
+        - {x: -21, y: -18.5}
+        - {x: -18, y: -17.5}
+        - {x: -18, y: -14.5}
+        - {x: -21, y: -13.5}
+        - {x: -22, y: -14.5}
+      - - {x: -11, y: -14.5}
+        - {x: -10, y: -17.5}
+        - {x: -8, y: -17.5}
+        - {x: 0, y: -10.5}
+        - {x: 0, y: -8.5}
+        - {x: -3, y: -7.5}
+      - - {x: 2, y: -17.5}
+        - {x: 5, y: -16.5}
+        - {x: 5, y: -13.5}
+        - {x: 2, y: -12.5}
+        - {x: 0, y: -14.5}
+      - - {x: 9, y: -14.5}
+        - {x: 12, y: -13.5}
+        - {x: 12, y: -10.5}
+        - {x: 9, y: -9.5}
+        - {x: 7, y: -11.5}
+      - - {x: 19, y: -12.5}
+        - {x: 21, y: -14.5}
+        - {x: 22, y: -14.5}
+        - {x: 22, y: -9.5}
+        - {x: 20, y: -9.5}
+      - - {x: 4, y: -9.5}
+        - {x: 7, y: -8.5}
+        - {x: 7, y: -5.5}
+        - {x: 4, y: -4.5}
+        - {x: 2, y: -6.5}
+      - - {x: 9, y: -9.5}
+        - {x: 12, y: -8.5}
+        - {x: 12, y: -5.5}
+        - {x: 9, y: -4.5}
+        - {x: 7, y: -6.5}
+      - - {x: -22, y: -7.5}
+        - {x: -21, y: -8.5}
+        - {x: -18, y: -7.5}
+        - {x: -18, y: -4.5}
+        - {x: -21, y: -3.5}
+        - {x: -22, y: -4.5}
+      - - {x: -16, y: 46.5}
+        - {x: -21, y: 34.5}
+        - {x: -21, y: 3.5}
+        - {x: -17, y: -7.5}
+        - {x: -7, y: -7.5}
+        - {x: 13, y: -3.5}
+        - {x: 13, y: 33.5}
+        - {x: 7, y: 46.5}
+      - - {x: -5, y: -4.5}
+        - {x: -2, y: -3.5}
+        - {x: -2, y: -0.5}
+        - {x: -5, y: 0.5}
+        - {x: -7, y: -1.5}
+      - - {x: 19, y: 3.5}
+        - {x: 21, y: 1.5}
+        - {x: 22, y: 1.5}
+        - {x: 22, y: 20.5}
+        - {x: 19, y: 19.5}
+    - name: female_animated_97
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 153
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_98
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 154
+        width: 34
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 17, y: -45.5}
+        - {x: 17, y: -43.5}
+        - {x: 14, y: -42.5}
+        - {x: 12, y: -45.5}
+      - - {x: -14, y: -45.5}
+        - {x: -11, y: -44.5}
+        - {x: -11, y: -41.5}
+        - {x: -14, y: -40.5}
+        - {x: -16, y: -42.5}
+      - - {x: -1, y: -43.5}
+        - {x: 2, y: -42.5}
+        - {x: 2, y: -39.5}
+        - {x: -1, y: -38.5}
+        - {x: -3, y: -40.5}
+      - - {x: -8, y: -37.5}
+        - {x: -5, y: -36.5}
+        - {x: -5, y: -33.5}
+        - {x: -8, y: -32.5}
+        - {x: -10, y: -34.5}
+      - - {x: 11, y: -36.5}
+        - {x: 14, y: -35.5}
+        - {x: 14, y: -32.5}
+        - {x: 11, y: -31.5}
+        - {x: 9, y: -33.5}
+      - - {x: -2, y: -30.5}
+        - {x: 1, y: -29.5}
+        - {x: 1, y: -26.5}
+        - {x: -2, y: -25.5}
+        - {x: -4, y: -27.5}
+      - - {x: 12, y: -26.5}
+        - {x: 15, y: -25.5}
+        - {x: 15, y: -22.5}
+        - {x: 12, y: -21.5}
+        - {x: 10, y: -23.5}
+      - - {x: 6, y: -24.5}
+        - {x: 9, y: -23.5}
+        - {x: 9, y: -20.5}
+        - {x: 6, y: -19.5}
+        - {x: 4, y: -21.5}
+      - - {x: -11, y: -23.5}
+        - {x: -8, y: -22.5}
+        - {x: -8, y: -19.5}
+        - {x: -11, y: -18.5}
+        - {x: -13, y: -20.5}
+      - - {x: 14, y: -18.5}
+        - {x: 16, y: -20.5}
+        - {x: 17, y: -20.5}
+        - {x: 17, y: -15.5}
+        - {x: 15, y: -15.5}
+      - - {x: 0, y: -17.5}
+        - {x: 3, y: -16.5}
+        - {x: 3, y: -13.5}
+        - {x: 0, y: -12.5}
+        - {x: -2, y: -14.5}
+      - - {x: -14, y: -14.5}
+        - {x: -14, y: -11.5}
+        - {x: -17, y: -10.5}
+        - {x: -17, y: -15.5}
+      - - {x: -10, y: 45.5}
+        - {x: -15, y: 39.5}
+        - {x: -17, y: 32.5}
+        - {x: -17, y: -1.5}
+        - {x: 15, y: -1.5}
+        - {x: 15, y: 43.5}
+        - {x: 10, y: 45.5}
+    - name: female_animated_99
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 100
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_100
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 100
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_101
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 100
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_102
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 100
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_103
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 100
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_104
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 100
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_105
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 100
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_106
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 100
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_107
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_108
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_109
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_110
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_111
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_112
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 50
+        width: 31
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_113
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 50
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.5, y: 22.5}
+        - {x: -15.5, y: 16.5}
+        - {x: -16.5, y: 11.5}
+        - {x: -16.5, y: -22.5}
+        - {x: 15.5, y: -22.5}
+        - {x: 15.5, y: 18.5}
+        - {x: 9.5, y: 22.5}
+      - - {x: 13.5, y: 15.5}
+        - {x: 11.5, y: 12.5}
+        - {x: 11.5, y: 5.5}
+        - {x: 15.5, y: 5.5}
+        - {x: 16.5, y: 7.5}
+        - {x: 16.5, y: 15.5}
+    - name: female_animated_114
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 50
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.5, y: 22.5}
+        - {x: -15.5, y: 16.5}
+        - {x: -16.5, y: 11.5}
+        - {x: -16.5, y: -22.5}
+        - {x: 15.5, y: -22.5}
+        - {x: 15.5, y: 18.5}
+        - {x: 9.5, y: 22.5}
+      - - {x: 13.5, y: 9.5}
+        - {x: 15.5, y: 7.5}
+        - {x: 16.5, y: 7.5}
+        - {x: 16.5, y: 13.5}
+        - {x: 13.5, y: 12.5}
+    - name: female_animated_115
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 0
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_116
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 0
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_117
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 0
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: female_animated_118
+      rect:
+        serializedVersion: 2
+        x: 125
         y: 0
         width: 30
         height: 45

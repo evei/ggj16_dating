@@ -17,6 +17,8 @@ public class DatingTableUI : MonoBehaviour
 	public SpeechBubble dateSpeechBuble;
 	public RatingPanel ratingPanel;
 
+	public CharacterAnimationController animController;
+
 	GameManager GameManager { get { return GameManager.Instance; } }
 
 	Player Player { get { return GameManager.Player; } }
@@ -155,6 +157,10 @@ public class DatingTableUI : MonoBehaviour
 		card.positive = playCardPayload.positive;
 		var cardText = GameManager.GetCardText(playCardPayload.text);
 		DisplayText(cardText ?? GameManager.ChooseTextForCard(card), playCardPayload.positive, dateSpeechBuble);
+
+		// TODO: TEST loops and maybe callback
+		animController.PlayCard(card, AnimationEndsCallback);
+		Debug.Log("Playing animation " + card.category +  " - " +  card.subCategory);
 	}
 
 	void HandleDateDrinks (DrinkBoozePayload drinkBoozePayload)
@@ -176,5 +182,11 @@ public class DatingTableUI : MonoBehaviour
 		// TODO Show Date empty chair and wait for some seconds
 		SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 	}		
+
 	#endregion
+
+	void AnimationEndsCallback ()
+	{
+		Debug.LogWarning("Animation finished"); 
+	}
 }
