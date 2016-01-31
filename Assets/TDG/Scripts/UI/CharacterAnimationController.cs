@@ -10,6 +10,7 @@ public class CharacterAnimationController : MonoBehaviour
 	public AnimationClip fallbackClip;
 	public AnimationClip passoutClip;
 	public AnimationClip fleeClip;
+	public AnimationClip drinkBoozeClip;
 
 	public List<TalkAnimConfig> talkConfig;
 	public List<ActionAnimConfig> actionConfig;
@@ -91,6 +92,11 @@ public class CharacterAnimationController : MonoBehaviour
 	public void PlayPassoutAnimation (Action onAnimationFinished)
 	{
 		StartCoroutine(PlayAnimation(passoutClip.name, onAnimationFinished));
+	}
+
+	public void PlayDrinkBoozeAnimation (Action onAnimationFinished)
+	{
+		StartCoroutine(PlayAnimation(drinkBoozeClip.name, onAnimationFinished));
 	}
 }
 

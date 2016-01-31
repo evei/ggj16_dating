@@ -16,6 +16,7 @@ public class TheDecisionUI : MonoBehaviour
 	public GameObject datePassesOutPanel;
 	public GameObject playerFleesPanel;
 	public GameObject dateFleesPanel;
+	public GameObject waitingPanel;
 
 	public GameObject quitButton;
 
@@ -62,6 +63,7 @@ public class TheDecisionUI : MonoBehaviour
 		playerFleesPanel.SetActive(false);
 		dateFleesPanel.SetActive(false);
 		quitButton.SetActive(false);
+		waitingPanel.SetActive(false);
 	}
 
 	void HandleDateFlees ()
@@ -127,8 +129,8 @@ public class TheDecisionUI : MonoBehaviour
 
 	IEnumerator SendAndWaitForDecisionOutcome (bool playerLove)
 	{
-		//TODO show waiting for date decision
 		decisionPanel.SetActive(false);
+		waitingPanel.SetActive(true);
 
 		GameManager.SendDecision(playerLove);
 
@@ -146,7 +148,7 @@ public class TheDecisionUI : MonoBehaviour
 
 	void DisplayDecisionEnding ()
 	{
-		decisionPanel.SetActive(false);
+		waitingPanel.SetActive(false);
 		quitButton.SetActive(true);
 		// Display appropriate animation based on the player decision
 		if (Player.playerInLove.positive && Player.dateInLove.positive) {

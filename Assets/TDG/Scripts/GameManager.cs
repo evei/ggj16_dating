@@ -74,7 +74,6 @@ public class GameManager
 
 	List<Card> GetAvailableCardsForPhaseAndBoozeLevel() 
 	{
-		//TODO predefined sets?/
 		return allCards.Where(c => (c.phase == -1 || c.phase == phase) && c.boozeLevel >= Player.boozeLevel).Except(Player.cards).ToList();
 	}
 
@@ -197,8 +196,6 @@ public class GameManager
 
 	public string GetPhaseName ()
 	{
-		// TODO Get the second and third phase names.
-
 		switch (phase) {
 		case 0:
 			return "Introduction";

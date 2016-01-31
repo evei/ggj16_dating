@@ -171,7 +171,6 @@ public class DatingTableUI : MonoBehaviour
 
 	void HandleDatePlaysCard (PlayCardPayload playCardPayload)
 	{
-		//TODO display card action/effect besides speech bubble?
 		var card = GameManager.GetCard(playCardPayload.card);
 		var cardText = GameManager.GetCardText(playCardPayload.text);
 		DisplayText(cardText ?? GameManager.ChooseTextForCard(card), playCardPayload.positive, dateSpeechBuble);
@@ -180,7 +179,8 @@ public class DatingTableUI : MonoBehaviour
 	}
 
 	void HandleDateDrinks (DrinkBoozePayload drinkBoozePayload)
-	{		
+	{	
+		animController.PlayDrinkBoozeAnimation(null);	
 		if (drinkBoozePayload.boozeLevel > GameManager.maxBoozeLevel) {
 			
 			GameManager.CurrentState = GameManager.GameState.DatePassesOut;
@@ -198,6 +198,7 @@ public class DatingTableUI : MonoBehaviour
 
 	void AnimationEndsCallback ()
 	{
+		// TODO 
 		Debug.LogWarning(">>>> Animation finished"); 
 	}
 
