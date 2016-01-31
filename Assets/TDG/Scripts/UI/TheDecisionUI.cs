@@ -17,6 +17,8 @@ public class TheDecisionUI : MonoBehaviour
 	public GameObject playerFleesPanel;
 	public GameObject dateFleesPanel;
 
+	public GameObject quitButton;
+
 	GameManager GameManager { get { return GameManager.Instance; } }
 
 	Coroutine decisionRoutine;
@@ -59,30 +61,31 @@ public class TheDecisionUI : MonoBehaviour
 		datePassesOutPanel.SetActive(false);
 		playerFleesPanel.SetActive(false);
 		dateFleesPanel.SetActive(false);
+		quitButton.SetActive(false);
 	}
 
 	void HandleDateFlees ()
 	{
 		dateFleesPanel.SetActive(true);
-		// TODO
+		quitButton.SetActive(true);
 	}
 
 	void HandleDatePassesOut ()
 	{
 		datePassesOutPanel.SetActive(true);
-		// TODO
+		quitButton.SetActive(true);
 	}
 
 	void HandlePlayerFlees ()
 	{
 		playerFleesPanel.SetActive(true);
-		// TODO
+		quitButton.SetActive(true);
 	}
 
 	void HandlePlayerPassesOut ()
 	{
 		playerPassesOutPanel.SetActive(true);
-		// TODO
+		quitButton.SetActive(true);
 	}
 
 	void HandleDecisionTime ()
@@ -142,6 +145,7 @@ public class TheDecisionUI : MonoBehaviour
 	void DisplayDecisionEnding ()
 	{
 		decisionPanel.SetActive(false);
+		quitButton.SetActive(true);
 		// Display appropriate animation based on the player decision
 		if (playerInLove && dateInLove) {
 			inLovePanel.SetActive(true);

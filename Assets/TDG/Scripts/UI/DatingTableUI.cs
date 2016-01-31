@@ -135,13 +135,13 @@ public class DatingTableUI : MonoBehaviour
 		GameManager.CurrentState = GameManager.GameState.PlayerFlees;
 		// TODO Send event so opponent is left alone and game ends
 		// TODO Quit from server room
-		SceneManager.LoadScene(MainGameController.SCENE_LOBBY);
+		SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 	}
 
 	void HandleDateFlees ()
 	{
 		GameManager.CurrentState = GameManager.GameState.DateFlees;
-		// TODO Show Date empty chair
+		// TODO Show Date empty chair and wait for some seconds
 		SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 	}
 }

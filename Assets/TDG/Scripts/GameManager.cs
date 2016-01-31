@@ -139,7 +139,7 @@ public class GameManager
 			return possibleTexts[RandomHelper.Next(possibleTexts.Count)];
 		}
 
-		Debug.LogWarningFormat("No text found for card {0}.{1}", card.category, card.SubCategoryName);
+		Debug.LogWarningFormat("No text found for card {0}. {1}", card.category, card.SubCategoryName);
 		return new CardText(-1, card.category, card.subCategory, null, null);
 	}
 
@@ -154,11 +154,11 @@ public class GameManager
 
 		switch (phase) {
 		case 0:
-			return "Impress her";
+			return "Introduction";
 		case 1:
 			return "Impress her";
 		case 2:
-			return "Impress her";
+			return "Go for it";
 		}
 
 		return string.Empty;
