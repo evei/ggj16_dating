@@ -162,8 +162,8 @@ public class DatingTableUI : MonoBehaviour
 	void HandleFleeButton ()
 	{
 		GameManager.CurrentState = GameManager.GameState.PlayerFlees;
-		// TODO Send event so opponent is left alone and game ends
-		// TODO Quit from server room
+		GameManager.SendFlee();
+		GameManager.CloseWebsocket();
 		SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 	}		
 
@@ -182,20 +182,15 @@ public class DatingTableUI : MonoBehaviour
 	void HandleDateDrinks (DrinkBoozePayload drinkBoozePayload)
 	{		
 		if (drinkBoozePayload.boozeLevel > GameManager.maxBoozeLevel) {
-			//TODO
-			Debug.Log("Date passed out");
+			
 			GameManager.CurrentState = GameManager.GameState.DatePassesOut;
-
 			animController.PlayPassoutAnimation(LoadDecision);
 		}
 	}
 
 	void HandleDateFlees ()
 	{
-		//TODO 
-		Debug.Log("Date fled the dating scene");
 		GameManager.CurrentState = GameManager.GameState.DateFlees;
-
 		animController.PlayFleeAnimation(LoadDecision);
 	}		
 

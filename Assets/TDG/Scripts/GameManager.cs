@@ -104,15 +104,15 @@ public class GameManager
 		var list = cards.entries;
 
 		int i = 0;
-		for (i = 0; i < 30; i++) {
+		for (i = 0; i < 50; i++) {
 			list.Add(CreateCard(i, CardCategory.Talk, typeof(TalkCategory)));
 		}
 
-		for (; i < 50; i++) {
+		for (; i < 80; i++) {
 			list.Add(CreateCard(i, CardCategory.Emotion, typeof(EmotionCategory)));
 		}
 
-		for (; i < 70; i++) {
+		for (; i < 110; i++) {
 			list.Add(CreateCard(i, CardCategory.Action, typeof(ActionCategory)));
 		}
 
@@ -152,7 +152,8 @@ public class GameManager
 	{
 		var subcategories = System.Enum.GetValues(enumType);
 		int subCategory = (int)subcategories.GetValue(RandomHelper.Next(subcategories.Length));
-		return new Card(i, cardCategory, subCategory, RandomHelper.TrueFalse(), -1, RandomHelper.Next(maxBoozeLevel + 1));
+		var boozeLevelForCard = RandomHelper.Next(maxBoozeLevel + 1);
+		return new Card(i, cardCategory, subCategory, RandomHelper.Next(boozeLevelForCard + 1) == boozeLevelForCard, -1, boozeLevelForCard);
 	}
 
 	public List<Card> TakeRandomCards (List<Card> cards, int amount)
@@ -378,6 +379,11 @@ public class GameManager
 		Send(payload);
 	}
 
+	public void SendFlee ()
+	{
+		Send(new Payload(PayloadType.Flee));
+	}
+
 	Coroutine Send<T> (T payload) where T : Payload
 	{
 		var msg = new SendMessage<T>(room, payload);
@@ -396,8 +402,7 @@ public class GameManager
 		while (!WebSocketWoo.Completed) {
 			yield return WebSocketWoo.Await();			
 		}
-
-		Debug.Log("sending:" + message);
+			
 		WebSocketWoo.ReturnValue.SendString(message);
 		Debug.Log("sent:" + message);
 	}
