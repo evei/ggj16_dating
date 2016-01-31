@@ -19,6 +19,8 @@ public class DatingTableUI : MonoBehaviour
 
 	public CharacterAnimationController animController;
 
+	public ParticleSystem drinkBoozeParticles;
+
 	GameManager GameManager { get { return GameManager.Instance; } }
 
 	Player Player { get { return GameManager.Player; } }
@@ -127,13 +129,16 @@ public class DatingTableUI : MonoBehaviour
 
 	IEnumerator DrinkBoozeRoutine ()
 	{
+		drinkBoozeParticles.gameObject.SetActive(true);
+		drinkBoozeParticles.Play();
 
-		// TODO Play Drink booze animation
-		yield return null;
+		yield return new WaitForSeconds(3f);
+
+		drinkBoozeParticles.gameObject.SetActive(false);
+		drinkBoozeParticles.Stop();
 
 		if (Player.boozeLevel >= GameManager.maxBoozeLevel) {
 			GameManager.CurrentState = GameManager.GameState.PlayerPassesOut;
-			// TODO Pass out animation
 			SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 		}
 	}
