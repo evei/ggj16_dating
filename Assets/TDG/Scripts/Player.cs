@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 
 public class Player
 {
@@ -7,6 +8,8 @@ public class Player
 		Male,
 		Female
 	}
+
+	public string id = Guid.NewGuid().ToString();
 
 	public int boozeLevel;
 	public Gender gender;

@@ -40,13 +40,13 @@ public class PlayCardPayload
 	}		
 }
 
-public class CardResponsePayload
+public class RatePhasePayload
 {
 	public bool positive;
-	public CardResponsePayload ()
+	public RatePhasePayload ()
 	{
 	}
-	public CardResponsePayload (bool positive)
+	public RatePhasePayload (bool positive)
 	{
 		this.positive = positive;
 	}	

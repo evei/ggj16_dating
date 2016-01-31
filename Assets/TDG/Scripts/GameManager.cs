@@ -15,7 +15,7 @@ public class GameManager
 	public int maxBoozeLevel = 5;
 	public int maxCardsPerPhase = 5;
 
-	int phase;
+	public int phase;
 	public bool FirstPhase {
 		get {
 			return phase == 0;
@@ -47,7 +47,6 @@ public class GameManager
 	public void Init(Player.Gender gender)
 	{
 		phase = 0;
-		userId = null;
 		CreatePlayer(gender);
 		allCards = GetCards();
 		allTexts = GetTexts();
@@ -152,49 +151,95 @@ public class GameManager
 	}
 
 	#region webservice
+	const string ROOM = "tdg";
+
+	public Action<WebserviceMessage> OnMessageFromOtherPlayer = msg => {};
+
+	public Coroutine StartDate()
+	{
+		receivedMessages.Clear();
+		listenRoutine = WooroutineRunner.StartRoutine(ListenToWebsocketRoutine());
+		return WooroutineRunner.StartRoutine(StartDateRoutine());
+	}
+
+	IEnumerator StartDateRoutine()
+	{
+		var index = receivedMessages.Count;
+		bool otherPlayerJoined = false;
+
+		while (!otherPlayerJoined) {			
+			while (!WebSocketWoo.Completed) {
+				yield return WebSocketWoo.Await();
+			}
+			
+			while (index >= receivedMessages.Count) {
+				yield return null;
+			}
+			
+			var msg = receivedMessages[index];
+			if (msg.type == "joined" && msg.user_id != Player.id) {
+				otherPlayerJoined = true;
+			}
+			index++;
+		}
+	}
+
 	Wooroutine<WebSocket> _webSocketWoo;
 	Wooroutine<WebSocket> WebSocketWoo {
 		get {
-			while (_webSocketWoo == null || _webSocketWoo.HasError || (_webSocketWoo.Completed && !_webSocketWoo.ReturnValue.error.IsNullOrEmpty())) {
-				_webSocketWoo = WooroutineRunner.StartRoutine<WebSocket>(WebsocketRoutine());
+			if (_webSocketWoo == null || _webSocketWoo.HasError || (_webSocketWoo.Completed && _webSocketWoo.ReturnValue.error != null)) {
+				_webSocketWoo = WooroutineRunner.StartRoutine<WebSocket>(ConnectRoutine());
 			}
 			return _webSocketWoo;
 		}
 	}
 		
-	IEnumerator WebsocketRoutine ()
+	IEnumerator ConnectRoutine ()
 	{
+		var joinMsg = JsonUtility.ToJson(GetJoinMessage());
+		Debug.LogWarning("(re)connecting: " + joinMsg);
 		WebSocket w = new WebSocket(new Uri("ws://dating-room-ggj2016.herokuapp.com/websocket"));
 		yield return WooroutineRunner.StartRoutine(w.Connect());
-		w.SendString(GetJoinMessage());
-
+		w.SendString(joinMsg);
 		yield return w;
 	}
-
-	string userId;
-	string room;
+		
 	List<WebserviceMessage> receivedMessages = new List<WebserviceMessage>();
 
-	void ResetWebservice()
+	public void CloseWebsocket()
 	{
-		userId = null;
-		room = null;
-		receivedMessages.Clear();
-		if (_webSocketWoo != null && _webSocketWoo.Completed) {
-			_webSocketWoo.ReturnValue.Close();			
+		if (listenRoutine != null) {
+			WooroutineRunner.StopRoutine(listenRoutine);
+		}
+		if (_webSocketWoo.Completed) {			
+			_webSocketWoo.ReturnValue.Close();
+		}
+		else {
+			_webSocketWoo.Stop();
+			_webSocketWoo = null;
 		}
 	}
 
-		
-	IEnumerator ListenToWebsocketRoutine (WebSocket w)
+	Coroutine listenRoutine;
+	IEnumerator ListenToWebsocketRoutine ()
 	{
-		while (w.error == null) {
-			var json = w.RecvString();
-			if (json != null) {
+		while (true) {
+			while (!WebSocketWoo.Completed) {
+				yield return WebSocketWoo.Await();
+			}
+			var json = WebSocketWoo.ReturnValue.RecvString();
+			if (json != null && WebSocketWoo.ReturnValue.error == null) {
+				Debug.Log(json);
 				var message = JsonUtility.FromJson<WebserviceMessage>(json);
 				if (receivedMessages.All(m => m.id != message.id)) {
 					receivedMessages.Add(message);
+					if (message.user_id != Player.id) {
+						OnMessageFromOtherPlayer(message);
+					}
 				}
+			}
+			if (WebSocketWoo.ReturnValue.error != null) {
+				Debug.LogError(WebSocketWoo.ReturnValue.error);
 			}
 			yield return null;
 		}
@@ -205,50 +250,19 @@ public class GameManager
 		Send(new PlayCardPayload(card.id, cardText.id, card.positive));
 	}
 
-	public Wooroutine<WebserviceMessage> PlayCard (Card card, CardText cardText)
-	{
-		yield return Send(new PlayCardPayload(card.id, cardText.id, card.positive));
-
-		//own message
-		yield return WooroutineRunner.StartRoutine<WebserviceMessage>(WaitForMessageRoutine()).Await();
-
-		var nextMessage = WooroutineRunner.StartRoutine<WebserviceMessage>(WaitForMessageRoutine());
-		yield return nextMessage;
-	}
-
 	public void Drink(int boozeLevel)
 	{
 		Send(new DrinkBoozePayload(boozeLevel));
 	}
 
-	public Coroutine StartDate()
+	public void RatePhase(bool positive)
 	{
-		return WooroutineRunner.StartRoutine(StartDateRoutine());
-	}
-
-	IEnumerator StartDateRoutine ()
-	{
-		while (true) {
-			var message = WooroutineRunner.StartRoutine<WebserviceMessage>(WaitForMessageRoutine());
-			yield return message.Await();
-			if (message.ReturnValue != null) {
-				Debug.Log(message.ReturnValue);
-				if (message.ReturnValue.users == null || message.ReturnValue.users.Length == 0) {
-					localPlayerFirst = true;
-					message = WooroutineRunner.StartRoutine<WebserviceMessage>(WaitForMessageRoutine());
-//					yield return message.Await();
-//					if (message.ReturnValue != null) {
-//						yield break;
-//					}
-				}
-				yield break;
-			}
-		}
+		Send(new RatePhasePayload(positive));
 	}
 
 	Coroutine Send (object payload)
 	{
-		sendRoutine = WooroutineRunner.StartRoutine(SendRoutine(JsonUtility.ToJson(new WebserviceMessage(userId, "send", room, payload))));
+		sendRoutine = WooroutineRunner.StartRoutine(SendRoutine(JsonUtility.ToJson(new WebserviceMessage(Player.id, "send", ROOM, payload))));
 		return sendRoutine;
 	}
 
@@ -267,18 +281,24 @@ public class GameManager
 		WebSocketWoo.ReturnValue.SendString(message);
 	}
 
-	IEnumerator WaitForMessageRoutine()
+	JoinMessage GetJoinMessage ()
 	{
-		var amount = receivedMessages.Count;
-		while (amount <= receivedMessages.Count) {
-			yield return null;
+		var msg = new JoinMessage { user_id = Player.id};
+		if (receivedMessages.Count > 0) {
+			msg.last_id = receivedMessages[receivedMessages.Count - 1].id;
 		}
-		yield return receivedMessages[amount];
+		else {
+			msg.last_id = -1;
+		}
+		return msg;
 	}
 
-	string GetJoinMessage ()
+	class JoinMessage 
 	{
-		return "{\"type\":\"join\",\"room\":\"foo\"}"; //TODO change as soon as reconnect is available
+		public string user_id;
+		public string type = "join";
+		public string room = ROOM;
+		public int last_id;
 	}
 	#endregion
 }
