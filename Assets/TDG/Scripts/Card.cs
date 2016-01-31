@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+[Serializable]
 public enum CardCategory
 {
 	None = -1,
@@ -6,6 +11,7 @@ public enum CardCategory
 	Emotion = 3
 }
 
+[Serializable]
 public enum TalkCategory 
 {
 	Compliment = 1,
@@ -22,6 +28,7 @@ public enum TalkCategory
 	StayQuiet = 12
 }
 
+[Serializable]
 public enum ActionCategory 
 {
 	Kiss = 1,
@@ -38,6 +45,7 @@ public enum ActionCategory
 	SmokeAZigarette = 12
 }
 
+[Serializable]
 public enum EmotionCategory 
 {
 	Laugh = 1,
@@ -49,6 +57,7 @@ public enum EmotionCategory
 	Anger = 7
 }
 
+[Serializable]
 public class Card
 {
 	public int id;
@@ -64,7 +73,7 @@ public class Card
 		this.id = id;
 		this.category = category;
 		this.subCategory = subCategory;
-		this.positive = true;
+		this.positive = positive;
 		this.phase = phase;
 		this.boozeLevel = boozeLevel;
 	}
@@ -91,23 +100,20 @@ public class Card
 	
 }
 
+[Serializable]
+public class CardsContainer
+{
+	public List<Card> entries = new List<Card>();
+}
+
+[Serializable]
 public class CardText
 {
 	public int id;
 	public CardCategory category;
 	public int subCategory;
-	string good;
-	public string Good {
-		get {
-			return good ?? string.Format("{0}.{1} <GOOD>", category, Card.GetSubCategoryName(category, subCategory));
-		}
-	}
-	string bad;
-	public string Bad {
-		get {
-			return bad ?? string.Format("{0}.{1} <BAD>", category, Card.GetSubCategoryName(category, subCategory));
-		}
-	}
+	public string good;
+	public string bad;
 
 	public CardText (int id, CardCategory category, int subCategory, string good, string bad)
 	{
@@ -117,4 +123,10 @@ public class CardText
 		this.good = good;
 		this.bad = bad;
 	}	
+}
+
+[Serializable]
+public class CardTextsContainer
+{
+	public List<CardText> entries = new List<CardText>();
 }

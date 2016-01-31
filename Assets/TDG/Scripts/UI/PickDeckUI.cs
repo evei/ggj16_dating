@@ -54,7 +54,7 @@ public class PickDeckUI : MonoBehaviour
 		Debug.Log("CURRENT PHASE = " + GameManager.phase);
 
 		var player = GameManager.Player;
-		var phaseCards = GameManager.GetSelectableCardsForPhase(player.boozeLevel);
+		var phaseCards = GameManager.GetSelectableCardsForPhase();
 		availableCards.AddRange(phaseCards);
 
 		foreach (var card in phaseCards) {

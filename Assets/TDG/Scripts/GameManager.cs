@@ -65,38 +65,44 @@ public class GameManager
 		CloseWebsocket();
 	}
 
-	public List<Card> GetSelectableCardsForPhase(int boozeLevel)
+	public List<Card> GetSelectableCardsForPhase()
 	{
-		var cardsForPhase = GetAllCardsForPhaseAndBoozeLevel(boozeLevel);
+		var cardsForPhase = GetAvailableCardsForPhaseAndBoozeLevel();
 		var selectedCards = TakeRandomCards(cardsForPhase, CARDS_FOR_PHASE);
 		return selectedCards;
 	}
 
-	public List<Card> GetAllCardsForPhaseAndBoozeLevel(int boozeLevel) 
+	List<Card> GetAvailableCardsForPhaseAndBoozeLevel() 
 	{
 		//TODO predefined sets?/
-		return allCards.Where(c => (c.phase == -1 || c.phase == phase) && c.boozeLevel >= boozeLevel).ToList();
+		return allCards.Where(c => (c.phase == -1 || c.phase == phase) && c.boozeLevel >= Player.boozeLevel).Except(Player.cards).ToList();
 	}
 
-	public void PlayerDrinks(Player player)
+	public void PlayerDrinks()
 	{
-		var cards = GetAllCardsForPhaseAndBoozeLevel(player.boozeLevel).Except(player.cards).ToList();
-		var unusedCards = player.cards.Where(c => !c.used).ToList();
-		var newCards = TakeRandomCards(cards, Math.Min(player.boozeLevel, unusedCards.Count));
-
-		while (unusedCards.Count > 0 && newCards.Count > 0) {
-			var unusedCard = unusedCards[RandomHelper.Next(unusedCards.Count)];
-			player.cards[player.cards.FindIndex(c => c == unusedCard)] = newCards[0];
-			unusedCards.Remove(unusedCard);
-			newCards.RemoveAt(0);
+		Player.boozeLevel++;
+		SendDrink(Player.boozeLevel);
+		if (Player.boozeLevel < maxBoozeLevel) {			
+			var cards = GetAvailableCardsForPhaseAndBoozeLevel();
+			var unusedCards = Player.cards.Where(c => !c.used).ToList();
+			var newCards = TakeRandomCards(cards, Math.Min(Player.boozeLevel, unusedCards.Count));
+			
+			while (unusedCards.Count > 0 && newCards.Count > 0) {
+				var unusedCard = unusedCards[RandomHelper.Next(unusedCards.Count)];
+				Player.cards[Player.cards.FindIndex(c => c == unusedCard)] = newCards[0];
+				unusedCards.Remove(unusedCard);
+				newCards.RemoveAt(0);
+			}
 		}
 	}
 
 	List<Card> GetCards ()
 	{
-		//return JsonUtility.FromJson<List<Card>>();
+		//return JsonUtility.FromJson<CardsContainer>(json).entries;
 
-		var list = new List<Card>();
+		var cards = new CardsContainer();
+		var list = cards.entries;
+
 		int i = 0;
 		for (i = 0; i < 30; i++) {
 			list.Add(CreateCard(i, CardCategory.Talk, typeof(TalkCategory)));
@@ -110,14 +116,36 @@ public class GameManager
 			list.Add(CreateCard(i, CardCategory.Action, typeof(ActionCategory)));
 		}
 
+//		Debug.Log(JsonUtility.ToJson(cards, true));
+
 		return list;
 	}
 
 	List<CardText> GetTexts ()
 	{
-		//return JsonUtility.FromJson<List<Text>>();
+		return JsonUtility.FromJson<CardTextsContainer>(Resources.Load<TextAsset>("texts").text).entries;
 
-		return new List<CardText>();
+//		var cardTexts = new CardTextsContainer();
+//		var list = cardTexts.entries;
+//		var i = 0;
+//		var talkCategories = Enum.GetValues(typeof(TalkCategory)).Cast<TalkCategory>();
+//		foreach (var talk in talkCategories) {
+//			list.Add(new CardText(++i, CardCategory.Talk, (int)talk, string.Format("{0}.{1} <GOOD>", CardCategory.Talk, talk), string.Format("{0}.{1} <BAD>", CardCategory.Talk, talk)));
+//		}
+//
+//		var actionCategories = Enum.GetValues(typeof(ActionCategory)).Cast<ActionCategory>();
+//		foreach (var action in actionCategories) {
+//			list.Add(new CardText(++i, CardCategory.Action, (int)action, string.Format("{0}.{1} <GOOD>", CardCategory.Action, action), string.Format("{0}.{1} <BAD>", CardCategory.Action, action)));
+//		}
+//
+//		var emotions = Enum.GetValues(typeof(EmotionCategory)).Cast<EmotionCategory>();
+//		foreach (var emotion in emotions) {
+//			list.Add(new CardText(++i, CardCategory.Emotion, (int)emotion, string.Format("{0}.{1} <GOOD>", CardCategory.Emotion, emotion), string.Format("{0}.{1} <BAD>", CardCategory.Emotion, emotion)));
+//		}
+//
+//		Debug.Log(JsonUtility.ToJson(cardTexts, true));
+
+//		return new List<CardText>();
 	}
 
 	Card CreateCard (int i, CardCategory cardCategory, System.Type enumType)
@@ -331,7 +359,7 @@ public class GameManager
 		Send(new PlayCardPayload(card.id, cardText.id, card.positive));
 	}
 
-	public void SendDrink(int boozeLevel)
+	void SendDrink(int boozeLevel)
 	{
 		Send(new DrinkBoozePayload(boozeLevel));
 	}

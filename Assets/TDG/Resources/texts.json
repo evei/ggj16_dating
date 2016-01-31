@@ -1,0 +1,221 @@
+{
+    "entries": [
+        {
+            "id": 1,
+            "category": 1,
+            "subCategory": 1,
+            "good": "Talk.Compliment <GOOD>",
+            "bad": "Talk.Compliment <BAD>"
+        },
+        {
+            "id": 2,
+            "category": 1,
+            "subCategory": 2,
+            "good": "Talk.ShowOff <GOOD>",
+            "bad": "Talk.ShowOff <BAD>"
+        },
+        {
+            "id": 3,
+            "category": 1,
+            "subCategory": 3,
+            "good": "Talk.Smalltalk <GOOD>",
+            "bad": "Talk.Smalltalk <BAD>"
+        },
+        {
+            "id": 4,
+            "category": 1,
+            "subCategory": 4,
+            "good": "Talk.Joke <GOOD>",
+            "bad": "Talk.Joke <BAD>"
+        },
+        {
+            "id": 5,
+            "category": 1,
+            "subCategory": 5,
+            "good": "Talk.NerdOut <GOOD>",
+            "bad": "Talk.NerdOut <BAD>"
+        },
+        {
+            "id": 6,
+            "category": 1,
+            "subCategory": 6,
+            "good": "Talk.ExRelationship <GOOD>",
+            "bad": "Talk.ExRelationship <BAD>"
+        },
+        {
+            "id": 7,
+            "category": 1,
+            "subCategory": 7,
+            "good": "Talk.Work <GOOD>",
+            "bad": "Talk.Work <BAD>"
+        },
+        {
+            "id": 8,
+            "category": 1,
+            "subCategory": 8,
+            "good": "Talk.Parents <GOOD>",
+            "bad": "Talk.Parents <BAD>"
+        },
+        {
+            "id": 9,
+            "category": 1,
+            "subCategory": 9,
+            "good": "Talk.Food <GOOD>",
+            "bad": "Talk.Food <BAD>"
+        },
+        {
+            "id": 10,
+            "category": 1,
+            "subCategory": 10,
+            "good": "Talk.Childhood <GOOD>",
+            "bad": "Talk.Childhood <BAD>"
+        },
+        {
+            "id": 11,
+            "category": 1,
+            "subCategory": 11,
+            "good": "Talk.Pets <GOOD>",
+            "bad": "Talk.Pets <BAD>"
+        },
+        {
+            "id": 12,
+            "category": 1,
+            "subCategory": 12,
+            "good": "Talk.StayQuiet <GOOD>",
+            "bad": "Talk.StayQuiet <BAD>"
+        },
+        {
+            "id": 13,
+            "category": 2,
+            "subCategory": 1,
+            "good": "Action.Kiss <GOOD>",
+            "bad": "Action.Kiss <BAD>"
+        },
+        {
+            "id": 14,
+            "category": 2,
+            "subCategory": 2,
+            "good": "Action.Wink <GOOD>",
+            "bad": "Action.Wink <BAD>"
+        },
+        {
+            "id": 15,
+            "category": 2,
+            "subCategory": 3,
+            "good": "Action.Fart <GOOD>",
+            "bad": "Action.Fart <BAD>"
+        },
+        {
+            "id": 16,
+            "category": 2,
+            "subCategory": 4,
+            "good": "Action.PickYourNose <GOOD>",
+            "bad": "Action.PickYourNose <BAD>"
+        },
+        {
+            "id": 17,
+            "category": 2,
+            "subCategory": 5,
+            "good": "Action.GoToRestroom <GOOD>",
+            "bad": "Action.GoToRestroom <BAD>"
+        },
+        {
+            "id": 18,
+            "category": 2,
+            "subCategory": 6,
+            "good": "Action.TapOnTable <GOOD>",
+            "bad": "Action.TapOnTable <BAD>"
+        },
+        {
+            "id": 19,
+            "category": 2,
+            "subCategory": 7,
+            "good": "Action.Texting <GOOD>",
+            "bad": "Action.Texting <BAD>"
+        },
+        {
+            "id": 20,
+            "category": 2,
+            "subCategory": 8,
+            "good": "Action.Leave <GOOD>",
+            "bad": "Action.Leave <BAD>"
+        },
+        {
+            "id": 21,
+            "category": 2,
+            "subCategory": 9,
+            "good": "Action.Frown <GOOD>",
+            "bad": "Action.Frown <BAD>"
+        },
+        {
+            "id": 22,
+            "category": 2,
+            "subCategory": 10,
+            "good": "Action.Smile <GOOD>",
+            "bad": "Action.Smile <BAD>"
+        },
+        {
+            "id": 23,
+            "category": 2,
+            "subCategory": 11,
+            "good": "Action.Pokerface <GOOD>",
+            "bad": "Action.Pokerface <BAD>"
+        },
+        {
+            "id": 24,
+            "category": 2,
+            "subCategory": 12,
+            "good": "Action.SmokeAZigarette <GOOD>",
+            "bad": "Action.SmokeAZigarette <BAD>"
+        },
+        {
+            "id": 25,
+            "category": 3,
+            "subCategory": 1,
+            "good": "Emotion.Laugh <GOOD>",
+            "bad": "Emotion.Laugh <BAD>"
+        },
+        {
+            "id": 26,
+            "category": 3,
+            "subCategory": 2,
+            "good": "Emotion.Cry <GOOD>",
+            "bad": "Emotion.Cry <BAD>"
+        },
+        {
+            "id": 27,
+            "category": 3,
+            "subCategory": 3,
+            "good": "Emotion.Blush <GOOD>",
+            "bad": "Emotion.Blush <BAD>"
+        },
+        {
+            "id": 28,
+            "category": 3,
+            "subCategory": 4,
+            "good": "Emotion.Drool <GOOD>",
+            "bad": "Emotion.Drool <BAD>"
+        },
+        {
+            "id": 29,
+            "category": 3,
+            "subCategory": 5,
+            "good": "Emotion.Yawn <GOOD>",
+            "bad": "Emotion.Yawn <BAD>"
+        },
+        {
+            "id": 30,
+            "category": 3,
+            "subCategory": 6,
+            "good": "Emotion.Panic <GOOD>",
+            "bad": "Emotion.Panic <BAD>"
+        },
+        {
+            "id": 31,
+            "category": 3,
+            "subCategory": 7,
+            "good": "Emotion.Anger <GOOD>",
+            "bad": "Emotion.Anger <BAD>"
+        }
+    ]
+}

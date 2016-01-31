@@ -89,7 +89,7 @@ public class DatingTableUI : MonoBehaviour
 
 	void DisplayText (CardText cardText, bool positive, SpeechBubble bubble)
 	{
-		bubble.DisplayText(positive ? cardText.Good : cardText.Bad);
+		bubble.DisplayText(positive ? cardText.good : cardText.bad);
 	}
 
 	void PlayerMoveStarts ()
@@ -120,8 +120,7 @@ public class DatingTableUI : MonoBehaviour
 
 	void DrinkBooze ()
 	{
-		Player.boozeLevel++;
-		GameManager.SendDrink(Player.boozeLevel);
+		GameManager.PlayerDrinks();
 		StartCoroutine(DrinkBoozeRoutine());
 	}
 
@@ -154,7 +153,6 @@ public class DatingTableUI : MonoBehaviour
 	{
 		//TODO display card action/effect besides speech bubble?
 		var card = GameManager.GetCard(playCardPayload.card);
-		card.positive = playCardPayload.positive;
 		var cardText = GameManager.GetCardText(playCardPayload.text);
 		DisplayText(cardText ?? GameManager.ChooseTextForCard(card), playCardPayload.positive, dateSpeechBuble);
 
