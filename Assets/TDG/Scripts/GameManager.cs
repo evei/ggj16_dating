@@ -268,7 +268,7 @@ public class GameManager
 	{
 		var message = GetMatchOrJoinMessage();
 		Debug.LogWarning("(re)connecting: " + message);
-		WebSocket w = new WebSocket(new Uri("ws://dating-room-ggj2016.herokuapp.com/websocket"));
+		WebSocket w = new WebSocket(new Uri("wss://dating-room-ggj2016.herokuapp.com/websocket"));
 		yield return WooroutineRunner.StartRoutine(w.Connect());
 		w.SendString(message);
 		yield return w;
