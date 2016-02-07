@@ -77,7 +77,8 @@ public enum PayloadType
 	Drink,
 	RatePhase,
 	Decision,
-	Flee
+	Flee,
+	PassOut
 }
 
 [Serializable]

@@ -56,7 +56,7 @@ public class GameManager
 	}
 
 	public void Init(Player.Gender gender)
-	{
+	{		
 		RandomHelper.r = new System.Random(10000);
 		phase = 0;
 		CreatePlayer(gender);
@@ -214,16 +214,21 @@ public class GameManager
 	public Action<PlayCardPayload> OnDatePlaysCard = pl => {};
 	public Action<DrinkBoozePayload> OnDateDrinks = pl => {};
 	public Action OnDateFlees = () => {};
+	public Action OnDatePassesOut = () => {};
 
 	public Coroutine StartDate()
 	{
+		Debug.Log("Starting date...");
+		CloseWebsocket();
 		receivedMessages.Clear();
+		room = null;
 		listenRoutine = WooroutineRunner.StartRoutine(ListenToWebsocketRoutine());
 		return WooroutineRunner.StartRoutine(StartDateRoutine());
 	}
 
 	IEnumerator StartDateRoutine()
 	{
+		Debug.Log("Date start handshake...");
 		var index = receivedMessages.Count;
 		bool otherPlayerJoined = false;
 		bool playerJoined = false;
@@ -340,6 +345,9 @@ public class GameManager
 			case PayloadType.Flee:
 				OnDateFlees();
 				break;
+			case PayloadType.PassOut:
+				OnDatePassesOut ();
+				break;
 			case PayloadType.RatePhase:
 				Player.ratesReceived.Add(JsonUtility.FromJson<WebsocketMessage<RatePhasePayload>>(json).payload);
 				break;
@@ -379,6 +387,11 @@ public class GameManager
 	public void SendFlee ()
 	{
 		Send(new Payload(PayloadType.Flee));
+	}
+
+	public void SendPassOut ()
+	{
+		Send(new Payload(PayloadType.PassOut));
 	}
 
 	Coroutine Send<T> (T payload) where T : Payload

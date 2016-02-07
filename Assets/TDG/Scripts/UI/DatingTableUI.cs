@@ -38,6 +38,7 @@ public class DatingTableUI : MonoBehaviour
 		GameManager.OnDatePlaysCard -= HandleDatePlaysCard;
 		GameManager.OnDateDrinks -= HandleDateDrinks;
 		GameManager.OnDateFlees -= HandleDateFlees;
+		GameManager.OnDatePassesOut -= HandleDatePassesOut;
 	}
 
 	void Start ()
@@ -51,6 +52,7 @@ public class DatingTableUI : MonoBehaviour
 		GameManager.OnDatePlaysCard += HandleDatePlaysCard;
 		GameManager.OnDateDrinks += HandleDateDrinks;
 		GameManager.OnDateFlees += HandleDateFlees;
+		GameManager.OnDatePassesOut += HandleDatePassesOut;
 	}
 
 	void PopulateMainDeck ()
@@ -154,6 +156,8 @@ public class DatingTableUI : MonoBehaviour
 
 		if (Player.boozeLevel >= GameManager.maxBoozeLevel) {
 			GameManager.CurrentState = GameManager.GameState.PlayerPassesOut;
+			GameManager.SendPassOut();
+			GameManager.CloseWebsocket();
 			SceneManager.LoadScene(MainGameController.SCENE_THE_DECISION);
 		}
 
@@ -198,6 +202,11 @@ public class DatingTableUI : MonoBehaviour
 		GameManager.CurrentState = GameManager.GameState.DateFlees;
 		animController.PlayFleeAnimation(LoadDecision);
 	}		
+
+	void HandleDatePassesOut () {
+		GameManager.CurrentState = GameManager.GameState.DatePassesOut;
+		animController.PlayPassoutAnimation(LoadDecision);
+	}
 
 	#endregion
 
